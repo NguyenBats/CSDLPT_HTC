@@ -424,10 +424,11 @@ namespace QLDSV_TC
             // 
             // txtTenLop
             // 
+            this.txtTenLop.EditValue = "Công nghệ thông tin";
             this.txtTenLop.Location = new System.Drawing.Point(795, 37);
             this.txtTenLop.MenuManager = this.barManager1;
             this.txtTenLop.Name = "txtTenLop";
-            this.txtTenLop.Size = new System.Drawing.Size(121, 20);
+            this.txtTenLop.Size = new System.Drawing.Size(215, 20);
             this.txtTenLop.TabIndex = 12;
             // 
             // bdsNienKhoa

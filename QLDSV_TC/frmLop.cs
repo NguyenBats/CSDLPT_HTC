@@ -198,6 +198,14 @@ namespace QLDSV_TC
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = false;
+            btnGhi.Enabled = btnPhucHoi.Enabled = true;
+            LopGridControl.Enabled = true;
+            txtMaLop.Enabled = true;
+            txtStartYear.Enabled = true;
+            txtEndYear.Enabled = true;
+            txtTenLop.Enabled = true;
+
             viTri = bdsLop.Position;
             txtMaLop.Text = "";
             txtTenLop.Text = "";
@@ -207,13 +215,7 @@ namespace QLDSV_TC
             //bdsLop.AddNew();
             //cboKhoa.Sekected = maKhoa;
 
-            btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = false;
-            btnGhi.Enabled = btnPhucHoi.Enabled = true;
-            LopGridControl.Enabled = false;
-            txtMaLop.Enabled = true;
-            txtStartYear.Enabled = true;
-            txtEndYear.Enabled = true;
-            txtTenLop.Enabled = true;
+            
         }
 
         private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
