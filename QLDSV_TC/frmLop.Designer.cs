@@ -61,7 +61,7 @@ namespace QLDSV_TC
             this.labKhoa = new System.Windows.Forms.Label();
             this.tableAdapterManager = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.TableAdapterManager();
             this.sINHVIENTableAdapter = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.SINHVIENTableAdapter();
-            this.cboKhoa = new DevExpress.XtraEditors.PanelControl();
+            this.textPanel = new DevExpress.XtraEditors.PanelControl();
             this.txtMaLopUnvisible = new System.Windows.Forms.TextBox();
             this.txtMaLop = new DevExpress.XtraEditors.TextEdit();
             this.txtEndYear = new DevExpress.XtraEditors.TextEdit();
@@ -84,8 +84,8 @@ namespace QLDSV_TC
             ((System.ComponentModel.ISupportInitialize)(this.bdsLop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboKhoa)).BeginInit();
-            this.cboKhoa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textPanel)).BeginInit();
+            this.textPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaLop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEndYear.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStartYear.Properties)).BeginInit();
@@ -371,22 +371,22 @@ namespace QLDSV_TC
             // 
             this.sINHVIENTableAdapter.ClearBeforeFill = true;
             // 
-            // cboKhoa
+            // textPanel
             // 
-            this.cboKhoa.Controls.Add(this.txtMaLopUnvisible);
-            this.cboKhoa.Controls.Add(this.txtMaLop);
-            this.cboKhoa.Controls.Add(label3);
-            this.cboKhoa.Controls.Add(this.txtEndYear);
-            this.cboKhoa.Controls.Add(label2);
-            this.cboKhoa.Controls.Add(this.txtStartYear);
-            this.cboKhoa.Controls.Add(label1);
-            this.cboKhoa.Controls.Add(this.txtTenLop);
-            this.cboKhoa.Controls.Add(tENLOPLabel);
-            this.cboKhoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cboKhoa.Location = new System.Drawing.Point(0, 368);
-            this.cboKhoa.Name = "cboKhoa";
-            this.cboKhoa.Size = new System.Drawing.Size(1083, 270);
-            this.cboKhoa.TabIndex = 7;
+            this.textPanel.Controls.Add(this.txtMaLopUnvisible);
+            this.textPanel.Controls.Add(this.txtMaLop);
+            this.textPanel.Controls.Add(label3);
+            this.textPanel.Controls.Add(this.txtEndYear);
+            this.textPanel.Controls.Add(label2);
+            this.textPanel.Controls.Add(this.txtStartYear);
+            this.textPanel.Controls.Add(label1);
+            this.textPanel.Controls.Add(this.txtTenLop);
+            this.textPanel.Controls.Add(tENLOPLabel);
+            this.textPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textPanel.Location = new System.Drawing.Point(0, 368);
+            this.textPanel.Name = "textPanel";
+            this.textPanel.Size = new System.Drawing.Size(1083, 270);
+            this.textPanel.TabIndex = 7;
             // 
             // txtMaLopUnvisible
             // 
@@ -458,7 +458,7 @@ namespace QLDSV_TC
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1083, 658);
-            this.Controls.Add(this.cboKhoa);
+            this.Controls.Add(this.textPanel);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -478,9 +478,9 @@ namespace QLDSV_TC
             ((System.ComponentModel.ISupportInitialize)(this.bdsLop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboKhoa)).EndInit();
-            this.cboKhoa.ResumeLayout(false);
-            this.cboKhoa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textPanel)).EndInit();
+            this.textPanel.ResumeLayout(false);
+            this.textPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaLop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEndYear.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStartYear.Properties)).EndInit();
@@ -513,7 +513,7 @@ namespace QLDSV_TC
         private System.Windows.Forms.Label labKhoa;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private QLDSV_TCDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private DevExpress.XtraEditors.PanelControl cboKhoa;
+        private DevExpress.XtraEditors.PanelControl textPanel;
         private QLDSV_TCDataSetTableAdapters.SINHVIENTableAdapter sINHVIENTableAdapter;
         private System.Windows.Forms.BindingSource bdsSV;
         private QLDSV_TCDataSetTableAdapters.LOPTableAdapter LOPTableAdapter;

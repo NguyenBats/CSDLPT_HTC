@@ -59,7 +59,7 @@ namespace QLDSV_TC
                 cmbKhoa.Enabled = false;
                 btnThem.Enabled = btnGhi.Enabled = btnXoa.Enabled = btnPhucHoi.Enabled = true;
             }
-            txtMaLop.Enabled = txtStartYear.Enabled = txtEndYear.Enabled = txtTenLop.Enabled = false;
+            
 
         }
 
@@ -169,10 +169,11 @@ namespace QLDSV_TC
                 return;
             }
             LopGridControl.Enabled = true;
-            cboKhoa.Enabled = false;
+            textPanel.Enabled = false;
             btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = true;
             btnGhi.Enabled = btnPhucHoi.Enabled = false;
-            txtMaLop.Enabled = txtStartYear.Enabled = txtEndYear.Enabled = txtTenLop.Enabled = false;
+            LopGridControl.Enabled = false;
+           
         }
 
         private void btnPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -184,10 +185,10 @@ namespace QLDSV_TC
             }
             setCurrentValue();
             LopGridControl.Enabled = true;
-            //cboKhoa.Enabled = false;
+            textPanel.Enabled = false;
             btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = true;
             btnGhi.Enabled = btnPhucHoi.Enabled = false;
-            txtMaLop.Enabled = txtStartYear.Enabled = txtEndYear.Enabled = txtTenLop.Enabled = false;
+           
         }
 
         private void btnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -201,17 +202,14 @@ namespace QLDSV_TC
             btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = false;
             btnGhi.Enabled = btnPhucHoi.Enabled = true;
             LopGridControl.Enabled = true;
-            txtMaLop.Enabled = true;
-            txtStartYear.Enabled = true;
-            txtEndYear.Enabled = true;
-            txtTenLop.Enabled = true;
+            
 
             viTri = bdsLop.Position;
             txtMaLop.Text = "";
             txtTenLop.Text = "";
             txtStartYear.Text = "";
             txtEndYear.Text = "";
-            //cboKhoa.Enabled = true;
+            textPanel.Enabled = true;
             //bdsLop.AddNew();
             //cboKhoa.Sekected = maKhoa;
 
