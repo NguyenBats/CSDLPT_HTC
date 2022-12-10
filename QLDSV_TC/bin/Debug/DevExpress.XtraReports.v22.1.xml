@@ -21936,7 +21936,7 @@
     </member>
     <member name="E:DevExpress.XtraReports.UI.XtraReport.DesignerLoaded">
       <summary>
-        <para>Occurs after the End-User Designer for WinForms loads the current report.</para>
+        <para>Occurs after the End-User Designer has been loaded for the current report instance.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraReports.UI.XtraReport.DesignerOptions">

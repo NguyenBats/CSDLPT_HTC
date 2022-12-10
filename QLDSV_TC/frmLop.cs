@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.DataAccess.Native.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,13 +14,13 @@ namespace QLDSV_TC
     public partial class frmLop : Form
     {
         int viTri;
-        String maKhoa="";
+        String maKhoa = "";
         public frmLop()
         {
             InitializeComponent();
         }
 
-       
+
 
         private void lOPBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -31,6 +32,10 @@ namespace QLDSV_TC
 
         private void frmLop_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.NIENKHOA' table. You can move, or remove it, as needed.
+            this.nIENKHOATableAdapter.Fill(this.qLDSV_TCDataSet.NIENKHOA);
+            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.KHOA' table. You can move, or remove it, as needed.
+            this.kHOATableAdapter.Fill(this.qLDSV_TCDataSet.KHOA);
             qLDSV_TCDataSet.EnforceConstraints = false;
             this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
             this.LOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
@@ -54,6 +59,7 @@ namespace QLDSV_TC
                 cmbKhoa.Enabled = false;
                 btnThem.Enabled = btnGhi.Enabled = btnXoa.Enabled = btnPhucHoi.Enabled = true;
             }
+            txtMaLop.Enabled = txtStartYear.Enabled = txtEndYear.Enabled = txtTenLop.Enabled = false;
 
         }
 
@@ -63,10 +69,10 @@ namespace QLDSV_TC
             String maLop = "";
             if (bdsSV.Count > 0)
             {
-                MessageBox.Show("Không thể xóa lớp này vì lớp đã có sinh viên","");
+                MessageBox.Show("Không thể xóa lớp này vì lớp đã có sinh viên", "");
                 return;
             }
-            if(MessageBox.Show("Bạn có muốn xóa lớp này không?","Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show("Bạn có muốn xóa lớp này không?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 try
                 {
@@ -74,7 +80,8 @@ namespace QLDSV_TC
                     bdsLop.RemoveCurrent();
                     this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
                     this.LOPTableAdapter.Update(this.qLDSV_TCDataSet.LOP);
-                }catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi xóa lớp, vui lòng xóa lại.\n" + ex.Message, "", MessageBoxButtons.OK);
                     this.LOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
@@ -87,12 +94,22 @@ namespace QLDSV_TC
 
         private void btnGhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //kiem tra ma lop khong trung tren cac phan manh +++
+            ////kiem tra ma lop khong trung tren cac phan manh +++
             if (txtMaLop.Text.Trim() == "")
             {
-                MessageBox.Show("Mã lớp không được để trống!", "", MessageBoxButtons.OK);
+                MessageBox.Show("Mã không được để trống!", "", MessageBoxButtons.OK);
                 txtMaLop.Focus();
                 return;
+            }
+            else
+            {
+                string prefix = "D" + Convert.ToInt32(txtStartYear.Text) % 2000;
+                if (!txtMaLop.Text.Contains(prefix))
+                {
+                    MessageBox.Show("Mã lớp phải có tiền tố " + prefix, "", MessageBoxButtons.OK);
+                    txtMaLop.Focus();
+                    return;
+                }
             }
             if (txtTenLop.Text.Trim() == "")
             {
@@ -100,41 +117,77 @@ namespace QLDSV_TC
                 txtTenLop.Focus();
                 return;
             }
-            if (txtKhoaHoc.Text.Trim() == "")
+            if (txtStartYear.Text.Trim() == "")
             {
-                MessageBox.Show("Khóa học không được để trống!", "", MessageBoxButtons.OK);
-                txtKhoaHoc.Focus();
+                MessageBox.Show("Năm bắt đầu không được để trống!", "", MessageBoxButtons.OK);
+                txtStartYear.Focus();
+                return;
+            }
+            if (txtEndYear.Text.Trim() == "")
+            {
+                MessageBox.Show("Năm kết thúc không được để trống!", "", MessageBoxButtons.OK);
+                txtEndYear.Focus();
                 return;
             }
             try
             {
-                bdsLop.EndEdit();
-                bdsLop.ResetCurrentItem();
-                this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.LOPTableAdapter.Update(this.qLDSV_TCDataSet.LOP);
+                //string prefix = "D" + Convert.ToInt32(txtStartYear.Text) % 2000;
+                //DataTable dtbLop = this.qLDSV_TCDataSet.LOP as DataTable;
+                //if (dtbLop != null && dtbLop.Rows.Count > 0)
+                //{
+                //    DataRow dr = dtbLop.AsEnumerable().FirstOrDefault(x => Convert.ToString(x["MALOP"]) == malop);//validate lần đầu, không trùng mã => insert thẳng
+                //    if (dr != null)
+                //    {
+                //        int index = Convert.ToInt32(dr["MALOP"].ToString().Substring(-2,2));
+                //    }
+                //}
+
+                //From this
+                //bdsLop.AddNew();
+                //To this
+                //DataRow newRow = this.qLDSV_TCDataSet.LOP.NewRow();
+                //newRow["KHOAHOC"] = txtStartYear.Text + "-" + txtEndYear.Text;
+                //newRow["MAKHOA"] = maKhoa.Trim();
+                //newRow["MALOP"] = txtMaLop.Text;
+                //newRow["TENLOP"] = txtTenLop.Text;
+                //bdsLop.Add(newRow);
+                String malop = txtMaLop.Text;
+                if (Program.ExecSqlToInt("EXEC [dbo].[sp_KiemTraMaLop] '" + malop + "'") == 1)
+                    return;
+                if (Program.ExecSqlNonQuery("INSERT INTO LOP(MALOP,TENLOP,KHOAHOC,MAKHOA) VALUES ('" + txtMaLop.Text + "','" + txtTenLop.Text + "','" + txtStartYear.Text + "-" + txtEndYear.Text + "','" + maKhoa.Trim() + "')") != 0)
+                    return;
+                else
+                {
+                    MessageBox.Show("Thêm mới lớp thành công.\n" ,"Thành công", MessageBoxButtons.OK);
+                    this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.LOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi thêm lớp.\n" + ex.Message, "", MessageBoxButtons.OK);
                 return;
             }
-            gcLop.Enabled = true;
-            groupBox1.Enabled = false;
+            LopGridControl.Enabled = true;
+            cboKhoa.Enabled = false;
             btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = true;
             btnGhi.Enabled = btnPhucHoi.Enabled = false;
+            txtMaLop.Enabled = txtStartYear.Enabled = txtEndYear.Enabled = txtTenLop.Enabled = false;
         }
 
         private void btnPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            bdsLop.CancelEdit();
+            //bdsLop.CancelEdit();
             if (btnThem.Enabled == false)
             {
                 bdsLop.Position = viTri;
             }
-            gcLop.Enabled = true;
-            groupBox1.Enabled = false;
+            setCurrentValue();
+            LopGridControl.Enabled = true;
+            //cboKhoa.Enabled = false;
             btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = true;
             btnGhi.Enabled = btnPhucHoi.Enabled = false;
+            txtMaLop.Enabled = txtStartYear.Enabled = txtEndYear.Enabled = txtTenLop.Enabled = false;
         }
 
         private void btnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -146,13 +199,21 @@ namespace QLDSV_TC
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             viTri = bdsLop.Position;
-            groupBox1.Enabled = true;
-            bdsLop.AddNew();
-            txtMaKhoa.Text = maKhoa;
+            txtMaLop.Text = "";
+            txtTenLop.Text = "";
+            txtStartYear.Text = "";
+            txtEndYear.Text = "";
+            //cboKhoa.Enabled = true;
+            //bdsLop.AddNew();
+            //cboKhoa.Sekected = maKhoa;
 
-            btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled  = false;
+            btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = false;
             btnGhi.Enabled = btnPhucHoi.Enabled = true;
-            gcLop.Enabled = false;
+            LopGridControl.Enabled = false;
+            txtMaLop.Enabled = true;
+            txtStartYear.Enabled = true;
+            txtEndYear.Enabled = true;
+            txtTenLop.Enabled = true;
         }
 
         private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
@@ -180,12 +241,71 @@ namespace QLDSV_TC
             try
             {
                 maKhoa = ((DataRowView)bdsLop[0])["MAKHOA"].ToString();
-            }catch(Exception ex) { }
+            }
+            catch (Exception ex) { }
         }
 
         private void txtMaLop_TextChanged(object sender, EventArgs e)
         {
+            //if (bdsLop.Count == 0) return;
+            //string nienKhoa = ((DataRowView)bdsLop[bdsLop.Position])["KHOAHOC"].ToString();//giu lai de reload
+            //DataTable dtbNienKhoa = this.qLDSV_TCDataSet.NIENKHOA as DataTable;
+            //cboNienKhoaFinal.DataSource = dtbNienKhoa;
+            //cboNienKhoaFinal.DisplayMember = "NIENKHOA";
+            //if (dtbNienKhoa != null && dtbNienKhoa.Rows.Count > 0)
+            //{
+            //    DataRow dr = dtbNienKhoa.AsEnumerable().First(x => Convert.ToString(x["NIENKHOA"]) == nienKhoa);
+            //    int selectedIndex = dtbNienKhoa.Rows.IndexOf(dr);
+            //    cboNienKhoaFinal.SelectedIndex = selectedIndex;
+            //}
+        }
 
+
+        private void txtMaLopUnvisible_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                setCurrentValue();
+            }
+            catch (Exception objEx)
+            {
+
+            }
+        }
+
+        private void setCurrentValue()
+        {
+            viTri = bdsLop.Position;
+            DataTable dtbLop = this.qLDSV_TCDataSet.LOP as DataTable;
+            if (dtbLop != null && dtbLop.Rows.Count > 0)
+            {
+                txtMaLop.Text = dtbLop.Rows[viTri]["MALOP"].ToString();
+                txtTenLop.Text = dtbLop.Rows[viTri]["TENLOP"].ToString();
+                txtStartYear.Text = dtbLop.Rows[viTri]["KHOAHOC"].ToString().Split('-')[0];
+                txtEndYear.Text = dtbLop.Rows[viTri]["KHOAHOC"].ToString().Split('-')[1];
+            }
+        }
+
+        private void txtStartYear_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (String.IsNullOrEmpty(txtStartYear.Text))
+                {
+                    return;
+                }
+                if (Convert.ToInt32(txtStartYear.Text) > 2000 && Convert.ToInt32(txtStartYear.Text) < 2050)
+                {
+                    int endYear = Convert.ToInt32(txtStartYear.Text) + 4;
+                    txtEndYear.Text = Convert.ToString(endYear);
+                    string malop = "D" + Convert.ToInt32(txtStartYear.Text) % 2000 + "CQ";
+                    txtMaLop.Text = malop;
+                }
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

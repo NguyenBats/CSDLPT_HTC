@@ -1174,7 +1174,7 @@ If this parameter has a value (it’s not null or an empty string) the val param
       <summary>
         <para>To bind a column to a data source field, set this property to the required data field name. To create unbound columns, assign a unique identifier to this property. If you obtained a column as a method return value or as an event argument, read the FieldName property value to identify this column.</para>
       </summary>
-      <value>A <see cref="T:System.String"/> value that specifies the unique column field name. The value is case-sensitive.</value>
+      <value>A <see cref="T:System.String"/> value that specifies the unique column field name.</value>
     </member>
     <member name="P:DevExpress.XtraGrid.Columns.GridColumn.FieldNameSortGroup">
       <summary>
@@ -1199,18 +1199,6 @@ If this parameter has a value (it’s not null or an empty string) the val param
         <para>Gets or sets a value specifying whether the column takes part in horizontal View scrolling or is anchored to a View edge.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraGrid.Columns.FixedStyle"/> enumeration value.</value>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Columns.GridColumn.GetAccessibleDescription">
-      <summary>
-        <para>Returns the object’s description used by accessibility client applications.</para>
-      </summary>
-      <returns>The object’s description used by accessibility client applications.</returns>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Columns.GridColumn.GetAccessibleName">
-      <summary>
-        <para>Returns the object’s name used by accessibility client applications.</para>
-      </summary>
-      <returns>The object’s name used by accessibility client applications.</returns>
     </member>
     <member name="M:DevExpress.XtraGrid.Columns.GridColumn.GetBestWidth">
       <summary>
@@ -2092,21 +2080,6 @@ If this parameter has a value (it’s not null or an empty string) the val param
       </summary>
       <param name="columns">An array of <see cref="T:DevExpress.XtraGrid.Columns.LayoutViewColumn"/> objects.</param>
     </member>
-    <member name="M:DevExpress.XtraGrid.Columns.LayoutViewColumnCollection.AddVisible(System.String,System.String)">
-      <summary>
-        <para>Adds a new column with the specified caption, binds it to the specified field, and makes this column visible.</para>
-      </summary>
-      <param name="fieldName">A string that specifies the name of the field to which to bind the column. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Columns.GridColumn.FieldName"/> property.</param>
-      <param name="caption">A string that specifies the column’s caption. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Columns.GridColumn.Caption"/> property.</param>
-      <returns>The created column.</returns>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Columns.LayoutViewColumnCollection.AddVisible(System.String)">
-      <summary>
-        <para>Adds a new column, binds it to the specified field, and makes this column visible.</para>
-      </summary>
-      <param name="fieldName">A string that specifies the name of the field to which to bind the column. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Columns.GridColumn.FieldName"/> property.</param>
-      <returns>The created column.</returns>
-    </member>
     <member name="M:DevExpress.XtraGrid.Columns.LayoutViewColumnCollection.ColumnByFieldName(System.String)">
       <summary>
         <para>Returns a column by the name of the field to which it is bound.</para>
@@ -2245,7 +2218,7 @@ If this parameter has a value (it’s not null or an empty string) the val param
       <summary>
         <para>Gets or sets whether the column’s header is displayed within the Customization Form when the column is hidden.</para>
       </summary>
-      <value>true if the column’s header is displayed within the Customization Form, Filter Editor, and Conditional Formatting Rules Manager when the column is hidden; otherwise, false.</value>
+      <value>true if the column’s header is displayed within the Customization Form when the column is hidden; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraGrid.Columns.OptionsColumn.ShowInExpressionEditor">
       <summary>
@@ -2678,13 +2651,6 @@ If this parameter has a value (it’s not null or an empty string) the val param
       </summary>
       <param name="summaryType">A <see cref="T:DevExpress.Data.SummaryItemType"/> value that is the new item’s summary type. This parameter is used to initialize the <see cref="P:DevExpress.XtraGrid.GridSummaryItem.SummaryType"/> property.</param>
       <returns>A <see cref="T:DevExpress.XtraGrid.GridColumnSummaryItem"/> object that is a new summary item added to the collection.</returns>
-    </member>
-    <member name="M:DevExpress.XtraGrid.GridColumnSummaryItemCollection.Add(DevExpress.XtraGrid.GridColumnSummaryItem)">
-      <summary>
-        <para>Adds the specified summary item to the collection.</para>
-      </summary>
-      <param name="summaryItem">A summary item.</param>
-      <returns>An integer value that specifies the position of the summary item within the collection.</returns>
     </member>
     <member name="P:DevExpress.XtraGrid.GridColumnSummaryItemCollection.Item(System.Int32)">
       <summary>
@@ -3485,12 +3451,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Initializes a new instance of a <see cref="T:DevExpress.XtraGrid.GridFormatRule"/> class.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.XtraGrid.GridFormatRule.#ctor(DevExpress.XtraEditors.FormatConditionRuleBase)">
-      <summary>
-        <para>Initializes a new instance of a <see cref="T:DevExpress.XtraGrid.GridFormatRule"/> class with the specified style format rule.</para>
-      </summary>
-      <param name="rule">A style format rule.</param>
-    </member>
     <member name="P:DevExpress.XtraGrid.GridFormatRule.ApplyToRow">
       <summary>
         <para>Gets or sets whether the format is applied to an entire row.</para>
@@ -3692,13 +3652,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <param name="summaryType">A <see cref="T:DevExpress.Data.SummaryItemType"/> value that is the new item’s summary type. This parameter is used to initialize the <see cref="P:DevExpress.XtraGrid.GridSummaryItem.SummaryType"/> property.</param>
       <param name="fieldName">A string value that is the field’s name used to calculate the summary. This parameter is used to initialize the <see cref="P:DevExpress.XtraGrid.GridSummaryItem.FieldName"/> property.</param>
       <returns>A <see cref="T:DevExpress.XtraGrid.GridGroupSummaryItem"/> object that is a new summary item added to the collection.</returns>
-    </member>
-    <member name="M:DevExpress.XtraGrid.GridGroupSummaryItemCollection.Add(DevExpress.XtraGrid.GridGroupSummaryItem)">
-      <summary>
-        <para>Adds the specified group summary item to the collection.</para>
-      </summary>
-      <param name="summaryItem">A group summary item.</param>
-      <returns>An integer value that specifies the position of the group summary item within the collection.</returns>
     </member>
     <member name="P:DevExpress.XtraGrid.GridGroupSummaryItemCollection.View">
       <summary>
@@ -4154,15 +4107,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Gets or sets whether to calculate the current summary against all rows or the selection. Use this property when you enable multiple row selection (see <see cref="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsSelection.MultiSelect"/>). This property is not supported in server mode.</para>
       </summary>
       <value>A value that specifies whether the current summary is calculated against all rows or the selection.</value>
-    </member>
-    <member name="M:DevExpress.XtraGrid.GridSummaryItem.SetSummary(DevExpress.Data.SummaryItemType,System.String,System.IFormatProvider,DevExpress.Data.SummaryMode)">
-      <summary>
-        <para>Specifies the type, display format, format provider, and summary mode of the summary item.</para>
-      </summary>
-      <param name="summaryType">A summary type. This value is assigned to the <see cref="P:DevExpress.XtraGrid.GridSummaryItem.SummaryType"/> property.</param>
-      <param name="displayFormat">A string that specifies the display format. This value is assigned to the <see cref="P:DevExpress.XtraGrid.GridSummaryItem.DisplayFormat"/> property.</param>
-      <param name="format">The IFormatProvider object, which specifies how values should be formatted. This value is assigned to the <see cref="P:DevExpress.XtraGrid.GridSummaryItem.Format"/> property.</param>
-      <param name="mode">A value that specifies whether the current summary is calculated against all rows or the selection. This value is assigned to the <see cref="P:DevExpress.XtraGrid.GridSummaryItem.Mode"/> property.</param>
     </member>
     <member name="M:DevExpress.XtraGrid.GridSummaryItem.SetSummary(DevExpress.Data.SummaryItemType,System.String)">
       <summary>
@@ -4755,21 +4699,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Adds an array of column objects to the collection.</para>
       </summary>
       <param name="columns">An array of <see cref="T:DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn"/> objects to be added to the collection.</param>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumnCollection.AddVisible(System.String,System.String)">
-      <summary>
-        <para>Adds a new column with the specified caption, binds it to the specified field, and makes this column visible.</para>
-      </summary>
-      <param name="fieldName">A string that specifies the name of the field to which to bind the column. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Columns.GridColumn.FieldName"/> property.</param>
-      <param name="caption">A string that specifies the column’s caption. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Columns.GridColumn.Caption"/> property.</param>
-      <returns>The created column.</returns>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumnCollection.AddVisible(System.String)">
-      <summary>
-        <para>Adds a new column, binds it to the specified field, and makes this column visible.</para>
-      </summary>
-      <param name="fieldName">A string that specifies the name of the field to which to bind the column. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Columns.GridColumn.FieldName"/> property.</param>
-      <returns>The created column.</returns>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumnCollection.ColumnByFieldName(System.String)">
       <summary>
@@ -5448,18 +5377,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Gets or sets the band’s behavior when the View is scrolled horizontally.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraGrid.Columns.FixedStyle"/> enumeration member specifying the band behavior when the View is scrolled horizontally.</value>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.BandedGrid.GridBand.GetAccessibleDescription">
-      <summary>
-        <para>Returns the object’s description used by accessibility client applications.</para>
-      </summary>
-      <returns>The object’s description used by accessibility client applications.</returns>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.BandedGrid.GridBand.GetAccessibleName">
-      <summary>
-        <para>Returns the object’s name used by accessibility client applications.</para>
-      </summary>
-      <returns>The object’s name used by accessibility client applications.</returns>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.BandedGrid.GridBand.GetTextCaption">
       <summary>
@@ -6183,18 +6100,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <summary>
         <para>Creates a new instance of the <see cref="T:DevExpress.XtraGrid.Views.Base.BaseView"/> class.</para>
       </summary>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Base.BaseView.AccessibleDescription">
-      <summary>
-        <para>Gets or sets the object’s description used by accessibility client applications.</para>
-      </summary>
-      <value>The object’s description used by accessibility client applications.</value>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Base.BaseView.AccessibleName">
-      <summary>
-        <para>Returns the object’s name used by accessibility client applications.</para>
-      </summary>
-      <value>The object’s name used by accessibility client applications.</value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.BaseView.ActiveEditor">
       <summary>
@@ -7906,7 +7811,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <summary>
         <para>Returns the index of the data source record that corresponds to the focused grid row (card).</para>
       </summary>
-      <returns>The zero-based index of the data record that corresponds to the focused grid row (card). Returns the value of the InvalidRowHandle constant (Int.MinValue or -2147483648 by default) if no data row (card) is currently selected. If a group row is selected, returns the data source index of the first visible data row within this group.</returns>
+      <returns>An integer value representing the zero-based index of the data record that corresponds to the focused grid row (card). Returns Int.MinValue (-2147483648) if no row (card) is currently selected.</returns>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.GetFocusedDisplayText">
       <summary>
@@ -8776,7 +8681,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.AutoPopulateColumns">
       <summary>
-        <para>Gets or sets whether to create columns automatically for all fields in the underlying data source (when binding the grid and if the View doesn’t contain any columns). When bound to a data source, the grid does not generate columns for properties of collection types.</para>
+        <para>Gets or sets whether columns should be created automatically for all fields in the underlying data source when the View doesn’t contain any columns. When bound to a business object, the grid does not generate columns for properties of collection types.</para>
       </summary>
       <value>true if the columns are created automatically when the View doesn’t contain any columns; otherwise, false.</value>
     </member>
@@ -10012,7 +9917,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.RowEventArgs.RowHandle">
       <summary>
-        <para>Gets the row’s handle (position). For the <see cref="E:DevExpress.XtraGrid.Views.Base.ColumnView.RowUpdated"/> event, this property specifies the previous handle (position) of the currently processed row. <see cref="F:DevExpress.XtraGrid.GridControl.NewItemRowHandle"/> value when a new row is added.</para>
+        <para>Gets the row’s handle (position). For the <see cref="E:DevExpress.XtraGrid.Views.Base.ColumnView.RowUpdated"/> event, this property specifies the previous handle (position) of the currently processed row.</para>
       </summary>
       <value>An integer value representing the row’s handle.</value>
     </member>
@@ -11717,17 +11622,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <summary>
         <para>Provides data for the <see cref="E:DevExpress.XtraGrid.Views.Grid.GridView.ClipboardRowPasting"/> event.</para>
       </summary>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.Grid.ClipboardRowPastingEventArgs.#ctor(DevExpress.XtraGrid.Views.Printing.GridPasteRowValues,System.Collections.Generic.IEnumerable{DevExpress.XtraGrid.Columns.GridColumn},System.Object[],System.Int32,System.Int32,System.Int32)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraGrid.Views.Grid.ClipboardRowPastingEventArgs"/> class.</para>
-      </summary>
-      <param name="pasteRow">A dictionary that contains values that will be pasted to the grid.</param>
-      <param name="gridColumns">A collection of grid columns.</param>
-      <param name="originalValues">A collection of original values in the clipboard.</param>
-      <param name="rowHandle">A row handle that identifies the row being updated.</param>
-      <param name="dataRowCountCore">A value that specifies the number of rows that contain data to process (without column and band header rows).</param>
-      <param name="rowCountCore">A value that specifies the total number of rows to process (with column and band header rows).</param>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.ClipboardRowPastingEventArgs.Cancel">
       <summary>
@@ -14114,7 +14008,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsView.ShowPreview">
       <summary>
-        <para>Gets or sets whether to display the preview sections.</para>
+        <para>Gets or sets a value specifying whether preview sections are displayed.</para>
       </summary>
       <value>true, to display row preview sections; otherwise, false.</value>
     </member>
@@ -14178,11 +14072,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>A filter button is presently pressed.</para>
       </summary>
     </member>
-    <member name="F:DevExpress.XtraGrid.Views.Grid.GridState.ColumnHeaderSearchButtonDown">
-      <summary>
-        <para>A column header search button is pressed.</para>
-      </summary>
-    </member>
     <member name="F:DevExpress.XtraGrid.Views.Grid.GridState.ColumnSizing">
       <summary>
         <para>A column’s right edge is being dragged to change the column’s width. The desired column’s <see cref="P:DevExpress.XtraGrid.Columns.OptionsColumn.AllowSize"/> option must be enabled to allow such resizing.</para>
@@ -14216,21 +14105,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     <member name="F:DevExpress.XtraGrid.Views.Grid.GridState.FilterPanelTextPressed">
       <summary>
         <para>The string in the filter panel which represents the filter criteria applied to a View is pressed. This shows/hides a dropdown window with a list of the most recently used filter criteria.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraGrid.Views.Grid.GridState.GroupPanelColumnHeaderSearchButtonDown">
-      <summary>
-        <para>The Search button displayed within the group panel is pressed.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraGrid.Views.Grid.GridState.GroupPanelFindPanelButtonPressed">
-      <summary>
-        <para>The Find panel’s Find button is pressed.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraGrid.Views.Grid.GridState.HeaderSearchEditing">
-      <summary>
-        <para>The user types within the column header (in column header search).</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraGrid.Views.Grid.GridState.IncrementalSearch">
@@ -14295,20 +14169,11 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
       <returns>The created unbound column. null if an end-user didn’t specify an expression for the column.</returns>
     </member>
-    <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.AddUnboundColumn(System.String,System.String,System.Type)">
-      <summary>
-        <para>Creates an unbound column with the specified name, caption, and unbound data type. Opens the Expression Editor to allow a \user to specify an expression for the column.</para>
-      </summary>
-      <param name="columnName">A string that specifies the column’s name. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Columns.GridColumn.Name"/> property. Must be a unique value.</param>
-      <param name="caption">The column’s caption. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Columns.GridColumn.Caption"/> property.</param>
-      <param name="dataType">The type of data to store in the unbound column. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Columns.GridColumn.UnboundDataType"/> property.</param>
-      <returns>The created unbound column. null if the user has not specified an expression for the column.</returns>
-    </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.AddUnboundColumn(System.String,System.String)">
       <summary>
         <para>Creates an unbound column with the specified name and display caption and opens the Expression Editor to allow an end-user to specify an expression for the column.</para>
       </summary>
-      <param name="columnName">A string to be assigned to the <see cref="P:DevExpress.XtraGrid.Columns.GridColumn.Name"/> property. Must be a unique value.</param>
+      <param name="columnName">A string to be assigned to the <see cref="P:DevExpress.XtraGrid.Columns.GridColumn.Name"/> property.</param>
       <param name="caption">The column’s display caption. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Columns.GridColumn.Caption"/> property.</param>
       <returns>The created unbound column. null if an end-user didn’t specify an expression for the column.</returns>
     </member>
@@ -17451,26 +17316,6 @@ The <see cref="F:DevExpress.XtraGrid.GridControl.InvalidRowHandle"/> value if th
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraGrid.Views.Items.ItemsView"/> class.</para>
       </summary>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.Items.ItemsView.BindCommand(System.Object,System.String,System.Func{System.Object})">
-      <summary>
-        <para>Binds the specific parameterized MVVM command to an HTML element.</para>
-      </summary>
-      <param name="command">The command to be bound to this HTML element.</param>
-      <param name="elementId">The unique element ID.</param>
-      <param name="queryCommandParameter">A Func delegate that passes the specific Object to the command as a parameter.</param>
-      <returns>An IDisposable object. Disposing of this object unbinds the command from this HTML element.</returns>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.Items.ItemsView.BindCommand``1(System.Linq.Expressions.Expression{System.Action{``0}},System.Object,System.String,System.Func{``0})">
-      <summary>
-        <para>Uses the command selector to find an appropriate parameterized MVVM command of the target type in the source, and binds this command to the target HTML element.</para>
-      </summary>
-      <param name="commandSelector">An Expression that selects the appropriate command from the source object.</param>
-      <param name="source">An Object (typically, a ViewModel) where the commandSelector looks for the required command.</param>
-      <param name="elementId">The unique ID of the target HTML element.</param>
-      <param name="queryCommandParameter">A Func delegate that passes the specific Object to the command as a parameter.</param>
-      <typeparam name="T">The type of a ViewModel that stores a bindable command.</typeparam>
-      <returns>An IDisposable object. Disposing of this object unbinds the command from this HTML element.</returns>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Items.ItemsView.CustomizeItem">
       <summary>
@@ -20683,36 +20528,6 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       <summary>
         <para>Begins the runtime initialization of this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/>.</para>
       </summary>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.BindCommand(System.Linq.Expressions.Expression{System.Action},System.Object,System.String,System.Func{System.Object})">
-      <summary>
-        <para>Uses the command selector to find an appropriate parameterized MVVM command in the source, and binds this command to the target HTML element.</para>
-      </summary>
-      <param name="commandSelector">An Expression that selects the appropriate command from the source object.</param>
-      <param name="source">An Object (typically, a ViewModel) where the commandSelector looks for the required command.</param>
-      <param name="elementId">The unique ID of the target HTML element.</param>
-      <param name="queryCommandParameter">A Func delegate that passes the specific Object to the command as a parameter.</param>
-      <returns>An IDisposable object. Disposing of this object unbinds the command from this navigation element.</returns>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.BindCommand(System.Object,System.String,System.Func{System.Object})">
-      <summary>
-        <para>Binds the specific parameterized MVVM command to an HTML element.</para>
-      </summary>
-      <param name="command">The command to be bound to this HTML element.</param>
-      <param name="elementId">The unique element ID.</param>
-      <param name="queryCommandParameter">A Func delegate that passes the specific Object to the command as a parameter.</param>
-      <returns>An IDisposable object. Disposing of this object unbinds the command from this HTML element.</returns>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.BindCommand``1(System.Linq.Expressions.Expression{System.Action{``0}},System.Object,System.String,System.Func{``0})">
-      <summary>
-        <para>Uses the command selector to find an appropriate parameterized MVVM command of the target type in the source, and binds this command to the target HTML element.</para>
-      </summary>
-      <param name="commandSelector">An Expression that selects the appropriate command from the source object.</param>
-      <param name="source">An Object (typically, a ViewModel) where the commandSelector looks for the required command.</param>
-      <param name="elementId">The unique ID of the target HTML element.</param>
-      <param name="queryCommandParameter">A Func delegate that passes the specific Object to the command as a parameter.</param>
-      <typeparam name="T">The type of a ViewModel that stores a bindable command.</typeparam>
-      <returns>An IDisposable object. Disposing of this object unbinds the command from this HTML element.</returns>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.CalcHitInfo(System.Drawing.Point)">
       <summary>

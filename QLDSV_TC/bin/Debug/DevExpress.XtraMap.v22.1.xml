@@ -14834,7 +14834,7 @@
     </member>
     <member name="T:DevExpress.XtraMap.SqlGeometryDataAdapterBase">
       <summary>
-        <para>This class provides the base functionality to provide data from a SQL Geometry data source.</para>
+        <para>This class provides the base functionality to provide data from a SQL Geometry datasource.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraMap.SqlGeometryItem">

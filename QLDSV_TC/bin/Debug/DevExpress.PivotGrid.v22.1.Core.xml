@@ -4914,8 +4914,8 @@
       <summary>
         <para>Returns a cell value by the column and row indexes.</para>
       </summary>
-      <param name="columnIndex">A zero-based integer that identifies the visible index of the column.</param>
-      <param name="rowIndex">A zero-based integer that identifies the visible index of the row.</param>
+      <param name="columnIndex">A zero-based integer which identifies the visible index of the column.</param>
+      <param name="rowIndex">A zero-based integer which identifies the visible index of the row.</param>
       <returns>A value displayed in the specified cell.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.GetCellValue(System.Object[],System.Object[],`0)">
@@ -4929,7 +4929,7 @@
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.GetColumnFields">
       <summary>
-        <para>Returns an array of column fields that correspond to the current cell.</para>
+        <para>Returns an array of column fields which correspond to the current cell.</para>
       </summary>
       <returns>An array of column fields.</returns>
     </member>
@@ -4952,16 +4952,16 @@
       <summary>
         <para>Returns the specified column or row field’s value for the cell, addressed by its zero-based index in the data area.</para>
       </summary>
-      <param name="field">A column or row field, whose value is to be obtained.</param>
-      <param name="cellIndex">A zero-based index of a cell in the data area that identifies the field value. Indexes starts from the left edge for column fields, and from the top edge for row fields.</param>
-      <returns>The field value.</returns>
+      <param name="field">A T object representing a column or row field, whose value is to be obtained.</param>
+      <param name="cellIndex">A zero-based index of a cell in the Data Area that identifies the required field value. Indexes are numbered starting from the left edge for column fields, and from the top edge for row fields.</param>
+      <returns>An object representing the field’s value.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.GetFieldValue(`0)">
       <summary>
-        <para>Returns the value of the specified column or row field that identifies the column/row in which the processed cell resides.</para>
+        <para>Returns the value of the specified column or row field which identifies the column/row in which the processed cell resides.</para>
       </summary>
-      <param name="field">A T object that identifies the field whose value is returned.</param>
-      <returns>The field value.</returns>
+      <param name="field">A T object which represents the field whose value is returned.</param>
+      <returns>An object representing the field’s value.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.GetGrandTotal(`0)">
       <summary>
@@ -5000,7 +5000,7 @@
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.GetRowFields">
       <summary>
-        <para>Returns an array of the row fields that correspond to the current cell.</para>
+        <para>Returns an array of the row fields which correspond to the current cell.</para>
       </summary>
       <returns>An array of row fields.</returns>
     </member>
@@ -5048,7 +5048,7 @@
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.RowField">
       <summary>
-        <para>Gets the innermost row field that corresponds to the processed cell.</para>
+        <para>Gets the innermost row field which corresponds to the processed cell.</para>
       </summary>
       <value>A T object that is the row field.</value>
     </member>
@@ -5065,9 +5065,9 @@
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.RowValueType">
       <summary>
-        <para>Gets the type of row that contains the processed cell.</para>
+        <para>Gets the type of row which contains the processed cell.</para>
       </summary>
-      <value>A <see cref="T:DevExpress.XtraPivotGrid.PivotGridValueType"/> enumeration value that specifies the type of row in which the processed cell resides.</value>
+      <value>A <see cref="T:DevExpress.XtraPivotGrid.PivotGridValueType"/> enumeration value which specifies the type of row in which the processed cell resides.</value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.SummaryType">
       <summary>

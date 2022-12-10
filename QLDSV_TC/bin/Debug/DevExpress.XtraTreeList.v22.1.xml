@@ -761,18 +761,6 @@
       </summary>
       <value>A value that specifies the band’s behavior when the <see cref="T:DevExpress.XtraTreeList.TreeList"/> control is scrolled horizontally.</value>
     </member>
-    <member name="M:DevExpress.XtraTreeList.Columns.TreeListBand.GetAccessibleDescription">
-      <summary>
-        <para>Returns the object’s description used by accessibility client applications.</para>
-      </summary>
-      <returns>The object’s description used by accessibility client applications.</returns>
-    </member>
-    <member name="M:DevExpress.XtraTreeList.Columns.TreeListBand.GetAccessibleName">
-      <summary>
-        <para>Returns the object’s name used by accessibility client applications.</para>
-      </summary>
-      <returns>The object’s name used by accessibility client applications.</returns>
-    </member>
     <member name="M:DevExpress.XtraTreeList.Columns.TreeListBand.GetCaption">
       <summary>
         <para>Returns the band’s caption.</para>
@@ -1204,18 +1192,6 @@
         <para>Gets the object that specifies the formatting applied to column values.</para>
       </summary>
       <value>A <see cref="T:DevExpress.Utils.FormatInfo"/> object that specifies formatting settings for column values.</value>
-    </member>
-    <member name="M:DevExpress.XtraTreeList.Columns.TreeListColumn.GetAccessibleDescription">
-      <summary>
-        <para>Returns the object’s description used by accessibility client applications.</para>
-      </summary>
-      <returns>The object’s description used by accessibility client applications.</returns>
-    </member>
-    <member name="M:DevExpress.XtraTreeList.Columns.TreeListColumn.GetAccessibleName">
-      <summary>
-        <para>Returns the object’s name used by accessibility client applications.</para>
-      </summary>
-      <returns>The object’s name used by accessibility client applications.</returns>
     </member>
     <member name="M:DevExpress.XtraTreeList.Columns.TreeListColumn.GetCaption">
       <summary>

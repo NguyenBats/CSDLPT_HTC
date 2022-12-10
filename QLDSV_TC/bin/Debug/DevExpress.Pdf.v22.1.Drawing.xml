@@ -1249,37 +1249,6 @@
         <para>The resulting Jpeg image quality is medium.</para>
       </summary>
     </member>
-    <member name="T:DevExpress.Pdf.PdfPageRenderingParameters">
-      <summary>
-        <para>Contains rendering parameters used to export a PDF page to a Bitmap image.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfPageRenderingParameters.Create(System.Int32)">
-      <summary>
-        <para>Creates a new PdfPageRenderingParameters instance with the specified image’s largest dimension length.</para>
-      </summary>
-      <param name="largestEdgeLength">The largest dimension length, in pixels.</param>
-      <returns>A new PdfPageRenderingParameters instance with the specified LargestEdgeLength property.</returns>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfPageRenderingParameters.CreateWithResolution(System.Single)">
-      <summary>
-        <para>Creates a new PdfPageRenderingParameters instance with the specified image DPI.</para>
-      </summary>
-      <param name="dpi">An image DPI.</param>
-      <returns>A new PdfPageRenderingParameters instance with the specified Dpi property.</returns>
-    </member>
-    <member name="P:DevExpress.Pdf.PdfPageRenderingParameters.Dpi">
-      <summary>
-        <para>Obtains the predefined resolution of a converted page.</para>
-      </summary>
-      <value>An image DPI.</value>
-    </member>
-    <member name="P:DevExpress.Pdf.PdfPageRenderingParameters.LargestEdgeLength">
-      <summary>
-        <para>Gets the length of an image’s largest dimension.</para>
-      </summary>
-      <value>The largest dimension length, in pixels.</value>
-    </member>
     <member name="T:DevExpress.Pdf.PdfPrinterSettings">
       <summary>
         <para>Provides the additional printer settings to a PDF Viewer.</para>

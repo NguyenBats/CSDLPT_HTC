@@ -17,8 +17,8 @@ namespace QLDSV_TC
         /// </summary>
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
-        public static String connstr_publisher = "Data Source=188702-NDTu;Initial Catalog=QLDSV_TC;User ID=sa;password=123";
-        public static String connstr_site3 = "Data Source=188702-NDTu\\MSSQLSERVER3;Initial Catalog=QLDSV_TC;User ID=sa;password=123";
+        public static String connstr_publisher = "Data Source=165067-NTDUY;Initial Catalog=QLDSV_TC;User ID=sa;password=12";
+        public static String connstr_site3 = "Data Source=165067-NTDUY\\MSSQLSERVER3;Initial Catalog=QLDSV_TC;User ID=sa;password=123";
         public static SqlDataReader myReader;
         public static String servername = "188702-NDTu";
         public static String username = "";
@@ -53,7 +53,7 @@ namespace QLDSV_TC
             }
             catch (Exception e)
             {
-               // MessageBox.Show("Lỗi kết nối về cơ sở dữ liệu gốc. \nBạn xem lại username và password.\n " + e.Message);
+                // MessageBox.Show("Lỗi kết nối về cơ sở dữ liệu gốc. \nBạn xem lại username và password.\n " + e.Message);
                 return 0;
             }
         }
@@ -101,10 +101,29 @@ namespace QLDSV_TC
             }
             catch (SqlException e)
             {
-                if (e.Message.Contains("Error converting  data type varchar to int"))
-                    MessageBox.Show("Bạn format Cell lại cột \"Ngày thi\" qua kiểu Number hoặc mở File Excel.");
-                else
-                    MessageBox.Show(e.Message);
+
+                MessageBox.Show(e.Message);
+                Program.conn.Close();
+                return e.State; //Trạng thái lỗi gửi từ RAISERROR trong SQL Server qua
+            }
+        }
+
+        public static int ExecSqlToInt(String strLenh)
+        {
+            SqlCommand sqlcmd = new SqlCommand(strLenh, Program.conn);
+            sqlcmd.CommandType = CommandType.Text;
+            sqlcmd.CommandTimeout = 600; //10phut
+            if (Program.conn.State == ConnectionState.Closed) Program.conn.Open();
+            try
+            {
+                int result = Convert.ToInt32(sqlcmd.ExecuteScalar());
+                Program.conn.Close();
+                return result;
+            }
+            catch (SqlException e)
+            {
+
+                MessageBox.Show(e.Message);
                 Program.conn.Close();
                 return e.State; //Trạng thái lỗi gửi từ RAISERROR trong SQL Server qua
             }

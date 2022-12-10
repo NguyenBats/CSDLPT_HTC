@@ -60,6 +60,18 @@
       <param name="filePath">The full path (including the file name and extension) where the image file will be created.</param>
       <param name="format">The image format.</param>
     </member>
+    <member name="M:DevExpress.XtraTreeMap.HierarchicalChartControlBase.ExportToMht(System.IO.Stream)">
+      <summary>
+        <para>Exports a treemap/sunburst to the specified stream in the MHT format.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> descendant class object to which the created MHT file should be sent.</param>
+    </member>
+    <member name="M:DevExpress.XtraTreeMap.HierarchicalChartControlBase.ExportToMht(System.String)">
+      <summary>
+        <para>Exports a treemap or sunburst to the specified file in the MHT format.</para>
+      </summary>
+      <param name="filePath">The full path (including the file name and extension) where the MHT file will be created.</param>
+    </member>
     <member name="M:DevExpress.XtraTreeMap.HierarchicalChartControlBase.ExportToPdf(System.IO.Stream,DevExpress.XtraPrinting.PdfExportOptions)">
       <summary>
         <para>Exports a treemap/sunburst to the specified stream in the PDF format using the specified export options.</para>
@@ -67,12 +79,60 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> descendant class object to which the created PDF file should be sent.</param>
       <param name="options">The object that stores options for export to the PDF format.</param>
     </member>
+    <member name="M:DevExpress.XtraTreeMap.HierarchicalChartControlBase.ExportToPdf(System.IO.Stream)">
+      <summary>
+        <para>Exports a treemap or sunburst to the specified stream in the PDF format.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> descendant class object to which the created PDF file should be sent.</param>
+    </member>
     <member name="M:DevExpress.XtraTreeMap.HierarchicalChartControlBase.ExportToPdf(System.String,DevExpress.XtraPrinting.PdfExportOptions)">
       <summary>
         <para>Exports a treemap or sunburst to the specified file in the PDF format using the specified export options.</para>
       </summary>
       <param name="filePath">The full path (including the file name and extension) where the PDF file will be created.</param>
       <param name="options">The object that stores options for export to the PDF format.</param>
+    </member>
+    <member name="M:DevExpress.XtraTreeMap.HierarchicalChartControlBase.ExportToPdf(System.String)">
+      <summary>
+        <para>Exports a treemap or sunburst to the specified file in the PDF format.</para>
+      </summary>
+      <param name="filePath">The full path (including the file name and extension) where the RTF file will be created.</param>
+    </member>
+    <member name="M:DevExpress.XtraTreeMap.HierarchicalChartControlBase.ExportToRtf(System.IO.Stream)">
+      <summary>
+        <para>Exports a treemap/sunburst to the specified stream in the RTF format.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> descendant class object to which the created RTF file should be sent.</param>
+    </member>
+    <member name="M:DevExpress.XtraTreeMap.HierarchicalChartControlBase.ExportToRtf(System.String)">
+      <summary>
+        <para>Exports a treemap/sunburst to the specified file in the RTF format.</para>
+      </summary>
+      <param name="filePath">The full path (including the file name and extension) where the RTF file is created.</param>
+    </member>
+    <member name="M:DevExpress.XtraTreeMap.HierarchicalChartControlBase.ExportToXls(System.IO.Stream)">
+      <summary>
+        <para>Exports a treemap/sunburst to the specified file in the XLS format.</para>
+      </summary>
+      <param name="stream">The full path (including the file name and extension) where the XLS file will be created.</param>
+    </member>
+    <member name="M:DevExpress.XtraTreeMap.HierarchicalChartControlBase.ExportToXls(System.String)">
+      <summary>
+        <para>Exports a treemap/sunburst to the specified file in the XLS format.</para>
+      </summary>
+      <param name="filePath">The full path (including the file name and extension) where the XLS file will be created.</param>
+    </member>
+    <member name="M:DevExpress.XtraTreeMap.HierarchicalChartControlBase.ExportToXlsx(System.IO.Stream)">
+      <summary>
+        <para>Exports a treemap/sunburst to the specified stream in the XLSX format.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> descendant class object to which the created XLSX file should be sent.</param>
+    </member>
+    <member name="M:DevExpress.XtraTreeMap.HierarchicalChartControlBase.ExportToXlsx(System.String)">
+      <summary>
+        <para>Exports a treemap/sunburst to the specified file in the XLSX format.</para>
+      </summary>
+      <param name="filePath">The full path (including the file name and extension) where the XLSX file will be created.</param>
     </member>
     <member name="P:DevExpress.XtraTreeMap.HierarchicalChartControlBase.Groups">
       <summary>

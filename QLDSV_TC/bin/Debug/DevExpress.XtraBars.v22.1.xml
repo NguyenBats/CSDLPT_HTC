@@ -2959,9 +2959,9 @@
     </member>
     <member name="P:DevExpress.XtraBars.BarItem.Caption">
       <summary>
-        <para>The bar item’s caption.</para>
+        <para>A string containing the item’s caption.</para>
       </summary>
-      <value>A string that specifies the bar item’s caption.</value>
+      <value>A string that specifies the item’s caption.</value>
     </member>
     <member name="P:DevExpress.XtraBars.BarItem.Category">
       <summary>
@@ -5245,7 +5245,7 @@
     </member>
     <member name="E:DevExpress.XtraBars.BarManager.CustomDrawItem">
       <summary>
-        <para>Allows you to manually paint bar item links.</para>
+        <para>Allows you to manually paint any <see cref="T:DevExpress.XtraBars.BarButtonItemLink"/> within this <see cref="T:DevExpress.XtraBars.BarManager"/>.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraBars.BarManager.Customize">
@@ -5340,7 +5340,7 @@
     </member>
     <member name="M:DevExpress.XtraBars.BarManager.GetNewItemId">
       <summary>
-        <para>This method is intended for internal use. Returns the new unique identifier of an item.</para>
+        <para>Returns the new unique identifier of an item.</para>
       </summary>
       <returns>An integer value representing the unique identifier of an item within the BarManager.</returns>
     </member>
@@ -18215,11 +18215,6 @@
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.Docking2010.WindowsUISeparator"/> class with the default settings.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.XtraBars.Docking2010.WindowsUISeparator.#ctor(System.Drawing.Image,System.Boolean,System.Int32,System.Boolean,DevExpress.Utils.AppearanceObject)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.Docking2010.WindowsUISeparator"/> class with specified settings.</para>
-      </summary>
-    </member>
     <member name="M:DevExpress.XtraBars.Docking2010.WindowsUISeparator.#ctor(System.Drawing.Image,System.Boolean,System.Int32,System.Boolean)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.Docking2010.WindowsUISeparator"/> class with specified settings.</para>
@@ -29830,12 +29825,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.Ribbon.RibbonEmptyAreaImageOptions"/> class.</para>
       </summary>
-    </member>
-    <member name="P:DevExpress.XtraBars.Ribbon.RibbonEmptyAreaImageOptions.AlwaysVisible">
-      <summary>
-        <para>Gets or sets whether the Ribbon can clip the Empty Area Image when there is not enough free space to display this image according to its SizeMode.</para>
-      </summary>
-      <value>true to allow partially visible Empty Area Images; false to hide an Empty Area Image if there is not enough free space to display it.</value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonEmptyAreaImageOptions.ImageAlignment">
       <summary>

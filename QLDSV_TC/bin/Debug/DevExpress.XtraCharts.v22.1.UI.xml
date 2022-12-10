@@ -418,12 +418,24 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> class descendant object to which the created document is exported.</param>
       <param name="options">The object containing extra options for exporting, like author and title.</param>
     </member>
+    <member name="M:DevExpress.XtraCharts.ChartControl.ExportToDocx(System.IO.Stream)">
+      <summary>
+        <para>Exports the chart to the specified stream like the docx file.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> class descendant object to which the created document is exported.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.ChartControl.ExportToDocx(System.String,DevExpress.XtraPrinting.DocxDocumentOptions)">
       <summary>
         <para>Exports the chart to a file under the specified path with the specified export options.</para>
       </summary>
       <param name="filePath">The full path (including the file name and extension)  where the docx file should be created.</param>
       <param name="options">The object containing extra options for exporting, like author and title.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.ChartControl.ExportToDocx(System.String)">
+      <summary>
+        <para>Exports the chart to a file under the specified path.</para>
+      </summary>
+      <param name="filePath">The full path (including the file name and extension)  where the docx file should be created.</param>
     </member>
     <member name="M:DevExpress.XtraCharts.ChartControl.ExportToHtml(System.IO.Stream,DevExpress.XtraPrinting.HtmlExportOptions)">
       <summary>
@@ -441,6 +453,12 @@
       <param name="title">A <see cref="T:System.String"/> which specifies the name shown as the title of the created HTML document.</param>
       <param name="compressed">true to compress the HTML code (secondary characters e.g. spaces are removed); otherwise, false.</param>
     </member>
+    <member name="M:DevExpress.XtraCharts.ChartControl.ExportToHtml(System.IO.Stream)">
+      <summary>
+        <para>Exports the chart’s layout as HTML and sends it to the specified stream.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created document is exported.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.ChartControl.ExportToHtml(System.String,DevExpress.XtraPrinting.HtmlExportOptions)">
       <summary>
         <para>Exports a chart to the specified file path in HTML format using the specified HTML-specific options.</para>
@@ -456,6 +474,12 @@
       <param name="htmlCharSet">A <see cref="T:System.String"/> which specifies the encoding name set in the HTML file (e.g. “UTF-8”).</param>
       <param name="title">A <see cref="T:System.String"/> which specifies the name shown as the title of the created HTML document.</param>
       <param name="compressed">true to compress the HTML code (secondary characters e.g. spaces are removed); otherwise, false.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.ChartControl.ExportToHtml(System.String)">
+      <summary>
+        <para>Exports the chart’s layout a to the specified file as HTML.</para>
+      </summary>
+      <param name="filePath">A <see cref="T:System.String"/> which specifies the full path (including the file name and extension) to where the HTML file will be created.</param>
     </member>
     <member name="M:DevExpress.XtraCharts.ChartControl.ExportToImage(System.IO.Stream,System.Drawing.Imaging.ImageFormat)">
       <summary>
@@ -503,6 +527,12 @@
       <param name="title">A <see cref="T:System.String"/> which specifies the name shown as the title of the created MHT document.</param>
       <param name="compressed">true to compress the MHT code (secondary characters e.g. spaces are removed); otherwise, false.</param>
     </member>
+    <member name="M:DevExpress.XtraCharts.ChartControl.ExportToMht(System.String)">
+      <summary>
+        <para>Exports the chart’s layout to an MHT file (Web archive, single file) at the specified path.</para>
+      </summary>
+      <param name="filePath">A <see cref="T:System.String"/> specifying the full path (including the file name and extension) where the MHT file will be created.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.ChartControl.ExportToPdf(System.IO.Stream,DevExpress.XtraPrinting.PdfExportOptions)">
       <summary>
         <para>Exports the chart’s data to a PDF document and sends it to the specified stream, with the specified options.</para>
@@ -510,12 +540,36 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created document is exported.</param>
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.PdfExportOptions"/> object, containing the options for the resulting PDF file.</param>
     </member>
+    <member name="M:DevExpress.XtraCharts.ChartControl.ExportToPdf(System.IO.Stream)">
+      <summary>
+        <para>Exports the chart’s layout to a PDF document and sends it to the specified stream.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created document is exported.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.ChartControl.ExportToPdf(System.String,DevExpress.XtraPrinting.PdfExportOptions)">
       <summary>
         <para>Exports the chart’s data to the specified PDF file, with the specified options.</para>
       </summary>
       <param name="filePath">A <see cref="T:System.String"/> specifying the full path (including the file name and extension)  where the PDF file will be created.</param>
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.PdfExportOptions"/> object, containing the options for the resulting PDF file.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.ChartControl.ExportToPdf(System.String)">
+      <summary>
+        <para>Exports the chart’s layout to the specified PDF file.</para>
+      </summary>
+      <param name="filePath">A <see cref="T:System.String"/> specifying the full path (including the file name and extension)  where the PDF file will be created.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.ChartControl.ExportToRtf(System.IO.Stream)">
+      <summary>
+        <para>Exports the chart’s data to an RTF document, and sends it to the specified stream.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created document is exported.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.ChartControl.ExportToRtf(System.String)">
+      <summary>
+        <para>Exports the chart’s data to the specified RTF file.</para>
+      </summary>
+      <param name="filePath">A <see cref="T:System.String"/> specifying the full path (including the file name and extension)  where the RTF file will be created.</param>
     </member>
     <member name="M:DevExpress.XtraCharts.ChartControl.ExportToSvg(System.IO.Stream)">
       <summary>
@@ -536,12 +590,24 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created document is exported.</param>
       <param name="options">An <see cref="T:DevExpress.XtraPrinting.XlsExportOptions"/> object, containing the options for the resulting XLS file.</param>
     </member>
+    <member name="M:DevExpress.XtraCharts.ChartControl.ExportToXls(System.IO.Stream)">
+      <summary>
+        <para>Creates an XLS document with a chart inserted as an image and sends it to a stream.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created document is exported.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.ChartControl.ExportToXls(System.String,DevExpress.XtraPrinting.XlsExportOptions)">
       <summary>
         <para>Creates an XLS file with a chart inserted as an image, with the specified options.</para>
       </summary>
       <param name="filePath">A <see cref="T:System.String"/> specifying the full path (including the file name and extension)  where the XLS file will be created.</param>
       <param name="options">An <see cref="T:DevExpress.XtraPrinting.XlsExportOptions"/> object, containing the options for the resulting XLS file.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.ChartControl.ExportToXls(System.String)">
+      <summary>
+        <para>Creates an XLS file with a chart inserted as an image.</para>
+      </summary>
+      <param name="filePath">A <see cref="T:System.String"/> which specifies the full path (including the file name and extension) to where the XLS file will be created.</param>
     </member>
     <member name="M:DevExpress.XtraCharts.ChartControl.ExportToXlsx(System.IO.Stream,DevExpress.XtraPrinting.XlsxExportOptions)">
       <summary>
@@ -550,12 +616,24 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created document is exported.</param>
       <param name="options">An <see cref="T:DevExpress.XtraPrinting.XlsxExportOptions"/> object, containing the options for the resulting XLSX file.</param>
     </member>
+    <member name="M:DevExpress.XtraCharts.ChartControl.ExportToXlsx(System.IO.Stream)">
+      <summary>
+        <para>Creates an XLSX document with a chart inserted as an image and sends it to a stream.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created document is exported.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.ChartControl.ExportToXlsx(System.String,DevExpress.XtraPrinting.XlsxExportOptions)">
       <summary>
         <para>Creates an XLSX file with a chart inserted as an image, with the specified options.</para>
       </summary>
       <param name="filePath">A <see cref="T:System.String"/> specifying the full path (including the file name and extension)  where the XLSX file will be created.</param>
       <param name="options">An <see cref="T:DevExpress.XtraPrinting.XlsxExportOptions"/> object, containing the options for the resulting XLSX file.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.ChartControl.ExportToXlsx(System.String)">
+      <summary>
+        <para>Creates an XLSX file with a chart inserted as an image.</para>
+      </summary>
+      <param name="filePath">A <see cref="T:System.String"/> specifying the full path (including the file name and extension)  where the XLS file will be created.</param>
     </member>
     <member name="P:DevExpress.XtraCharts.ChartControl.FillStyle">
       <summary>
@@ -1225,6 +1303,18 @@
       </summary>
       <value>true if the heatmap can be zoomed vertically (along a y-axis); otherwise, false.</value>
     </member>
+    <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToDocx(System.IO.Stream)">
+      <summary>
+        <para>Exports the control in the Office Open XML file format (DOCX file) and sends it to the specified stream.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object that specifies the stream to which the document should be sent.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToDocx(System.String)">
+      <summary>
+        <para>Exports the control in the Office Open XML file format and saves it to the specified DOCX file.</para>
+      </summary>
+      <param name="filePath">A string value which specifies the full path (including the file name and extension) where the DOCX file should be created.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToHtml(System.IO.Stream,DevExpress.XtraPrinting.HtmlExportOptions)">
       <summary>
         <para>Exports the control to the specified stream in HTML format.</para>
@@ -1232,12 +1322,24 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created document is exported.</param>
       <param name="options">An object that specifies the HTML export options to be applied when a diagram is exported.</param>
     </member>
+    <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToHtml(System.IO.Stream)">
+      <summary>
+        <para>Exports the control to the specified stream in HTML format.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created document is exported.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToHtml(System.String,DevExpress.XtraPrinting.HtmlExportOptions)">
       <summary>
         <para>Exports the control to the specified file in HTML format.</para>
       </summary>
       <param name="filePath">A string that specifies the full path to the file to which the control is exported.</param>
       <param name="options">An object that specifies the HTML export options to be applied when a diagram is exported.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToHtml(System.String)">
+      <summary>
+        <para>Exports the control to the specified file in HTML format.</para>
+      </summary>
+      <param name="filePath">A string that specifies the full path to the file to which the control is exported.</param>
     </member>
     <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToImage(System.IO.Stream,System.Drawing.Imaging.ImageFormat)">
       <summary>
@@ -1267,6 +1369,12 @@
       <param name="filePath">The file name (including the full path) for the created MHT file.</param>
       <param name="options">Export options.</param>
     </member>
+    <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToMht(System.String)">
+      <summary>
+        <para>Exports the diagram to an MHT file.</para>
+      </summary>
+      <param name="filePath">A <see cref="T:System.String"/> that specifies the file name (including the full path) for the resulting MHT file.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToPdf(System.IO.Stream,DevExpress.XtraPrinting.PdfExportOptions)">
       <summary>
         <para>Exports the chart’s data to a PDF document and sends it to the stream.</para>
@@ -1274,12 +1382,36 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created document is exported.</param>
       <param name="options">Contains options for the resulting PDF file.</param>
     </member>
+    <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToPdf(System.IO.Stream)">
+      <summary>
+        <para>Exports the chart’s data to a PDF document and sends it to the specified stream.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created document is exported.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToPdf(System.String,DevExpress.XtraPrinting.PdfExportOptions)">
       <summary>
         <para>Exports the diagram image to a PDF file with the specified path.</para>
       </summary>
       <param name="filePath">A file path that includes the file name and extension.</param>
       <param name="options">Contains settings applied to the resulting PDF file.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToPdf(System.String)">
+      <summary>
+        <para>Exports the diagram image to a PDF file with the specified path.</para>
+      </summary>
+      <param name="filePath">A file path that includes the file name and extension.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToRtf(System.IO.Stream)">
+      <summary>
+        <para>Exports the control to a stream in RTF format.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the data is exported.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToRtf(System.String)">
+      <summary>
+        <para>Exports the control to an RTF document with the given path.</para>
+      </summary>
+      <param name="filePath">A file path that includes the file name and extension, where the file should be created.</param>
     </member>
     <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToSvg(System.IO.Stream)">
       <summary>
@@ -1300,12 +1432,24 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> descendant class object to which the file should be sent.</param>
       <param name="options">Contains settings that are applied to the exported document.</param>
     </member>
+    <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToXls(System.IO.Stream)">
+      <summary>
+        <para>Creates an XLS document with the diagram inserted as an image and sends it to a stream.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> descendant class object to which the file should be sent.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToXls(System.String,DevExpress.XtraPrinting.XlsExportOptions)">
       <summary>
         <para>Exports the diagram to an XLS file with given parameters.</para>
       </summary>
       <param name="filePath">A file path that includes the file name and extension, where the file should be created.</param>
       <param name="options">Options that apply to the resulting document.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToXls(System.String)">
+      <summary>
+        <para>Exports the diagram to an XLS file with given parameters.</para>
+      </summary>
+      <param name="filePath">A file path that includes the file name and extension, where the file should be created.</param>
     </member>
     <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToXlsx(System.IO.Stream,DevExpress.XtraPrinting.XlsxExportOptions)">
       <summary>
@@ -1314,12 +1458,24 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> descendant class object to which the file should be sent.</param>
       <param name="options">Contains settings that apply to the exported document.</param>
     </member>
+    <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToXlsx(System.IO.Stream)">
+      <summary>
+        <para>Creates an XLSX document with the diagram inserted as an image and sends it to a stream.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> descendant class object to which the file should be sent.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToXlsx(System.String,DevExpress.XtraPrinting.XlsxExportOptions)">
       <summary>
         <para>Exports the diagram to an XLSX file with given parameters.</para>
       </summary>
       <param name="filePath">A file path that includes the file name and extension, where the file should be created.</param>
       <param name="options">Contains settings that apply to the exported document.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.ExportToXlsx(System.String)">
+      <summary>
+        <para>Exports the diagram to an XLS file with given parameters.</para>
+      </summary>
+      <param name="filePath">A file path that includes the file name and extension.</param>
     </member>
     <member name="M:DevExpress.XtraCharts.Heatmap.HeatmapControl.GetToolTipController">
       <summary>
@@ -1562,6 +1718,18 @@
       </summary>
       <value>true if Sankey items can be highlighted; otherwise, false. The default value is true.</value>
     </member>
+    <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToDocx(System.IO.Stream)">
+      <summary>
+        <para>Exports the control in the Office Open XML file format (DOCX file) and sends it to the specified stream.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object that specifies the stream to which the document should be sent.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToDocx(System.String)">
+      <summary>
+        <para>Exports the control in the Office Open XML file format and saves it to the specified DOCX file.</para>
+      </summary>
+      <param name="filePath">A string value which specifies the full path (including the file name and extension) where the DOCX file should be created.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToHtml(System.IO.Stream,DevExpress.XtraPrinting.HtmlExportOptions)">
       <summary>
         <para>Exports the control to the specified stream in HTML format.</para>
@@ -1569,12 +1737,24 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created document is exported.</param>
       <param name="options">An object that specifies the HTML export options to be applied when a diagram is exported.</param>
     </member>
+    <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToHtml(System.IO.Stream)">
+      <summary>
+        <para>Exports the control to the specified stream in HTML format.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created document is exported.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToHtml(System.String,DevExpress.XtraPrinting.HtmlExportOptions)">
       <summary>
         <para>Exports the control to the specified file in HTML format.</para>
       </summary>
       <param name="filePath">A string that specifies the full path to the file to which the control is exported.</param>
       <param name="options">An object that specifies the HTML export options to be applied when a diagram is exported.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToHtml(System.String)">
+      <summary>
+        <para>Exports the control to the specified file in HTML format.</para>
+      </summary>
+      <param name="filePath">A string that specifies the full path to the file to which the control is exported.</param>
     </member>
     <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToImage(System.IO.Stream,System.Drawing.Imaging.ImageFormat)">
       <summary>
@@ -1597,12 +1777,24 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created MHT file should be sent.</param>
       <param name="options">The MHT export options to be applied when the diagram is exported.</param>
     </member>
+    <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToMht(System.IO.Stream)">
+      <summary>
+        <para>Exports the diagram to the specified stream in MHT format.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created MHT file should be sent.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToMht(System.String,DevExpress.XtraPrinting.MhtExportOptions)">
       <summary>
         <para>Exports the diagram to the specified file in MHT format with given MHT-specific options.</para>
       </summary>
       <param name="filePath">The file name (including the full path) for the created MHT file.</param>
       <param name="options">Export options.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToMht(System.String)">
+      <summary>
+        <para>Exports the diagram to an MHT file.</para>
+      </summary>
+      <param name="filePath">A <see cref="T:System.String"/> that specifies the file name (including the full path) for the resulting MHT file.</param>
     </member>
     <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToPdf(System.IO.Stream,DevExpress.XtraPrinting.PdfExportOptions)">
       <summary>
@@ -1611,12 +1803,36 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created document is exported.</param>
       <param name="options">Contains options for the resulting PDF file.</param>
     </member>
+    <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToPdf(System.IO.Stream)">
+      <summary>
+        <para>Exports the chart’s data to a PDF document and sends it to the specified stream.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created document is exported.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToPdf(System.String,DevExpress.XtraPrinting.PdfExportOptions)">
       <summary>
         <para>Exports the diagram image to a PDF file with the specified path.</para>
       </summary>
       <param name="filePath">A file path that includes the file name and extension.</param>
       <param name="options">Contains settings applied to the resulting PDF file.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToPdf(System.String)">
+      <summary>
+        <para>Exports the diagram image to a PDF file with the specified path.</para>
+      </summary>
+      <param name="filePath">A file path that includes the file name and extension.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToRtf(System.IO.Stream)">
+      <summary>
+        <para>Exports the Sankey diagram to a stream in RTF format.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the data is exported.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToRtf(System.String)">
+      <summary>
+        <para>Exports the diagram to an RTF document with the given path.</para>
+      </summary>
+      <param name="filePath">A file path that includes the file name and extension, where the file should be created.</param>
     </member>
     <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToSvg(System.IO.Stream)">
       <summary>
@@ -1637,12 +1853,24 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> descendant class object to which the file should be sent.</param>
       <param name="options">Contains settings that are applied to the exported document.</param>
     </member>
+    <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToXls(System.IO.Stream)">
+      <summary>
+        <para>Creates an XLS document with the diagram inserted as an image and sends it to a stream.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> descendant class object to which the file should be sent.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToXls(System.String,DevExpress.XtraPrinting.XlsExportOptions)">
       <summary>
         <para>Exports the diagram to an XLS file with given parameters.</para>
       </summary>
       <param name="filePath">A file path that includes the file name and extension, where the file should be created.</param>
       <param name="options">Options that apply to the resulting document.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToXls(System.String)">
+      <summary>
+        <para>Exports the diagram to an XLS file with given parameters.</para>
+      </summary>
+      <param name="filePath">A file path that includes the file name and extension, where the file should be created.</param>
     </member>
     <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToXlsx(System.IO.Stream,DevExpress.XtraPrinting.XlsxExportOptions)">
       <summary>
@@ -1651,12 +1879,24 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> descendant class object to which the file should be sent.</param>
       <param name="options">Contains settings that apply to the exported document.</param>
     </member>
+    <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToXlsx(System.IO.Stream)">
+      <summary>
+        <para>Creates an XLSX document with the diagram inserted as an image and sends it to a stream.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> descendant class object to which the file should be sent.</param>
+    </member>
     <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToXlsx(System.String,DevExpress.XtraPrinting.XlsxExportOptions)">
       <summary>
         <para>Exports the diagram to an XLSX file with given parameters.</para>
       </summary>
       <param name="filePath">A file path that includes the file name and extension, where the file should be created.</param>
       <param name="options">Contains settings that apply to the exported document.</param>
+    </member>
+    <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.ExportToXlsx(System.String)">
+      <summary>
+        <para>Exports the diagram to an XLS file with given parameters.</para>
+      </summary>
+      <param name="filePath">A file path that includes the file name and extension.</param>
     </member>
     <member name="M:DevExpress.XtraCharts.Sankey.SankeyDiagramControl.GetToolTipController">
       <summary>

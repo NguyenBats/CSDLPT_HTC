@@ -61,16 +61,16 @@ namespace QLDSV_TC
             this.colSOTIET_LT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSOTIET_TH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1 = new DevExpress.XtraEditors.PanelControl();
+            this.txtMaMH = new DevExpress.XtraEditors.TextEdit();
+            this.mONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLDSV_TCDataSetGoc = new QLDSV_TC.QLDSV_TCDataSetGoc();
             this.txtSoTietTH = new System.Windows.Forms.TextBox();
             this.txtSoTietLT = new DevExpress.XtraEditors.TextEdit();
             this.txtTenMH = new System.Windows.Forms.TextBox();
             this.bdsLTC = new System.Windows.Forms.BindingSource(this.components);
             this.LOPTINCHITableAdapter = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.LOPTINCHITableAdapter();
-            this.qLDSV_TCDataSetGoc = new QLDSV_TC.QLDSV_TCDataSetGoc();
-            this.mONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mONHOCTableAdapter1 = new QLDSV_TC.QLDSV_TCDataSetGocTableAdapters.MONHOCTableAdapter();
             this.tableAdapterManager1 = new QLDSV_TC.QLDSV_TCDataSetGocTableAdapters.TableAdapterManager();
-            this.txtMaMH = new DevExpress.XtraEditors.TextEdit();
             labMaMH = new System.Windows.Forms.Label();
             labTenMH = new System.Windows.Forms.Label();
             labSoTietLT = new System.Windows.Forms.Label();
@@ -84,11 +84,11 @@ namespace QLDSV_TC
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaMH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSetGoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoTietLT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLTC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSetGoc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaMH.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labMaMH
@@ -96,7 +96,7 @@ namespace QLDSV_TC
             labMaMH.AutoSize = true;
             labMaMH.Location = new System.Drawing.Point(137, 105);
             labMaMH.Name = "labMaMH";
-            labMaMH.Size = new System.Drawing.Size(84, 17);
+            labMaMH.Size = new System.Drawing.Size(64, 13);
             labMaMH.TabIndex = 0;
             labMaMH.Text = "Mã môn học";
             // 
@@ -105,7 +105,7 @@ namespace QLDSV_TC
             labTenMH.AutoSize = true;
             labTenMH.Location = new System.Drawing.Point(683, 113);
             labTenMH.Name = "labTenMH";
-            labTenMH.Size = new System.Drawing.Size(90, 17);
+            labTenMH.Size = new System.Drawing.Size(68, 13);
             labTenMH.TabIndex = 2;
             labTenMH.Text = "Tên môn học";
             // 
@@ -114,7 +114,7 @@ namespace QLDSV_TC
             labSoTietLT.AutoSize = true;
             labSoTietLT.Location = new System.Drawing.Point(137, 147);
             labSoTietLT.Name = "labSoTietLT";
-            labSoTietLT.Size = new System.Drawing.Size(106, 17);
+            labSoTietLT.Size = new System.Drawing.Size(84, 13);
             labSoTietLT.TabIndex = 4;
             labSoTietLT.Text = "Số tiết lý thuyết";
             // 
@@ -123,7 +123,7 @@ namespace QLDSV_TC
             labSoTietTH.AutoSize = true;
             labSoTietTH.Location = new System.Drawing.Point(674, 150);
             labSoTietTH.Name = "labSoTietTH";
-            labSoTietTH.Size = new System.Drawing.Size(115, 17);
+            labSoTietTH.Size = new System.Drawing.Size(90, 13);
             labSoTietTH.TabIndex = 6;
             labSoTietTH.Text = "Số tiết thực hành";
             // 
@@ -224,7 +224,7 @@ namespace QLDSV_TC
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1200, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1200, 24);
             // 
             // barDockControlBottom
             // 
@@ -238,24 +238,24 @@ namespace QLDSV_TC
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 631);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 637);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1200, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1200, 24);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 631);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 637);
             // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.cmbKhoa);
             this.panelControl1.Controls.Add(this.labKhoa);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 30);
+            this.panelControl1.Location = new System.Drawing.Point(0, 24);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1200, 100);
             this.panelControl1.TabIndex = 4;
@@ -266,7 +266,7 @@ namespace QLDSV_TC
             this.cmbKhoa.FormattingEnabled = true;
             this.cmbKhoa.Location = new System.Drawing.Point(108, 33);
             this.cmbKhoa.Name = "cmbKhoa";
-            this.cmbKhoa.Size = new System.Drawing.Size(261, 24);
+            this.cmbKhoa.Size = new System.Drawing.Size(261, 21);
             this.cmbKhoa.TabIndex = 1;
             this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
             // 
@@ -275,7 +275,7 @@ namespace QLDSV_TC
             this.labKhoa.AutoSize = true;
             this.labKhoa.Location = new System.Drawing.Point(55, 36);
             this.labKhoa.Name = "labKhoa";
-            this.labKhoa.Size = new System.Drawing.Size(39, 17);
+            this.labKhoa.Size = new System.Drawing.Size(31, 13);
             this.labKhoa.TabIndex = 0;
             this.labKhoa.Text = "Khoa";
             // 
@@ -307,9 +307,9 @@ namespace QLDSV_TC
             // 
             // gcMonHoc
             // 
-            this.gcMonHoc.DataSource = this.bdsMonHoc;
+            this.gcMonHoc.DataSource = this.mONHOCBindingSource;
             this.gcMonHoc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcMonHoc.Location = new System.Drawing.Point(0, 130);
+            this.gcMonHoc.Location = new System.Drawing.Point(0, 124);
             this.gcMonHoc.MainView = this.gridView1;
             this.gcMonHoc.MenuManager = this.barManager1;
             this.gcMonHoc.Name = "gcMonHoc";
@@ -367,17 +367,36 @@ namespace QLDSV_TC
             this.groupBox1.Controls.Add(this.txtTenMH);
             this.groupBox1.Controls.Add(labMaMH);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 449);
+            this.groupBox1.Location = new System.Drawing.Point(0, 443);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1200, 212);
+            this.groupBox1.Size = new System.Drawing.Size(1200, 218);
             this.groupBox1.TabIndex = 7;
+            // 
+            // txtMaMH
+            // 
+            this.txtMaMH.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mONHOCBindingSource, "MAMH", true));
+            this.txtMaMH.Location = new System.Drawing.Point(244, 105);
+            this.txtMaMH.MenuManager = this.barManager1;
+            this.txtMaMH.Name = "txtMaMH";
+            this.txtMaMH.Size = new System.Drawing.Size(125, 20);
+            this.txtMaMH.TabIndex = 9;
+            // 
+            // mONHOCBindingSource
+            // 
+            this.mONHOCBindingSource.DataMember = "MONHOC";
+            this.mONHOCBindingSource.DataSource = this.qLDSV_TCDataSetGoc;
+            // 
+            // qLDSV_TCDataSetGoc
+            // 
+            this.qLDSV_TCDataSetGoc.DataSetName = "QLDSV_TCDataSetGoc";
+            this.qLDSV_TCDataSetGoc.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtSoTietTH
             // 
             this.txtSoTietTH.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsMonHoc, "SOTIET_TH", true));
             this.txtSoTietTH.Location = new System.Drawing.Point(789, 147);
             this.txtSoTietTH.Name = "txtSoTietTH";
-            this.txtSoTietTH.Size = new System.Drawing.Size(100, 23);
+            this.txtSoTietTH.Size = new System.Drawing.Size(100, 21);
             this.txtSoTietTH.TabIndex = 7;
             // 
             // txtSoTietLT
@@ -386,7 +405,7 @@ namespace QLDSV_TC
             this.txtSoTietLT.Location = new System.Drawing.Point(245, 144);
             this.txtSoTietLT.MenuManager = this.barManager1;
             this.txtSoTietLT.Name = "txtSoTietLT";
-            this.txtSoTietLT.Size = new System.Drawing.Size(100, 22);
+            this.txtSoTietLT.Size = new System.Drawing.Size(100, 20);
             this.txtSoTietLT.TabIndex = 5;
             // 
             // txtTenMH
@@ -394,7 +413,7 @@ namespace QLDSV_TC
             this.txtTenMH.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsMonHoc, "TENMH", true));
             this.txtTenMH.Location = new System.Drawing.Point(789, 105);
             this.txtTenMH.Name = "txtTenMH";
-            this.txtTenMH.Size = new System.Drawing.Size(251, 23);
+            this.txtTenMH.Size = new System.Drawing.Size(251, 21);
             this.txtTenMH.TabIndex = 3;
             // 
             // bdsLTC
@@ -405,16 +424,6 @@ namespace QLDSV_TC
             // LOPTINCHITableAdapter
             // 
             this.LOPTINCHITableAdapter.ClearBeforeFill = true;
-            // 
-            // qLDSV_TCDataSetGoc
-            // 
-            this.qLDSV_TCDataSetGoc.DataSetName = "QLDSV_TCDataSetGoc";
-            this.qLDSV_TCDataSetGoc.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mONHOCBindingSource
-            // 
-            this.mONHOCBindingSource.DataMember = "MONHOC";
-            this.mONHOCBindingSource.DataSource = this.qLDSV_TCDataSetGoc;
             // 
             // mONHOCTableAdapter1
             // 
@@ -434,18 +443,9 @@ namespace QLDSV_TC
             this.tableAdapterManager1.SINHVIENTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = QLDSV_TC.QLDSV_TCDataSetGocTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // txtMaMH
-            // 
-            this.txtMaMH.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mONHOCBindingSource, "MAMH", true));
-            this.txtMaMH.Location = new System.Drawing.Point(244, 105);
-            this.txtMaMH.MenuManager = this.barManager1;
-            this.txtMaMH.Name = "txtMaMH";
-            this.txtMaMH.Size = new System.Drawing.Size(125, 22);
-            this.txtMaMH.TabIndex = 9;
-            // 
             // frmMonHoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 681);
             this.Controls.Add(this.groupBox1);
@@ -472,11 +472,11 @@ namespace QLDSV_TC
             ((System.ComponentModel.ISupportInitialize)(this.groupBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaMH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSetGoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoTietLT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLTC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSetGoc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaMH.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

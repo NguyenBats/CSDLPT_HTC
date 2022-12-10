@@ -6787,7 +6787,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.Controls.EditorButton">
       <summary>
-        <para>An editor button displayed in a <see cref="T:DevExpress.XtraEditors.ButtonEdit"/> control or its descendant.</para>
+        <para>Represent an individual editor button displayed in a <see cref="T:DevExpress.XtraEditors.ButtonEdit"/> control or descendant.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.Controls.EditorButton.#ctor">
@@ -25236,7 +25236,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.ForceInitialize">
       <summary>
-        <para>Finishes the initialization of the LookUp editor’s data source. Call this method when the form is loading, before you start to create columns or obtain column values.</para>
+        <para>Forces the control’s data source to provide the information which is required to work with this data source.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.GetDataSourceRowByDisplayValue(System.Object)">
@@ -28280,6 +28280,26 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
         <para>Gets or sets the custom drop-down control for this <see cref="T:DevExpress.XtraEditors.TokenEdit"/>.</para>
       </summary>
       <value>A DevExpress.XtraEditors.Popup.CustomTokenEditDropDownControlBase class descendant that serves as the custom drop-down control for this <see cref="T:DevExpress.XtraEditors.TokenEdit"/>.</value>
+    </member>
+    <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit.DataBoundEditEnumEditValueMapper.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit.DataBoundEditEnumEditValueMapper"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit.DataBoundEditListEditValueMapper.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit.DataBoundEditListEditValueMapper"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit.DataBoundEditMapperRegistry.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit.DataBoundEditMapperRegistry"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit.DataBoundEditStringEditValueMapper.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit.DataBoundEditStringEditValueMapper"/> class.</para>
+      </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit.DataSource">
       <summary>
@@ -35310,27 +35330,10 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
       <value>The title.</value>
     </member>
-    <member name="T:DevExpress.XtraSplashScreen.ImageRotationParams">
-      <summary>
-        <para>Image animation options in an Overlay Form.</para>
-      </summary>
-    </member>
     <member name="M:DevExpress.XtraSplashScreen.ImageRotationParams.#ctor(System.Int32,System.Int32)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraSplashScreen.ImageRotationParams"/> class with specified settings.</para>
       </summary>
-    </member>
-    <member name="P:DevExpress.XtraSplashScreen.ImageRotationParams.Duration">
-      <summary>
-        <para>Gets the time required to rotate image 360 degrees.</para>
-      </summary>
-      <value>The time required to rotate image 360 degrees, in milliseconds.</value>
-    </member>
-    <member name="P:DevExpress.XtraSplashScreen.ImageRotationParams.Ticks">
-      <summary>
-        <para>Gets the number of frames required to rotate image 360 degrees.</para>
-      </summary>
-      <value>The number of frames required to rotate image 360 degrees.</value>
     </member>
     <member name="T:DevExpress.XtraSplashScreen.IOverlaySplashScreenHandle">
       <summary>

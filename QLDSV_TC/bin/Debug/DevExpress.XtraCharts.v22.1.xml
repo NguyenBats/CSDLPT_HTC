@@ -28567,12 +28567,6 @@ If null (Nothing in Visual Basic), then a <see cref="T:System.ArgumentNullExcept
       </summary>
       <value>true if the Trend Line is extrapolated to infinity; otherwise, false.</value>
     </member>
-    <member name="P:DevExpress.XtraCharts.TrendLine.ExtrapolateToNegativeInfinity">
-      <summary>
-        <para>Specifies whether the Trend Line is extrapolated to negative infinity.</para>
-      </summary>
-      <value>true to extrapolate the Trend Line to negative infinity; otherwise, false.</value>
-    </member>
     <member name="P:DevExpress.XtraCharts.TrendLine.IndicatorName">
       <summary>
         <para>Returns the localized name of the indicator type.</para>

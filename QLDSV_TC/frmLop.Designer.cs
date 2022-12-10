@@ -30,12 +30,11 @@ namespace QLDSV_TC
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label labMaLop;
-            System.Windows.Forms.Label labTenLop;
-            System.Windows.Forms.Label labMaKhoa;
-            System.Windows.Forms.Label labKhoaHoc;
+            System.Windows.Forms.Label tENLOPLabel;
+            System.Windows.Forms.Label label1;
+            System.Windows.Forms.Label label2;
+            System.Windows.Forms.Label label3;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLop));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -50,79 +49,87 @@ namespace QLDSV_TC
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.cmbKhoa = new System.Windows.Forms.ComboBox();
-            this.labKhoa = new System.Windows.Forms.Label();
-            this.qLDSV_TCDataSet = new QLDSV_TC.QLDSV_TCDataSet();
+            this.LopGridControl = new DevExpress.XtraGrid.GridControl();
             this.bdsLop = new System.Windows.Forms.BindingSource(this.components);
-            this.LOPTableAdapter = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.LOPTableAdapter();
-            this.tableAdapterManager = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.TableAdapterManager();
-            this.sINHVIENTableAdapter = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.SINHVIENTableAdapter();
-            this.gcLop = new DevExpress.XtraGrid.GridControl();
+            this.qLDSV_TCDataSet = new QLDSV_TC.QLDSV_TCDataSet();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMALOP = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTENLOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKHOAHOC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKHOA = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.groupBox1 = new DevExpress.XtraEditors.PanelControl();
-            this.txtKhoaHoc = new DevExpress.XtraEditors.TextEdit();
-            this.txtMaKhoa = new DevExpress.XtraEditors.TextEdit();
+            this.colMALOP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTENLOP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cmbKhoa = new System.Windows.Forms.ComboBox();
+            this.labKhoa = new System.Windows.Forms.Label();
+            this.tableAdapterManager = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.TableAdapterManager();
+            this.sINHVIENTableAdapter = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.SINHVIENTableAdapter();
+            this.cboKhoa = new DevExpress.XtraEditors.PanelControl();
+            this.txtMaLopUnvisible = new System.Windows.Forms.TextBox();
+            this.txtMaLop = new DevExpress.XtraEditors.TextEdit();
+            this.txtEndYear = new DevExpress.XtraEditors.TextEdit();
+            this.txtStartYear = new DevExpress.XtraEditors.TextEdit();
             this.txtTenLop = new DevExpress.XtraEditors.TextEdit();
-            this.txtMaLop = new System.Windows.Forms.TextBox();
+            this.bdsNienKhoa = new System.Windows.Forms.BindingSource(this.components);
+            this.bdsKhoa = new System.Windows.Forms.BindingSource(this.components);
             this.bdsSV = new System.Windows.Forms.BindingSource(this.components);
-            labMaLop = new System.Windows.Forms.Label();
-            labTenLop = new System.Windows.Forms.Label();
-            labMaKhoa = new System.Windows.Forms.Label();
-            labKhoaHoc = new System.Windows.Forms.Label();
+            this.LOPTableAdapter = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.LOPTableAdapter();
+            this.kHOATableAdapter = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.KHOATableAdapter();
+            this.nIENKHOATableAdapter = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.NIENKHOATableAdapter();
+            tENLOPLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LopGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLop)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcLop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKhoaHoc.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaKhoa.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboKhoa)).BeginInit();
+            this.cboKhoa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaLop.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEndYear.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStartYear.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenLop.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsNienKhoa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsKhoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsSV)).BeginInit();
             this.SuspendLayout();
             // 
-            // labMaLop
+            // tENLOPLabel
             // 
-            labMaLop.AutoSize = true;
-            labMaLop.Location = new System.Drawing.Point(127, 58);
-            labMaLop.Name = "labMaLop";
-            labMaLop.Size = new System.Drawing.Size(52, 17);
-            labMaLop.TabIndex = 0;
-            labMaLop.Text = "Mã Lớp";
+            tENLOPLabel.AutoSize = true;
+            tENLOPLabel.Location = new System.Drawing.Point(724, 40);
+            tENLOPLabel.Name = "tENLOPLabel";
+            tENLOPLabel.Size = new System.Drawing.Size(42, 13);
+            tENLOPLabel.TabIndex = 5;
+            tENLOPLabel.Text = "Tên lớp";
             // 
-            // labTenLop
+            // label1
             // 
-            labTenLop.AutoSize = true;
-            labTenLop.Location = new System.Drawing.Point(489, 58);
-            labTenLop.Name = "labTenLop";
-            labTenLop.Size = new System.Drawing.Size(58, 17);
-            labTenLop.TabIndex = 2;
-            labTenLop.Text = "Tên Lớp";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(51, 44);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(68, 13);
+            label1.TabIndex = 13;
+            label1.Text = "Năm bắt đầu";
             // 
-            // labMaKhoa
+            // label2
             // 
-            labMaKhoa.AutoSize = true;
-            labMaKhoa.Location = new System.Drawing.Point(486, 105);
-            labMaKhoa.Name = "labMaKhoa";
-            labMaKhoa.Size = new System.Drawing.Size(60, 17);
-            labMaKhoa.TabIndex = 4;
-            labMaKhoa.Text = "Mã Khoa";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(273, 44);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(70, 13);
+            label2.TabIndex = 15;
+            label2.Text = "Năm kết thúc";
             // 
-            // labKhoaHoc
+            // label3
             // 
-            labKhoaHoc.AutoSize = true;
-            labKhoaHoc.Location = new System.Drawing.Point(117, 105);
-            labKhoaHoc.Name = "labKhoaHoc";
-            labKhoaHoc.Size = new System.Drawing.Size(66, 17);
-            labKhoaHoc.TabIndex = 2;
-            labKhoaHoc.Text = "Khóa học";
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(497, 44);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(38, 13);
+            label3.TabIndex = 17;
+            label3.Text = "Mã lớp";
             // 
             // barManager1
             // 
@@ -222,7 +229,7 @@ namespace QLDSV_TC
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1083, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1083, 24);
             // 
             // barDockControlBottom
             // 
@@ -237,19 +244,19 @@ namespace QLDSV_TC
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 608);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 614);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1083, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1083, 24);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 608);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 614);
             // 
             // barButtonItem1
             // 
@@ -259,13 +266,75 @@ namespace QLDSV_TC
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.LopGridControl);
             this.panelControl1.Controls.Add(this.cmbKhoa);
             this.panelControl1.Controls.Add(this.labKhoa);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 30);
+            this.panelControl1.Location = new System.Drawing.Point(0, 24);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1083, 74);
+            this.panelControl1.Size = new System.Drawing.Size(1083, 344);
             this.panelControl1.TabIndex = 4;
+            // 
+            // LopGridControl
+            // 
+            this.LopGridControl.DataSource = this.bdsLop;
+            this.LopGridControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LopGridControl.Location = new System.Drawing.Point(2, 2);
+            this.LopGridControl.MainView = this.gridView1;
+            this.LopGridControl.MenuManager = this.barManager1;
+            this.LopGridControl.Name = "LopGridControl";
+            this.LopGridControl.Size = new System.Drawing.Size(1079, 220);
+            this.LopGridControl.TabIndex = 2;
+            this.LopGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // bdsLop
+            // 
+            this.bdsLop.DataMember = "LOP";
+            this.bdsLop.DataSource = this.qLDSV_TCDataSet;
+            // 
+            // qLDSV_TCDataSet
+            // 
+            this.qLDSV_TCDataSet.DataSetName = "QLDSV_TCDataSet";
+            this.qLDSV_TCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colKHOAHOC,
+            this.colMAKHOA,
+            this.colMALOP,
+            this.colTENLOP});
+            this.gridView1.GridControl = this.LopGridControl;
+            this.gridView1.Name = "gridView1";
+            // 
+            // colKHOAHOC
+            // 
+            this.colKHOAHOC.FieldName = "KHOAHOC";
+            this.colKHOAHOC.Name = "colKHOAHOC";
+            this.colKHOAHOC.Visible = true;
+            this.colKHOAHOC.VisibleIndex = 0;
+            // 
+            // colMAKHOA
+            // 
+            this.colMAKHOA.FieldName = "MAKHOA";
+            this.colMAKHOA.Name = "colMAKHOA";
+            this.colMAKHOA.Visible = true;
+            this.colMAKHOA.VisibleIndex = 1;
+            // 
+            // colMALOP
+            // 
+            this.colMALOP.FieldName = "MALOP";
+            this.colMALOP.Name = "colMALOP";
+            this.colMALOP.Visible = true;
+            this.colMALOP.VisibleIndex = 2;
+            // 
+            // colTENLOP
+            // 
+            this.colTENLOP.FieldName = "TENLOP";
+            this.colTENLOP.Name = "colTENLOP";
+            this.colTENLOP.Visible = true;
+            this.colTENLOP.VisibleIndex = 3;
             // 
             // cmbKhoa
             // 
@@ -273,7 +342,7 @@ namespace QLDSV_TC
             this.cmbKhoa.FormattingEnabled = true;
             this.cmbKhoa.Location = new System.Drawing.Point(103, 19);
             this.cmbKhoa.Name = "cmbKhoa";
-            this.cmbKhoa.Size = new System.Drawing.Size(279, 24);
+            this.cmbKhoa.Size = new System.Drawing.Size(279, 21);
             this.cmbKhoa.TabIndex = 1;
             this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
             // 
@@ -282,23 +351,9 @@ namespace QLDSV_TC
             this.labKhoa.AutoSize = true;
             this.labKhoa.Location = new System.Drawing.Point(51, 22);
             this.labKhoa.Name = "labKhoa";
-            this.labKhoa.Size = new System.Drawing.Size(39, 17);
+            this.labKhoa.Size = new System.Drawing.Size(31, 13);
             this.labKhoa.TabIndex = 0;
             this.labKhoa.Text = "Khoa";
-            // 
-            // qLDSV_TCDataSet
-            // 
-            this.qLDSV_TCDataSet.DataSetName = "QLDSV_TCDataSet";
-            this.qLDSV_TCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bdsLop
-            // 
-            this.bdsLop.DataMember = "LOP";
-            this.bdsLop.DataSource = this.qLDSV_TCDataSet;
-            // 
-            // LOPTableAdapter
-            // 
-            this.LOPTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -306,7 +361,7 @@ namespace QLDSV_TC
             this.tableAdapterManager.DANGKYTableAdapter = null;
             this.tableAdapterManager.GIANGVIENTableAdapter = null;
             this.tableAdapterManager.KHOATableAdapter = null;
-            this.tableAdapterManager.LOPTableAdapter = this.LOPTableAdapter;
+            this.tableAdapterManager.LOPTableAdapter = null;
             this.tableAdapterManager.LOPTINCHITableAdapter = null;
             this.tableAdapterManager.MONHOCTableAdapter = null;
             this.tableAdapterManager.SINHVIENTableAdapter = this.sINHVIENTableAdapter;
@@ -316,125 +371,93 @@ namespace QLDSV_TC
             // 
             this.sINHVIENTableAdapter.ClearBeforeFill = true;
             // 
-            // gcLop
+            // cboKhoa
             // 
-            this.gcLop.DataSource = this.bdsLop;
-            this.gcLop.Dock = System.Windows.Forms.DockStyle.Top;
-            gridLevelNode1.RelationName = "Level1";
-            this.gcLop.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-            this.gcLop.Location = new System.Drawing.Point(0, 104);
-            this.gcLop.MainView = this.gridView1;
-            this.gcLop.MenuManager = this.barManager1;
-            this.gcLop.Name = "gcLop";
-            this.gcLop.Size = new System.Drawing.Size(1083, 220);
-            this.gcLop.TabIndex = 6;
-            this.gcLop.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.cboKhoa.Controls.Add(this.txtMaLopUnvisible);
+            this.cboKhoa.Controls.Add(this.txtMaLop);
+            this.cboKhoa.Controls.Add(label3);
+            this.cboKhoa.Controls.Add(this.txtEndYear);
+            this.cboKhoa.Controls.Add(label2);
+            this.cboKhoa.Controls.Add(this.txtStartYear);
+            this.cboKhoa.Controls.Add(label1);
+            this.cboKhoa.Controls.Add(this.txtTenLop);
+            this.cboKhoa.Controls.Add(tENLOPLabel);
+            this.cboKhoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cboKhoa.Location = new System.Drawing.Point(0, 368);
+            this.cboKhoa.Name = "cboKhoa";
+            this.cboKhoa.Size = new System.Drawing.Size(1083, 270);
+            this.cboKhoa.TabIndex = 7;
             // 
-            // gridView1
+            // txtMaLopUnvisible
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMALOP,
-            this.colTENLOP,
-            this.colKHOAHOC,
-            this.colMAKHOA});
-            this.gridView1.GridControl = this.gcLop;
-            this.gridView1.Name = "gridView1";
-            // 
-            // colMALOP
-            // 
-            this.colMALOP.FieldName = "MALOP";
-            this.colMALOP.Name = "colMALOP";
-            this.colMALOP.Visible = true;
-            this.colMALOP.VisibleIndex = 0;
-            // 
-            // colTENLOP
-            // 
-            this.colTENLOP.FieldName = "TENLOP";
-            this.colTENLOP.Name = "colTENLOP";
-            this.colTENLOP.Visible = true;
-            this.colTENLOP.VisibleIndex = 1;
-            // 
-            // colKHOAHOC
-            // 
-            this.colKHOAHOC.FieldName = "KHOAHOC";
-            this.colKHOAHOC.Name = "colKHOAHOC";
-            this.colKHOAHOC.Visible = true;
-            this.colKHOAHOC.VisibleIndex = 2;
-            // 
-            // colMAKHOA
-            // 
-            this.colMAKHOA.FieldName = "MAKHOA";
-            this.colMAKHOA.Name = "colMAKHOA";
-            this.colMAKHOA.Visible = true;
-            this.colMAKHOA.VisibleIndex = 3;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(labKhoaHoc);
-            this.groupBox1.Controls.Add(labMaKhoa);
-            this.groupBox1.Controls.Add(this.txtKhoaHoc);
-            this.groupBox1.Controls.Add(this.txtMaKhoa);
-            this.groupBox1.Controls.Add(labTenLop);
-            this.groupBox1.Controls.Add(this.txtTenLop);
-            this.groupBox1.Controls.Add(labMaLop);
-            this.groupBox1.Controls.Add(this.txtMaLop);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 324);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1083, 314);
-            this.groupBox1.TabIndex = 7;
-            // 
-            // txtKhoaHoc
-            // 
-            this.txtKhoaHoc.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLop, "KHOAHOC", true));
-            this.txtKhoaHoc.Location = new System.Drawing.Point(196, 102);
-            this.txtKhoaHoc.MenuManager = this.barManager1;
-            this.txtKhoaHoc.Name = "txtKhoaHoc";
-            this.txtKhoaHoc.Size = new System.Drawing.Size(186, 22);
-            this.txtKhoaHoc.TabIndex = 3;
-            // 
-            // txtMaKhoa
-            // 
-            this.txtMaKhoa.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLop, "MAKHOA", true));
-            this.txtMaKhoa.Enabled = false;
-            this.txtMaKhoa.Location = new System.Drawing.Point(566, 102);
-            this.txtMaKhoa.MenuManager = this.barManager1;
-            this.txtMaKhoa.Name = "txtMaKhoa";
-            this.txtMaKhoa.Size = new System.Drawing.Size(267, 22);
-            this.txtMaKhoa.TabIndex = 5;
-            // 
-            // txtTenLop
-            // 
-            this.txtTenLop.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLop, "TENLOP", true));
-            this.txtTenLop.Location = new System.Drawing.Point(566, 55);
-            this.txtTenLop.MenuManager = this.barManager1;
-            this.txtTenLop.Name = "txtTenLop";
-            this.txtTenLop.Size = new System.Drawing.Size(267, 22);
-            this.txtTenLop.TabIndex = 3;
+            this.txtMaLopUnvisible.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLop, "MALOP", true));
+            this.txtMaLopUnvisible.Location = new System.Drawing.Point(125, 98);
+            this.txtMaLopUnvisible.Name = "txtMaLopUnvisible";
+            this.txtMaLopUnvisible.Size = new System.Drawing.Size(100, 21);
+            this.txtMaLopUnvisible.TabIndex = 19;
+            this.txtMaLopUnvisible.TextChanged += new System.EventHandler(this.txtMaLopUnvisible_TextChanged);
             // 
             // txtMaLop
             // 
-            this.txtMaLop.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLop, "MALOP", true));
-            this.txtMaLop.Location = new System.Drawing.Point(196, 55);
+            this.txtMaLop.Location = new System.Drawing.Point(566, 37);
+            this.txtMaLop.MenuManager = this.barManager1;
             this.txtMaLop.Name = "txtMaLop";
-            this.txtMaLop.Size = new System.Drawing.Size(186, 23);
-            this.txtMaLop.TabIndex = 1;
-            this.txtMaLop.TextChanged += new System.EventHandler(this.txtMaLop_TextChanged);
+            this.txtMaLop.Size = new System.Drawing.Size(121, 20);
+            this.txtMaLop.TabIndex = 18;
             // 
-            // bdsSV
+            // txtEndYear
             // 
-            this.bdsSV.DataMember = "FK_SINHVIEN_LOP";
-            this.bdsSV.DataSource = this.bdsLop;
+            this.txtEndYear.Location = new System.Drawing.Point(347, 41);
+            this.txtEndYear.MenuManager = this.barManager1;
+            this.txtEndYear.Name = "txtEndYear";
+            this.txtEndYear.Size = new System.Drawing.Size(121, 20);
+            this.txtEndYear.TabIndex = 16;
+            // 
+            // txtStartYear
+            // 
+            this.txtStartYear.Location = new System.Drawing.Point(125, 41);
+            this.txtStartYear.MenuManager = this.barManager1;
+            this.txtStartYear.Name = "txtStartYear";
+            this.txtStartYear.Size = new System.Drawing.Size(121, 20);
+            this.txtStartYear.TabIndex = 14;
+            this.txtStartYear.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtStartYear_KeyUp);
+            // 
+            // txtTenLop
+            // 
+            this.txtTenLop.Location = new System.Drawing.Point(795, 37);
+            this.txtTenLop.MenuManager = this.barManager1;
+            this.txtTenLop.Name = "txtTenLop";
+            this.txtTenLop.Size = new System.Drawing.Size(121, 20);
+            this.txtTenLop.TabIndex = 12;
+            // 
+            // bdsNienKhoa
+            // 
+            this.bdsNienKhoa.DataMember = "NIENKHOA";
+            this.bdsNienKhoa.DataSource = this.qLDSV_TCDataSet;
+            // 
+            // bdsKhoa
+            // 
+            this.bdsKhoa.DataMember = "KHOA";
+            this.bdsKhoa.DataSource = this.qLDSV_TCDataSet;
+            // 
+            // LOPTableAdapter
+            // 
+            this.LOPTableAdapter.ClearBeforeFill = true;
+            // 
+            // kHOATableAdapter
+            // 
+            this.kHOATableAdapter.ClearBeforeFill = true;
+            // 
+            // nIENKHOATableAdapter
+            // 
+            this.nIENKHOATableAdapter.ClearBeforeFill = true;
             // 
             // frmLop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1083, 658);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.gcLop);
+            this.Controls.Add(this.cboKhoa);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -450,16 +473,19 @@ namespace QLDSV_TC
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LopGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLop)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcLop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKhoaHoc.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaKhoa.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboKhoa)).EndInit();
+            this.cboKhoa.ResumeLayout(false);
+            this.cboKhoa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaLop.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEndYear.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStartYear.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenLop.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsNienKhoa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsKhoa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsSV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -485,21 +511,26 @@ namespace QLDSV_TC
         private System.Windows.Forms.ComboBox cmbKhoa;
         private System.Windows.Forms.Label labKhoa;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private System.Windows.Forms.BindingSource bdsLop;
-        private QLDSV_TCDataSetTableAdapters.LOPTableAdapter LOPTableAdapter;
         private QLDSV_TCDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private DevExpress.XtraGrid.GridControl gcLop;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.PanelControl groupBox1;
-        private System.Windows.Forms.TextBox txtMaLop;
-        private DevExpress.XtraGrid.Columns.GridColumn colMALOP;
-        private DevExpress.XtraGrid.Columns.GridColumn colTENLOP;
-        private DevExpress.XtraGrid.Columns.GridColumn colKHOAHOC;
-        private DevExpress.XtraGrid.Columns.GridColumn colMAKHOA;
-        private DevExpress.XtraEditors.TextEdit txtMaKhoa;
-        private DevExpress.XtraEditors.TextEdit txtTenLop;
+        private DevExpress.XtraEditors.PanelControl cboKhoa;
         private QLDSV_TCDataSetTableAdapters.SINHVIENTableAdapter sINHVIENTableAdapter;
         private System.Windows.Forms.BindingSource bdsSV;
-        private DevExpress.XtraEditors.TextEdit txtKhoaHoc;
+        private QLDSV_TCDataSetTableAdapters.LOPTableAdapter LOPTableAdapter;
+        private System.Windows.Forms.BindingSource bdsLop;
+        private DevExpress.XtraGrid.GridControl LopGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn colKHOAHOC;
+        private DevExpress.XtraGrid.Columns.GridColumn colMAKHOA;
+        private DevExpress.XtraGrid.Columns.GridColumn colMALOP;
+        private DevExpress.XtraGrid.Columns.GridColumn colTENLOP;
+        private System.Windows.Forms.BindingSource bdsKhoa;
+        private QLDSV_TCDataSetTableAdapters.KHOATableAdapter kHOATableAdapter;
+        private System.Windows.Forms.BindingSource bdsNienKhoa;
+        private QLDSV_TCDataSetTableAdapters.NIENKHOATableAdapter nIENKHOATableAdapter;
+        private DevExpress.XtraEditors.TextEdit txtTenLop;
+        private DevExpress.XtraEditors.TextEdit txtStartYear;
+        private DevExpress.XtraEditors.TextEdit txtEndYear;
+        private DevExpress.XtraEditors.TextEdit txtMaLop;
+        private System.Windows.Forms.TextBox txtMaLopUnvisible;
     }
 }

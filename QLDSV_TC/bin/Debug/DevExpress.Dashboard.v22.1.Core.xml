@@ -8655,7 +8655,6 @@
       <summary>
         <para>Values are grouped by the week of the year.</para>
         <para>Example: 1, 2, 3, … 52</para>
-        <para>Week numbers are calculated based on the following current culture’s settings: the  <see cref="P:System.Globalization.DateTimeFormatInfo.CalendarWeekRule"/> and <see cref="P:System.Globalization.DateTimeFormatInfo.FirstDayOfWeek"/> properties.</para>
       </summary>
     </member>
     <member name="F:DevExpress.DashboardCommon.DateTimeGroupInterval.WeekYear">

@@ -13790,7 +13790,7 @@
     </member>
     <member name="T:DevExpress.DataAccess.Web.IDataSourceWizardConnectionStringsProvider">
       <summary>
-        <para>Allows you to manage data connections available in the Data Source Wizard.</para>
+        <para>If implemented, this interface allows you to manage data connections in web components.</para>
       </summary>
     </member>
     <member name="M:DevExpress.DataAccess.Web.IDataSourceWizardConnectionStringsProvider.GetConnectionDescriptions">
