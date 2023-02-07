@@ -34,8 +34,8 @@ namespace QLDSV_TC
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLop));
             System.Windows.Forms.Label tENKHOALabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLop));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -62,6 +62,7 @@ namespace QLDSV_TC
             this.tableAdapterManager = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.TableAdapterManager();
             this.sINHVIENTableAdapter = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.SINHVIENTableAdapter();
             this.textPanel = new DevExpress.XtraEditors.PanelControl();
+            this.cmbKhoa = new System.Windows.Forms.ComboBox();
             this.txtMaLopUnvisible = new System.Windows.Forms.TextBox();
             this.txtMaLop = new DevExpress.XtraEditors.TextEdit();
             this.txtEndYear = new DevExpress.XtraEditors.TextEdit();
@@ -73,7 +74,7 @@ namespace QLDSV_TC
             this.LOPTableAdapter = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.LOPTableAdapter();
             this.kHOATableAdapter = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.KHOATableAdapter();
             this.nIENKHOATableAdapter = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.NIENKHOATableAdapter();
-            this.cmbKhoa = new System.Windows.Forms.ComboBox();
+            this.lopCombobox1 = new QLDSV_TC.Combobox.LopCombobox();
             tENLOPLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
@@ -132,6 +133,15 @@ namespace QLDSV_TC
             label3.Size = new System.Drawing.Size(38, 13);
             label3.TabIndex = 17;
             label3.Text = "Mã lớp";
+            // 
+            // tENKHOALabel
+            // 
+            tENKHOALabel.AutoSize = true;
+            tENKHOALabel.Location = new System.Drawing.Point(57, 160);
+            tENKHOALabel.Name = "tENKHOALabel";
+            tENKHOALabel.Size = new System.Drawing.Size(31, 13);
+            tENKHOALabel.TabIndex = 19;
+            tENKHOALabel.Text = "Khoa";
             // 
             // barManager1
             // 
@@ -364,6 +374,7 @@ namespace QLDSV_TC
             // 
             // textPanel
             // 
+            this.textPanel.Controls.Add(this.lopCombobox1);
             this.textPanel.Controls.Add(this.cmbKhoa);
             this.textPanel.Controls.Add(tENKHOALabel);
             this.textPanel.Controls.Add(this.txtMaLopUnvisible);
@@ -380,6 +391,15 @@ namespace QLDSV_TC
             this.textPanel.Name = "textPanel";
             this.textPanel.Size = new System.Drawing.Size(1083, 270);
             this.textPanel.TabIndex = 7;
+            // 
+            // cmbKhoa
+            // 
+            this.cmbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKhoa.FormattingEnabled = true;
+            this.cmbKhoa.Location = new System.Drawing.Point(125, 152);
+            this.cmbKhoa.Name = "cmbKhoa";
+            this.cmbKhoa.Size = new System.Drawing.Size(279, 21);
+            this.cmbKhoa.TabIndex = 21;
             // 
             // txtMaLopUnvisible
             // 
@@ -446,23 +466,15 @@ namespace QLDSV_TC
             // 
             this.nIENKHOATableAdapter.ClearBeforeFill = true;
             // 
-            // tENKHOALabel
+            // lopCombobox1
             // 
-            tENKHOALabel.AutoSize = true;
-            tENKHOALabel.Location = new System.Drawing.Point(57, 160);
-            tENKHOALabel.Name = "tENKHOALabel";
-            tENKHOALabel.Size = new System.Drawing.Size(31, 13);
-            tENKHOALabel.TabIndex = 19;
-            tENKHOALabel.Text = "Khoa";
-            // 
-            // cmbKhoa
-            // 
-            this.cmbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbKhoa.FormattingEnabled = true;
-            this.cmbKhoa.Location = new System.Drawing.Point(125, 152);
-            this.cmbKhoa.Name = "cmbKhoa";
-            this.cmbKhoa.Size = new System.Drawing.Size(279, 21);
-            this.cmbKhoa.TabIndex = 21;
+            this.lopCombobox1.DisplayMember = "TENLOP";
+            this.lopCombobox1.FormattingEnabled = true;
+            this.lopCombobox1.Location = new System.Drawing.Point(100, 47);
+            this.lopCombobox1.Name = "lopCombobox1";
+            this.lopCombobox1.Size = new System.Drawing.Size(121, 21);
+            this.lopCombobox1.TabIndex = 22;
+            this.lopCombobox1.ValueMember = "MALOP";
             // 
             // frmLop
             // 
@@ -544,5 +556,6 @@ namespace QLDSV_TC
         private DevExpress.XtraEditors.TextEdit txtMaLop;
         private System.Windows.Forms.TextBox txtMaLopUnvisible;
         private System.Windows.Forms.ComboBox cmbKhoa;
+        private Combobox.LopCombobox lopCombobox1;
     }
 }

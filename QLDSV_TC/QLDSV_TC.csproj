@@ -103,6 +103,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Combobox\GioiTinhCombobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Combobox\LopCombobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Combobox\GiangVienCombobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Combobox\SinhVienCombobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Combobox\MonHocCombobox.cs">
       <SubType>Component</SubType>
     </Compile>
