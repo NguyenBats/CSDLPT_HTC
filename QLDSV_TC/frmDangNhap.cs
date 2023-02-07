@@ -85,25 +85,10 @@ namespace QLDSV_TC
                 Program.mKhoa = cmbKhoa.SelectedIndex;
                 Program.mloginDN = Program.mlogin;
                 Program.passwordDN = Program.password;
-
                 string maSv = txtLogin.Text;
                 string password = txtPass.Text;
                 string strlenh = "EXEC [dbo].[SP_LOGIN] '" + maSv + "'," + "'" + password + "'";
-
                 Program.myReader = Program.ExecSqlDataReader(strlenh);
-                //if (Program.myReader == null)
-                //{
-                //    Program.username = Program.mlogin;
-                //    Program.mGroup = "PKT";
-                //    Program.conn.Close();
-                //    Program.frmChinh.MANV.Text = "Mã NV: " + Program.username;
-                //    Program.frmChinh.HOTEN.Text = "Họ tên: " + Program.username;
-                //    Program.frmChinh.NHOM.Text = "Phòng: " + "PKT";
-                //    Program.frmChinh.HienThiMenu();
-                //    this.Close();
-                //    return;
-                //}
-
                 if (!Program.myReader.HasRows)
                 {
                     MessageBox.Show("Lỗi đăng nhập", "", MessageBoxButtons.OK);

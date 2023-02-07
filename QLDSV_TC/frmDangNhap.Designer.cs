@@ -37,6 +37,7 @@ namespace QLDSV_TC
             this.txtPass = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.monHocCombobox1 = new QLDSV_TC.Combobox.MonHocCombobox();
             this.SuspendLayout();
             // 
             // lbChiNhanh
@@ -119,11 +120,20 @@ namespace QLDSV_TC
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // monHocCombobox1
+            // 
+            this.monHocCombobox1.FormattingEnabled = true;
+            this.monHocCombobox1.Location = new System.Drawing.Point(598, 210);
+            this.monHocCombobox1.Name = "monHocCombobox1";
+            this.monHocCombobox1.Size = new System.Drawing.Size(121, 21);
+            this.monHocCombobox1.TabIndex = 8;
+            // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.monHocCombobox1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.txtPass);
@@ -150,5 +160,6 @@ namespace QLDSV_TC
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Button btnThoat;
+        private Combobox.MonHocCombobox monHocCombobox1;
     }
 }

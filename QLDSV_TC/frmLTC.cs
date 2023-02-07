@@ -246,42 +246,43 @@ namespace QLDSV_TC
         {
             //kiem tra ma lop khong trung tren cac phan manh +++
            
-            if (txtNienKhoa.Text.Trim() == "")
-            {
-                MessageBox.Show("Tên lớp không được để trống!", "", MessageBoxButtons.OK);
-                txtNienKhoa.Focus();
-                return;
-            }
-            if (cbbMaMH.Text.Trim() == "")
-            {
-                MessageBox.Show("Mã môn học không được để trống!", "", MessageBoxButtons.OK);
-                cbbMaMH.Focus();
-                return;
-            }
-            if (txtNhom.Text.Trim() == "")
-            {
-                MessageBox.Show("Nhóm không được để trống!", "", MessageBoxButtons.OK);
-                txtNhom.Focus();
-            }
-            if (cbbMaGV.Text.Trim() == "")
-            {
-                MessageBox.Show("Mã giảng viên không được để trống!", "", MessageBoxButtons.OK);
-                cbbMaGV.Focus();
-                return;
-            }
-            if (txtSoSVMin.Text.Trim() == "")
-            {
-                MessageBox.Show("Số sinh viên tối thiểu không được để trống!", "", MessageBoxButtons.OK);
-                txtSoSVMin.Focus();
-                return;
-            }
-            String query = "Exec SP_InsertLTC '" + txtNienKhoa.Text + "'," + cmbHocKy.Text + ",'" + cbbMaMH.SelectedValue.ToString().Trim() + "',"
-            + txtNhom.Text + ",'" + cbbMaGV.SelectedValue.ToString().Trim() + "','" + txtMaKhoa.Text + "'," + txtSoSVMin.Text+","+cmbHuyLop.Text;
-            Console.WriteLine("SQL thêm ltc: " + query);
+            
 
             if (state == "add" && !checkLTC()) return;
             try
             {
+                if (txtNienKhoa.Text.Trim() == "")
+                {
+                    MessageBox.Show("Tên lớp không được để trống!", "", MessageBoxButtons.OK);
+                    txtNienKhoa.Focus();
+                    return;
+                }
+                if (cbbMaMH.Text.Trim() == "")
+                {
+                    MessageBox.Show("Mã môn học không được để trống!", "", MessageBoxButtons.OK);
+                    cbbMaMH.Focus();
+                    return;
+                }
+                if (txtNhom.Text.Trim() == "")
+                {
+                    MessageBox.Show("Nhóm không được để trống!", "", MessageBoxButtons.OK);
+                    txtNhom.Focus();
+                }
+                if (cbbMaGV.Text.Trim() == "")
+                {
+                    MessageBox.Show("Mã giảng viên không được để trống!", "", MessageBoxButtons.OK);
+                    cbbMaGV.Focus();
+                    return;
+                }
+                if (txtSoSVMin.Text.Trim() == "")
+                {
+                    MessageBox.Show("Số sinh viên tối thiểu không được để trống!", "", MessageBoxButtons.OK);
+                    txtSoSVMin.Focus();
+                    return;
+                }
+                String query = "Exec SP_InsertLTC '" + txtNienKhoa.Text + "'," + cmbHocKy.Text + ",'" + cbbMaMH.SelectedValue.ToString().Trim() + "',"
+                + txtNhom.Text + ",'" + cbbMaGV.SelectedValue.ToString().Trim() + "','" + txtMaKhoa.Text + "'," + txtSoSVMin.Text + "," + cmbHuyLop.Text;
+                Console.WriteLine("SQL thêm ltc: " + query);
                 bdsLopTC.EndEdit();
                 bdsLopTC.ResetCurrentItem();
                 this.SP_GetMaGVMH_LTCTableAdapter.Connection.ConnectionString = Program.connstr;
