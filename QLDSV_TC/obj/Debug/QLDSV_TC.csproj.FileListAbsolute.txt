@@ -862,3 +862,10 @@ G:\Distributed\CSDLPT_HTC\QLDSV_TC\bin\Debug\de\DevExpress.XtraNavBar.v22.1.reso
 G:\Distributed\CSDLPT_HTC\QLDSV_TC\bin\Debug\es\DevExpress.XtraNavBar.v22.1.resources.dll
 G:\Distributed\CSDLPT_HTC\QLDSV_TC\bin\Debug\ja\DevExpress.XtraNavBar.v22.1.resources.dll
 G:\Distributed\CSDLPT_HTC\QLDSV_TC\obj\Debug\QLDSV_TC.csproj.CopyComplete
+G:\Distributed\CSDLPT_HTC\QLDSV_TC\bin\Debug\C1.C1Excel.2.dll
+G:\Distributed\CSDLPT_HTC\QLDSV_TC\bin\Debug\C1.Common.dll
+G:\Distributed\CSDLPT_HTC\QLDSV_TC\bin\Debug\C1.Win.C1BarCode.2.dll
+G:\Distributed\CSDLPT_HTC\QLDSV_TC\bin\Debug\C1.Win.C1FlexGrid.2.dll
+G:\Distributed\CSDLPT_HTC\QLDSV_TC\bin\Debug\C1.C1Excel.2.xml
+G:\Distributed\CSDLPT_HTC\QLDSV_TC\bin\Debug\C1.Win.C1FlexGrid.2.xml
+G:\Distributed\CSDLPT_HTC\QLDSV_TC\bin\Debug\C1.Win.C1List.2.dll

@@ -1,7 +1,12 @@
-DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraBars.BarManager, DevExpress.XtraBars.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraBars.Ribbon.RibbonControl, DevExpress.XtraBars.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraTabbedMdi.XtraTabbedMdiManager, DevExpress.XtraBars.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+
+DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraBars.BarManager, DevExpress.XtraBars.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+C1.Win.C1BarCode.C1BarCode, C1.Win.C1BarCode.2, Version=2.0.20092.34, Culture=neutral, PublicKeyToken=79882d576c6336da
+DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+C1.Win.C1FlexGrid.C1FlexGrid, C1.Win.C1FlexGrid.2, Version=2.6.20092.416, Culture=neutral, PublicKeyToken=79882d576c6336da
+DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+C1.Win.C1List.C1Combo, C1.Win.C1List.2, Version=2.1.20092.156, Culture=neutral, PublicKeyToken=6b24f8f981dbd7bc
+DevExpress.XtraBars.Ribbon.RibbonControl, DevExpress.XtraBars.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraTabbedMdi.XtraTabbedMdiManager, DevExpress.XtraBars.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+C1.C1Excel.C1XLBook, C1.C1Excel.2, Version=2.1.20092.120, Culture=neutral, PublicKeyToken=79882d576c6336da
