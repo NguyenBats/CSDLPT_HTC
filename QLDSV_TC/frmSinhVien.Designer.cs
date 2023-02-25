@@ -37,7 +37,6 @@ namespace QLDSV_TC
             System.Windows.Forms.Label labDiaChi;
             System.Windows.Forms.Label labNgaySinh;
             System.Windows.Forms.Label labMaLop;
-            System.Windows.Forms.Label labMatKhau;
             System.Windows.Forms.Label dANGHIHOCLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSinhVien));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -62,6 +61,8 @@ namespace QLDSV_TC
             this.tableAdapterManager = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.TableAdapterManager();
             this.DANGKYTableAdapter = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.DANGKYTableAdapter();
             this.groupBox1 = new DevExpress.XtraEditors.PanelControl();
+            this.labelMatKhau = new System.Windows.Forms.Label();
+            this.cboDaNghiHoc = new QLDSV_TC.Combobox.DaNghiHocCombobox();
             this.cboGioiTinh = new QLDSV_TC.Combobox.GioiTinhCombobox();
             this.cboLop = new QLDSV_TC.Combobox.LopCombobox();
             this.label1 = new System.Windows.Forms.Label();
@@ -72,7 +73,6 @@ namespace QLDSV_TC
             this.txtHo = new DevExpress.XtraEditors.TextEdit();
             this.txtMaSV = new DevExpress.XtraEditors.TextEdit();
             this.bdsDangKy = new System.Windows.Forms.BindingSource(this.components);
-            this.cboDaNghiHoc = new QLDSV_TC.Combobox.DaNghiHocCombobox();
             labMaSV = new System.Windows.Forms.Label();
             labHo = new System.Windows.Forms.Label();
             labTen = new System.Windows.Forms.Label();
@@ -80,7 +80,6 @@ namespace QLDSV_TC
             labDiaChi = new System.Windows.Forms.Label();
             labNgaySinh = new System.Windows.Forms.Label();
             labMaLop = new System.Windows.Forms.Label();
-            labMatKhau = new System.Windows.Forms.Label();
             dANGHIHOCLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -169,16 +168,6 @@ namespace QLDSV_TC
             labMaLop.Size = new System.Drawing.Size(27, 15);
             labMaLop.TabIndex = 12;
             labMaLop.Text = "Lớp";
-            // 
-            // labMatKhau
-            // 
-            labMatKhau.AutoSize = true;
-            labMatKhau.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            labMatKhau.Location = new System.Drawing.Point(855, 190);
-            labMatKhau.Name = "labMatKhau";
-            labMatKhau.Size = new System.Drawing.Size(54, 15);
-            labMatKhau.TabIndex = 16;
-            labMatKhau.Text = "Mật khẩu";
             // 
             // dANGHIHOCLabel
             // 
@@ -332,7 +321,6 @@ namespace QLDSV_TC
             this.flexSinhVien.Size = new System.Drawing.Size(1188, 240);
             this.flexSinhVien.StyleInfo = resources.GetString("flexSinhVien.StyleInfo");
             this.flexSinhVien.TabIndex = 4;
-            this.flexSinhVien.SelChange += new System.EventHandler(this.flexSinhVien_SelChange);
             this.flexSinhVien.Click += new System.EventHandler(this.flexSinhVien_Click);
             // 
             // cmbKhoa
@@ -353,7 +341,6 @@ namespace QLDSV_TC
             this.labKhoa.Size = new System.Drawing.Size(31, 13);
             this.labKhoa.TabIndex = 2;
             this.labKhoa.Text = "Khoa";
-            this.labKhoa.Click += new System.EventHandler(this.labKhoa_Click);
             // 
             // qLDSV_TCDataSet
             // 
@@ -387,12 +374,12 @@ namespace QLDSV_TC
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.labelMatKhau);
             this.groupBox1.Controls.Add(this.cboDaNghiHoc);
             this.groupBox1.Controls.Add(this.cboGioiTinh);
             this.groupBox1.Controls.Add(this.cboLop);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(dANGHIHOCLabel);
-            this.groupBox1.Controls.Add(labMatKhau);
             this.groupBox1.Controls.Add(this.txtMatKhau);
             this.groupBox1.Controls.Add(labMaLop);
             this.groupBox1.Controls.Add(labNgaySinh);
@@ -411,6 +398,25 @@ namespace QLDSV_TC
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1238, 333);
             this.groupBox1.TabIndex = 7;
+            // 
+            // labelMatKhau
+            // 
+            this.labelMatKhau.AutoSize = true;
+            this.labelMatKhau.Location = new System.Drawing.Point(838, 191);
+            this.labelMatKhau.Name = "labelMatKhau";
+            this.labelMatKhau.Size = new System.Drawing.Size(51, 13);
+            this.labelMatKhau.TabIndex = 23;
+            this.labelMatKhau.Text = "Mật khẩu";
+            // 
+            // cboDaNghiHoc
+            // 
+            this.cboDaNghiHoc.DisplayMember = "Name";
+            this.cboDaNghiHoc.FormattingEnabled = true;
+            this.cboDaNghiHoc.Location = new System.Drawing.Point(923, 133);
+            this.cboDaNghiHoc.Name = "cboDaNghiHoc";
+            this.cboDaNghiHoc.Size = new System.Drawing.Size(190, 21);
+            this.cboDaNghiHoc.TabIndex = 22;
+            this.cboDaNghiHoc.ValueMember = "ID";
             // 
             // cboGioiTinh
             // 
@@ -518,16 +524,6 @@ namespace QLDSV_TC
             this.bdsDangKy.DataMember = "FK_CTLTC_SINHVIEN";
             this.bdsDangKy.DataSource = this.bdsSV;
             // 
-            // cboDaNghiHoc
-            // 
-            this.cboDaNghiHoc.DisplayMember = "Name";
-            this.cboDaNghiHoc.FormattingEnabled = true;
-            this.cboDaNghiHoc.Location = new System.Drawing.Point(923, 133);
-            this.cboDaNghiHoc.Name = "cboDaNghiHoc";
-            this.cboDaNghiHoc.Size = new System.Drawing.Size(190, 21);
-            this.cboDaNghiHoc.TabIndex = 22;
-            this.cboDaNghiHoc.ValueMember = "ID";
-            // 
             // frmSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -602,5 +598,6 @@ namespace QLDSV_TC
         private C1.Win.C1FlexGrid.C1FlexGrid flexSinhVien;
         private Combobox.GioiTinhCombobox cboGioiTinh;
         private Combobox.DaNghiHocCombobox cboDaNghiHoc;
+        private System.Windows.Forms.Label labelMatKhau;
     }
 }
