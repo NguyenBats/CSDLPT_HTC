@@ -55,10 +55,6 @@ namespace QLDSV_TC
             this.flexSinhVien = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.cmbKhoa = new System.Windows.Forms.ComboBox();
             this.labKhoa = new System.Windows.Forms.Label();
-            this.qLDSV_TCDataSet = new QLDSV_TC.QLDSV_TCDataSet();
-            this.bdsSV = new System.Windows.Forms.BindingSource(this.components);
-            this.SINHVIENTableAdapter = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.SINHVIENTableAdapter();
-            this.tableAdapterManager = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.TableAdapterManager();
             this.DANGKYTableAdapter = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.DANGKYTableAdapter();
             this.groupBox1 = new DevExpress.XtraEditors.PanelControl();
             this.labelMatKhau = new System.Windows.Forms.Label();
@@ -85,8 +81,6 @@ namespace QLDSV_TC
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flexSinhVien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsSV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).BeginInit();
@@ -342,32 +336,6 @@ namespace QLDSV_TC
             this.labKhoa.TabIndex = 2;
             this.labKhoa.Text = "Khoa";
             // 
-            // qLDSV_TCDataSet
-            // 
-            this.qLDSV_TCDataSet.DataSetName = "QLDSV_TCDataSet";
-            this.qLDSV_TCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bdsSV
-            // 
-            this.bdsSV.DataMember = "SINHVIEN";
-            this.bdsSV.DataSource = this.qLDSV_TCDataSet;
-            // 
-            // SINHVIENTableAdapter
-            // 
-            this.SINHVIENTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DANGKYTableAdapter = this.DANGKYTableAdapter;
-            this.tableAdapterManager.GIANGVIENTableAdapter = null;
-            this.tableAdapterManager.KHOATableAdapter = null;
-            this.tableAdapterManager.LOPTableAdapter = null;
-            this.tableAdapterManager.LOPTINCHITableAdapter = null;
-            this.tableAdapterManager.MONHOCTableAdapter = null;
-            this.tableAdapterManager.SINHVIENTableAdapter = this.SINHVIENTableAdapter;
-            this.tableAdapterManager.UpdateOrder = QLDSV_TC.QLDSV_TCDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // DANGKYTableAdapter
             // 
             this.DANGKYTableAdapter.ClearBeforeFill = true;
@@ -450,7 +418,6 @@ namespace QLDSV_TC
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSV, "PASSWORD", true));
             this.txtMatKhau.Location = new System.Drawing.Point(923, 187);
             this.txtMatKhau.MenuManager = this.barManager1;
             this.txtMatKhau.Name = "txtMatKhau";
@@ -461,7 +428,6 @@ namespace QLDSV_TC
             // 
             // dateEditNgaySinh
             // 
-            this.dateEditNgaySinh.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSV, "NGAYSINH", true));
             this.dateEditNgaySinh.EditValue = null;
             this.dateEditNgaySinh.Location = new System.Drawing.Point(198, 127);
             this.dateEditNgaySinh.MenuManager = this.barManager1;
@@ -477,7 +443,6 @@ namespace QLDSV_TC
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSV, "DIACHI", true));
             this.txtDiaChi.Location = new System.Drawing.Point(198, 187);
             this.txtDiaChi.MenuManager = this.barManager1;
             this.txtDiaChi.Name = "txtDiaChi";
@@ -488,7 +453,6 @@ namespace QLDSV_TC
             // 
             // txtTen
             // 
-            this.txtTen.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSV, "TEN", true));
             this.txtTen.Location = new System.Drawing.Point(688, 74);
             this.txtTen.MenuManager = this.barManager1;
             this.txtTen.Name = "txtTen";
@@ -499,7 +463,6 @@ namespace QLDSV_TC
             // 
             // txtHo
             // 
-            this.txtHo.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSV, "HO", true));
             this.txtHo.Location = new System.Drawing.Point(433, 74);
             this.txtHo.MenuManager = this.barManager1;
             this.txtHo.Name = "txtHo";
@@ -510,7 +473,6 @@ namespace QLDSV_TC
             // 
             // txtMaSV
             // 
-            this.txtMaSV.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSV, "MASV", true));
             this.txtMaSV.Location = new System.Drawing.Point(198, 74);
             this.txtMaSV.MenuManager = this.barManager1;
             this.txtMaSV.Name = "txtMaSV";
@@ -518,11 +480,6 @@ namespace QLDSV_TC
             this.txtMaSV.Properties.Appearance.Options.UseFont = true;
             this.txtMaSV.Size = new System.Drawing.Size(156, 22);
             this.txtMaSV.TabIndex = 1;
-            // 
-            // bdsDangKy
-            // 
-            this.bdsDangKy.DataMember = "FK_CTLTC_SINHVIEN";
-            this.bdsDangKy.DataSource = this.bdsSV;
             // 
             // frmSinhVien
             // 
@@ -545,8 +502,6 @@ namespace QLDSV_TC
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flexSinhVien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsSV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -577,11 +532,7 @@ namespace QLDSV_TC
         private DevExpress.XtraBars.BarButtonItem btnGhi;
         private DevExpress.XtraBars.BarButtonItem btnPhucHoi;
         private DevExpress.XtraBars.BarButtonItem btnThoat;
-        private System.Windows.Forms.BindingSource bdsSV;
-        private QLDSV_TCDataSet qLDSV_TCDataSet;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private QLDSV_TCDataSetTableAdapters.SINHVIENTableAdapter SINHVIENTableAdapter;
-        private QLDSV_TCDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private DevExpress.XtraEditors.PanelControl groupBox1;
         private QLDSV_TCDataSetTableAdapters.DANGKYTableAdapter DANGKYTableAdapter;
         private System.Windows.Forms.BindingSource bdsDangKy;

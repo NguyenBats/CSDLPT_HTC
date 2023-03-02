@@ -55,6 +55,8 @@ namespace QLDSV_TC
             this.MONHOCTableAdapter = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.MONHOCTableAdapter();
             this.tableAdapterManager = new QLDSV_TC.QLDSV_TCDataSetTableAdapters.TableAdapterManager();
             this.gcMonHoc = new DevExpress.XtraGrid.GridControl();
+            this.mONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLDSV_TCDataSetGoc = new QLDSV_TC.QLDSV_TCDataSetGoc();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAMH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENMH = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -62,8 +64,6 @@ namespace QLDSV_TC
             this.colSOTIET_TH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1 = new DevExpress.XtraEditors.PanelControl();
             this.txtMaMH = new DevExpress.XtraEditors.TextEdit();
-            this.mONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLDSV_TCDataSetGoc = new QLDSV_TC.QLDSV_TCDataSetGoc();
             this.txtSoTietTH = new System.Windows.Forms.TextBox();
             this.txtSoTietLT = new DevExpress.XtraEditors.TextEdit();
             this.txtTenMH = new System.Windows.Forms.TextBox();
@@ -81,12 +81,12 @@ namespace QLDSV_TC
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsMonHoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMonHoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSetGoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaMH.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSetGoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoTietLT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLTC)).BeginInit();
             this.SuspendLayout();
@@ -318,6 +318,16 @@ namespace QLDSV_TC
             this.gcMonHoc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // mONHOCBindingSource
+            // 
+            this.mONHOCBindingSource.DataMember = "MONHOC";
+            this.mONHOCBindingSource.DataSource = this.qLDSV_TCDataSetGoc;
+            // 
+            // qLDSV_TCDataSetGoc
+            // 
+            this.qLDSV_TCDataSetGoc.DataSetName = "QLDSV_TCDataSetGoc";
+            this.qLDSV_TCDataSetGoc.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -380,16 +390,6 @@ namespace QLDSV_TC
             this.txtMaMH.Name = "txtMaMH";
             this.txtMaMH.Size = new System.Drawing.Size(125, 20);
             this.txtMaMH.TabIndex = 9;
-            // 
-            // mONHOCBindingSource
-            // 
-            this.mONHOCBindingSource.DataMember = "MONHOC";
-            this.mONHOCBindingSource.DataSource = this.qLDSV_TCDataSetGoc;
-            // 
-            // qLDSV_TCDataSetGoc
-            // 
-            this.qLDSV_TCDataSetGoc.DataSetName = "QLDSV_TCDataSetGoc";
-            this.qLDSV_TCDataSetGoc.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtSoTietTH
             // 
@@ -468,13 +468,13 @@ namespace QLDSV_TC
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsMonHoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMonHoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSetGoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaMH.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLDSV_TCDataSetGoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoTietLT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLTC)).EndInit();
             this.ResumeLayout(false);

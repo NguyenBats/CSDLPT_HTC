@@ -109,6 +109,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BO\Lop.cs" />
     <Compile Include="BO\LopTinChi.cs" />
     <Compile Include="BO\SinhVien.cs" />
     <Compile Include="Combobox\DaNghiHocCombobox.cs">
@@ -129,6 +130,7 @@
     <Compile Include="Combobox\MonHocCombobox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DAO\LopDAO.cs" />
     <Compile Include="DAO\LopTinChiDAO.cs" />
     <Compile Include="DAO\SinhVienDAO.cs" />
     <Compile Include="frmDangKy.cs">

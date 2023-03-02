@@ -1,4 +1,6 @@
 ﻿using DevExpress.DataAccess.Native.Excel;
+using QLDSV_TC.BO;
+using QLDSV_TC.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,38 +15,68 @@ namespace QLDSV_TC
 {
     public partial class frmLop : Form
     {
-        int viTri;
-        String maKhoa = "";
         public frmLop()
         {
             InitializeComponent();
         }
 
 
-
-        private void lOPBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void refreshData()
         {
-            this.Validate();
-            this.bdsLop.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.qLDSV_TCDataSet);
+            try
+            {
+                //Lấy dữ liệu lớp đổ ra lưới
+                LopDAO lopDAO = new LopDAO();
+                DataTable dtbSinhVien = lopDAO.GetAll();
+                if (dtbSinhVien != null && dtbSinhVien.Rows.Count > 0)
+                {
+                    flexLop.DataSource = dtbSinhVien;
+
+                }
+                else
+                {
+                    btnXoa.Enabled = false;
+                }
+
+                FormatFlex();
+            }
+            catch (Exception e)
+            {
+            }
 
         }
 
+        private void FormatFlex()
+        {
+            try
+            {
+                flexLop.Width = 1600;
+                flexLop.Cols[0].Visible = false;
+                flexLop.Cols["MALOP"].Caption = "Mã lớp";
+                flexLop.Cols["TENLOP"].Caption = "Tên lớp";
+                flexLop.Cols["KHOAHOC"].Caption = "Khóa học";
+                flexLop.Cols["MAKHOA"].Caption = "Mã khoa";
+                flexLop.Cols["ROWGUID"].Visible = false;
+                flexLop.Cols["MAKHOA"].Visible = false;
+                flexLop.Rows[0].Height = 50;
+                flexLop.Cols["MALOP"].Width = 200;
+                flexLop.Cols["TENLOP"].Width = 200;
+                flexLop.Cols["KHOAHOC"].Width = 200;
+                flexLop.Cols["MAKHOA"].Width = 200;
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Lỗi format lưới.\n" + ex.Message, "", MessageBoxButtons.OK);
+            }
+        }
+
+
         private void frmLop_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.NIENKHOA' table. You can move, or remove it, as needed.
-            this.nIENKHOATableAdapter.Fill(this.qLDSV_TCDataSet.NIENKHOA);
-            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.KHOA' table. You can move, or remove it, as needed.
-            this.kHOATableAdapter.Fill(this.qLDSV_TCDataSet.KHOA);
-            qLDSV_TCDataSet.EnforceConstraints = false;
-            this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.LOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
-
-            this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.SINHVIEN' table. You can move, or remove it, as needed.
-            this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN);
-
-            maKhoa = ((DataRowView)bdsLop[0])["MAKHOA"].ToString();
             cmbKhoa.DataSource = Program.bds_dspm; //sao chep bds_pm o form dang nhap
             cmbKhoa.DisplayMember = "TENKHOA";
             cmbKhoa.ValueMember = "TENSERVER";
@@ -60,35 +92,31 @@ namespace QLDSV_TC
             btnThem.Enabled = btnGhi.Enabled = btnXoa.Enabled = true;
             btnPhucHoi.Enabled = false;
             txtMaLop.Enabled = false;
+            refreshData();
         }
 
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            String maLop = "";
-            if (bdsSV.Count > 0)
-            {
-                MessageBox.Show("Không thể xóa lớp này vì lớp đã có sinh viên", "");
-                return;
-            }
+            //if (bdsSV.Count > 0)
+            //{
+            //    MessageBox.Show("Không thể xóa lớp này vì lớp đã có sinh viên", "");
+            //    return;
+            //}
             if (MessageBox.Show("Bạn có muốn xóa lớp này không?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 try
                 {
-                    maLop = ((DataRowView)bdsLop[bdsLop.Position])["MALOP"].ToString();//giu lai de reload
-                    bdsLop.RemoveCurrent();
-                    this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
-                    this.LOPTableAdapter.Update(this.qLDSV_TCDataSet.LOP);
+                    SinhVienDAO sinhVienDAO = new SinhVienDAO();
+                    sinhVienDAO.Delete(txtMaLop.Text.Trim());
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi xóa lớp, vui lòng xóa lại.\n" + ex.Message, "", MessageBoxButtons.OK);
-                    this.LOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
-                    bdsLop.Position = bdsLop.Find("MALOP", maLop);
                     return;
                 }
             }
-            if (bdsLop.Count == 0) btnXoa.Enabled = false;
+            refreshData();
         }
 
         private void btnGhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -131,57 +159,52 @@ namespace QLDSV_TC
             try
             {
                 String malop = txtMaLop.Text;
+                LopDAO lopDAO = new LopDAO();
+                Lop lop = new Lop();
+                lop.MaLop = malop;
+                lop.TenLop = txtTenLop.Text.Trim();
+                lop.KhoaHoc = txtStartYear.Text.Trim() + "-" + txtEndYear.Text.Trim();
+                lop.MaKhoa = cmbKhoa.SelectedValue.ToString(); ;
                 if (btnThem.Enabled == false)
                 {
-                    if (Program.ExecSqlToInt("EXEC [dbo].[sp_KiemTraMaLop] '" + malop + "'") == 1)
+                    if (lopDAO.CheckMaLop(malop))
                         return;
-                    if (Program.ExecSqlNonQuery("INSERT INTO LOP(MALOP,TENLOP,KHOAHOC,MAKHOA) VALUES ('" + txtMaLop.Text + "','" + txtTenLop.Text + "','" + txtStartYear.Text + "-" + txtEndYear.Text + "','" + maKhoa.Trim() + "')") != 0)
+                   
+                    if (!lopDAO.CreateLop(lop))
                         return;
                     else
                     {
                         MessageBox.Show("Thêm mới lớp thành công.\n", "Thành công", MessageBoxButtons.OK);
-                        this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
-                        this.LOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
+
                     }
-                    LopGridControl.Enabled = true;
                     textPanel.Enabled = false;
                     btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = true;
                     btnGhi.Enabled = btnPhucHoi.Enabled = false;
-                    LopGridControl.Enabled = false;
                 }
                 else
                 {
-                    if (Program.ExecSqlNonQuery("UPDATE LOP SET TENLOP = '" + txtTenLop.Text + "', KHOAHOC = '" + txtStartYear.Text + "-" + txtEndYear.Text + "' WHERE MALOP = '" + txtMaLop.Text+"'") != 0)
+                    if (!lopDAO.UpdateLop(lop))
                         return;
                     else
                     {
                         MessageBox.Show("Cập nhật thông tin lớp thành công.\n", "Thành công", MessageBoxButtons.OK);
-                        this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
-                        this.LOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
                     }
                 }
-                
+
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi thêm lớp.\n" + ex.Message, "", MessageBoxButtons.OK);
                 return;
-            }         
-            
-           
+            }
+
+
         }
 
         private void btnPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //bdsLop.CancelEdit();
-            if (btnThem.Enabled == false)
-            {
-                bdsLop.Position = viTri;
-            }
-            setCurrentValue();
-            LopGridControl.Enabled = true;
-            //textPanel.Enabled = false;
+            flexLop.Enabled = true;
             btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = true;
             btnGhi.Enabled = btnPhucHoi.Enabled = false;
             txtMaLop.Enabled = false;
@@ -197,20 +220,12 @@ namespace QLDSV_TC
         {
             btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = false;
             btnGhi.Enabled = btnPhucHoi.Enabled = true;
-            LopGridControl.Enabled = true;
-            
-
-            viTri = bdsLop.Position;
             txtMaLop.Text = "";
             txtTenLop.Text = "";
             txtStartYear.Text = "";
             txtEndYear.Text = "";
             textPanel.Enabled = true;
             txtMaLop.Enabled = true;
-            //bdsLop.AddNew();
-            //cboKhoa.Sekected = maKhoa;
-
-
         }
 
         private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
@@ -231,56 +246,7 @@ namespace QLDSV_TC
             {
                 MessageBox.Show("Lỗi kết nối về chi nhánh mới.\n", "", MessageBoxButtons.OK);
             }
-            this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.LOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
-            this.sINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN);
-            try
-            {
-                maKhoa = ((DataRowView)bdsLop[0])["MAKHOA"].ToString();
-            }
-            catch (Exception ex) { }
-        }
-
-        private void txtMaLop_TextChanged(object sender, EventArgs e)
-        {
-            //if (bdsLop.Count == 0) return;
-            //string nienKhoa = ((DataRowView)bdsLop[bdsLop.Position])["KHOAHOC"].ToString();//giu lai de reload
-            //DataTable dtbNienKhoa = this.qLDSV_TCDataSet.NIENKHOA as DataTable;
-            //cboNienKhoaFinal.DataSource = dtbNienKhoa;
-            //cboNienKhoaFinal.DisplayMember = "NIENKHOA";
-            //if (dtbNienKhoa != null && dtbNienKhoa.Rows.Count > 0)
-            //{
-            //    DataRow dr = dtbNienKhoa.AsEnumerable().First(x => Convert.ToString(x["NIENKHOA"]) == nienKhoa);
-            //    int selectedIndex = dtbNienKhoa.Rows.IndexOf(dr);
-            //    cboNienKhoaFinal.SelectedIndex = selectedIndex;
-            //}
-        }
-
-
-        private void txtMaLopUnvisible_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                setCurrentValue();
-            }
-            catch (Exception objEx)
-            {
-
-            }
-        }
-
-        private void setCurrentValue()
-        {
-            viTri = bdsLop.Position;
-            DataTable dtbLop = this.qLDSV_TCDataSet.LOP as DataTable;
-            if (dtbLop != null && dtbLop.Rows.Count > 0)
-            {
-                txtMaLop.Text = dtbLop.Rows[viTri]["MALOP"].ToString();
-                txtTenLop.Text = dtbLop.Rows[viTri]["TENLOP"].ToString();
-                txtStartYear.Text = dtbLop.Rows[viTri]["KHOAHOC"].ToString().Split('-')[0];
-                txtEndYear.Text = dtbLop.Rows[viTri]["KHOAHOC"].ToString().Split('-')[1];
-            }
+            refreshData();
         }
 
         private void txtStartYear_KeyUp(object sender, KeyEventArgs e)
@@ -302,6 +268,26 @@ namespace QLDSV_TC
             catch (Exception)
             {
 
+            }
+        }
+
+        private void flexLop_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                btnGhi.Enabled = true;
+                btnPhucHoi.Enabled = false;
+                int row = flexLop.Row;
+                txtMaLop.Text = flexLop[row, "MALOP"].ToString();
+                txtMaLop.Enabled = false;
+                txtTenLop.Text = flexLop[row, "TENLOP"].ToString();
+                txtStartYear.Text = flexLop[row, "KHOAHOC"].ToString().Split('-')[0];
+                txtEndYear.Text = flexLop[row, "KHOAHOC"].ToString().Split('-')[1];
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi", ex.ToString(), MessageBoxButtons.OK);
             }
         }
     }

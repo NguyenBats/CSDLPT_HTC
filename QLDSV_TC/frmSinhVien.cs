@@ -17,18 +17,9 @@ namespace QLDSV_TC
 {
     public partial class frmSinhVien : Form
     {
-        int viTri;
         public frmSinhVien()
         {
             InitializeComponent();
-        }
-
-        private void sINHVIENBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.bdsSV.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.qLDSV_TCDataSet);
-
         }
 
         private void FormatFlex()
@@ -96,14 +87,6 @@ namespace QLDSV_TC
         {
 
             refreshData();
-
-            qLDSV_TCDataSet.EnforceConstraints = false;
-            this.SINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.SINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN);
-
-            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.DANGKY' table. You can move, or remove it, as needed.
-            this.DANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.DANGKYTableAdapter.Fill(this.qLDSV_TCDataSet.DANGKY);
             // TODO: This line of code loads data into the 'qLDSV_TCDataSet.SINHVIEN' table. You can move, or remove it, as needed.
             cmbKhoa.DataSource = Program.bds_dspm; //sao chep bds_pm o form dang nhap
             cmbKhoa.DisplayMember = "TENKHOA";
@@ -119,6 +102,7 @@ namespace QLDSV_TC
                 cmbKhoa.Enabled = false;
                 btnThem.Enabled = btnGhi.Enabled = btnXoa.Enabled = btnPhucHoi.Enabled = true;
             }
+            cmbKhoa.Enabled = true;//them vao de test
             txtMatKhau.Visible = true;
             labelMatKhau.Visible = true;
         }
@@ -141,30 +125,25 @@ namespace QLDSV_TC
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            String maSinhVien = "";
             if (bdsDangKy.Count > 0)
             {
                 MessageBox.Show("Không thể xóa môn học này vì đã có lớp tín chỉ", "");
                 return;
             }
-            if (MessageBox.Show("Bạn có muốn xóa lớp này không?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show("Bạn có muốn xóa sinh viên này không?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 try
                 {
-                    maSinhVien = ((DataRowView)bdsSV[bdsSV.Position])["MASV"].ToString();//giu lai de reload
-                    bdsSV.RemoveCurrent();
-                    this.SINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-                    this.SINHVIENTableAdapter.Update(this.qLDSV_TCDataSet.SINHVIEN);
+                    SinhVienDAO sinhVienDAO = new SinhVienDAO();
+                    sinhVienDAO.Delete(txtMaSV.Text.Trim());
+                    refreshData();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi xóa sinh viên, vui lòng xóa lại.\n" + ex.Message, "", MessageBoxButtons.OK);
-                    this.SINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN);
-                    bdsSV.Position = bdsSV.Find("MASV", bdsSV);
                     return;
                 }
             }
-            if (bdsSV.Count == 0) btnXoa.Enabled = false;
         }
 
         private void btnGhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -172,27 +151,25 @@ namespace QLDSV_TC
             //kiem tra ma sv khong trung tren cac phan manh +++
             try
             {
-                if (txtMaSV.Text.Trim() == "")
+                if (string.IsNullOrWhiteSpace(txtMaSV.Text))
                 {
                     MessageBox.Show("Mã sinh viên không được để trống!", "", MessageBoxButtons.OK);
                     txtMaSV.Focus();
                     return;
                 }
-
-                if (txtHo.Text.Trim() == "")
+                if (string.IsNullOrWhiteSpace(txtHo.Text))
                 {
                     MessageBox.Show("Họ không được để trống!", "", MessageBoxButtons.OK);
                     txtHo.Focus();
                     return;
                 }
-                if (txtTen.Text.Trim() == "")
+                if (string.IsNullOrWhiteSpace(txtTen.Text))
                 {
                     MessageBox.Show("Tên không được để trống!", "", MessageBoxButtons.OK);
                     txtTen.Focus();
                     return;
                 }
-
-                if (txtDiaChi.Text.Trim() == "")
+                if (string.IsNullOrWhiteSpace(txtDiaChi.Text))
                 {
                     MessageBox.Show("Địa chỉ không được để trống!", "", MessageBoxButtons.OK);
                     txtDiaChi.Focus();
@@ -209,27 +186,22 @@ namespace QLDSV_TC
                 sinhVien.Malop = cboLop.SelectedValue.ToString().Trim();
                 sinhVien.Danghihoc = Convert.ToBoolean(cboDaNghiHoc.SelectedValue);
                 sinhVien.Password = txtMatKhau.Text.Trim();
-
-                if (!btnThem.Enabled)//Đang thêm mới
+                if (!btnThem.Enabled)
                 {
+                    // Đang thêm mới
                     sinhVienDAO.Insert(sinhVien);
                 }
                 else
                 {
                     sinhVienDAO.Update(sinhVien);
                 }
-
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi thêm sinh viên.\n" + ex.Message, "", MessageBoxButtons.OK);
+                MessageBox.Show($"Lỗi thêm sinh viên.\n{ex.Message}", "", MessageBoxButtons.OK);
                 return;
             }
-
-        
             flexSinhVien.Enabled = true;
-            //groupBox1.Enabled = false;
             txtMatKhau.Visible = true;
             labelMatKhau.Visible = true;
             btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = true;
@@ -239,10 +211,7 @@ namespace QLDSV_TC
 
         private void btnPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //if (btnThem.Enabled == false)
-            //{
-            //    bdsMonHoc.Position = viTri;
-            //}
+
             flexSinhVien.Enabled = true;
             groupBox1.Enabled = false;
             btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = true;
@@ -275,17 +244,13 @@ namespace QLDSV_TC
             {
                 MessageBox.Show("Lỗi kết nối về chi nhánh mới.\n", "", MessageBoxButtons.OK);
             }
-            this.SINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.SINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN);
-            this.DANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.DANGKYTableAdapter.Fill(this.qLDSV_TCDataSet.DANGKY);
+            refreshData();
         }
 
         private void flexSinhVien_Click(object sender, EventArgs e)
         {
             try
             {
-                //btnThem.Enabled = false;
                 btnGhi.Enabled = true;
                 btnPhucHoi.Enabled = false;
                 int row = flexSinhVien.Row;
@@ -293,24 +258,10 @@ namespace QLDSV_TC
                 txtMaSV.Enabled = false;
                 txtHo.Text = flexSinhVien[row, "HO"].ToString();
                 txtTen.Text = flexSinhVien[row, "TEN"].ToString();
-                if (flexSinhVien.GetData(row, "PHAI").ToString() == "True")
-                {
-                    cboGioiTinh.SelectedIndex = 0;
-                }
-                else
-                {
-                    cboGioiTinh.SelectedIndex = 1;
-                }
-
-                if (flexSinhVien.GetData(row, "DANGHIHOC").ToString() == "True")
-                {
-                    cboDaNghiHoc.SelectedIndex = 0;
-                }
-                else
-                {
-                    cboDaNghiHoc.SelectedIndex = 1;
-                }
-                dateEditNgaySinh.DateTime = Convert.ToDateTime(flexSinhVien[row, "NGAYSINH"].ToString());
+                txtDiaChi.Text = flexSinhVien[row, "DIACHI"].ToString();
+                cboGioiTinh.SelectedIndex = Convert.ToBoolean(flexSinhVien.GetData(row, "PHAI")) ? 0 : 1;
+                cboDaNghiHoc.SelectedIndex = Convert.ToBoolean(flexSinhVien.GetData(row, "DANGHIHOC")) ? 0 : 1;
+                dateEditNgaySinh.DateTime = Convert.ToDateTime(flexSinhVien[row, "NGAYSINH"]);
             }
             catch (Exception ex)
             {
