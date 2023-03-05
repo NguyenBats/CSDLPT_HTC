@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QLDSV_TC.BO;
+using QLDSV_TC.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,45 +9,64 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
 
 namespace QLDSV_TC
 {
     public partial class frmMonHoc : Form
     {
-        int viTri;
-        String maKhoa = "";
+
         public frmMonHoc()
         {
             InitializeComponent();
             
         }
 
-        private void mONHOCBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void FormatFlex()
         {
-            this.Validate();
-            this.bdsMonHoc.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.qLDSV_TCDataSet);
+            try
+            {
+                flexMonHoc.Width = 1600;
+                flexMonHoc.Cols[0].Visible = false;
+                flexMonHoc.Cols["MAMH"].Caption = "Mã môn học";
+                flexMonHoc.Cols["TENMH"].Caption = "Tên môn học";
+                flexMonHoc.Cols["SOTIET_LT"].Caption = "Số tiết lý thuyết";
+                flexMonHoc.Cols["SOTIET_TH"].Caption = "Số tiết thực hành";
 
+                flexMonHoc.Cols["ROWGUID"].Visible = false;
+                flexMonHoc.Rows[0].Height = 50;
+                flexMonHoc.Cols["MAMH"].Width = 300;
+                flexMonHoc.Cols["TENMH"].Width = 300;
+                flexMonHoc.Cols["SOTIET_LT"].Width = 300;
+                flexMonHoc.Cols["SOTIET_TH"].Width = 300;
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Lỗi format lưới.\n" + ex.Message, "", MessageBoxButtons.OK);
+            }
         }
-        
+
+        private void refreshData()
+        {
+            //Lấy dữ liệu sinh viên đổ ra lưới
+            MonHocDAO monhocDAO = new MonHocDAO();
+            DataTable dtbMonHoc = monhocDAO.GetAll();
+            flexMonHoc.DataSource = dtbMonHoc;
+            FormatFlex();
+        }
+
+
         private void frmMonHoc_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLDSV_TCDataSetGoc.MONHOC' table. You can move, or remove it, as needed.
-            this.mONHOCTableAdapter1.Fill(this.qLDSV_TCDataSetGoc.MONHOC);
-            qLDSV_TCDataSet.EnforceConstraints = false;
-            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.MONHOC' table. You can move, or remove it, as needed.
-            this.MONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.MONHOCTableAdapter.Fill(this.qLDSV_TCDataSet.MONHOC);
-            // TODO: This line of code loads data into the 'qLDSV_TCDataSet.LOPTINCHI' table. You can move, or remove it, as needed.
-            this.LOPTINCHITableAdapter.Connection.ConnectionString = Program.connstr;
-            this.LOPTINCHITableAdapter.Fill(this.qLDSV_TCDataSet.LOPTINCHI);
-            
+            refreshData();
             cmbKhoa.DataSource = Program.bds_dspm; //sao chep bds_pm o form dang nhap
             cmbKhoa.DisplayMember = "TENKHOA";
             cmbKhoa.ValueMember = "TENSERVER";
-            cmbKhoa.SelectedIndex = Program.mKhoa;
-
-            
+            cmbKhoa.SelectedIndex = Program.mKhoa;         
             if (Program.mGroup == "PGV")
             {
                 cmbKhoa.Enabled = true;//bat tat theo phan quyen
@@ -60,42 +81,40 @@ namespace QLDSV_TC
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-           
-            viTri = bdsMonHoc.Position;
+            txtMaMH.Text = "";
+            txtMaMH.Enabled = true;
+            txtTenMH.Text = "";
+            txtSoTietLT.Text = "";
+            txtSoTietTH.Text = "";
             groupBox1.Enabled = true;
-            bdsMonHoc.AddNew();
-
             btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = false;
             btnGhi.Enabled = btnPhucHoi.Enabled = true;
-            gcMonHoc.Enabled = false;
         }
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            String maMonHoc = "";
-            if (bdsLTC.Count > 0)
-            {
-                MessageBox.Show("Không thể xóa môn học này vì đã có lớp tín chỉ", "");
-                return;
-            }
+            //if (bdsLTC.Count > 0)
+            //{
+            //    MessageBox.Show("Không thể xóa môn học này vì đã có lớp tín chỉ", "");
+            //    return;
+            //}
             if (MessageBox.Show("Bạn có muốn xóa lớp này không?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 try
                 {
-                    maMonHoc = ((DataRowView)bdsMonHoc[bdsMonHoc.Position])["MAMH"].ToString();//giu lai de reload
-                    bdsMonHoc.RemoveCurrent();
-                    this.MONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
-                    this.MONHOCTableAdapter.Update(this.qLDSV_TCDataSet.MONHOC);
+                    MonHocDAO monHocDAO = new MonHocDAO();
+                    monHocDAO.Delete(txtMaMH.Text.Trim());
+                    MessageBox.Show("Xóa môn học thành công.\n", "", MessageBoxButtons.OK);
+                    refreshData();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi xóa lớp, vui lòng xóa lại.\n" + ex.Message, "", MessageBoxButtons.OK);
-                    this.MONHOCTableAdapter.Fill(this.qLDSV_TCDataSet.MONHOC);
-                    bdsMonHoc.Position = bdsMonHoc.Find("MAMH", maMonHoc);
+                    MessageBox.Show("Lỗi xóa môn học, vui lòng thử lại lại.\n" + ex.Message, "", MessageBoxButtons.OK);
+
                     return;
                 }
             }
-            if (bdsMonHoc.Count == 0) btnXoa.Enabled = false;
+            //if (bdsMonHoc.Count == 0) btnXoa.Enabled = false;
         }
 
         private void btnGhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -127,30 +146,38 @@ namespace QLDSV_TC
             }
             try
             {
-                bdsMonHoc.EndEdit();
-                bdsMonHoc.ResetCurrentItem();
-                this.MONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.MONHOCTableAdapter.Update(this.qLDSV_TCDataSet.MONHOC);
+                MonHocDAO monHocDAO = new MonHocDAO();
+                MonHoc monHoc = new MonHoc();
+                monHoc.MaMH = txtMaMH.Text.Trim();
+                monHoc.TenMH = txtTenMH.Text.Trim();
+                monHoc.SoTietLT = Convert.ToInt32(txtSoTietLT.Text.Trim());
+                monHoc.SoTietTH = Convert.ToInt32(txtSoTietTH.Text.Trim());
+                if (!btnThem.Enabled)
+                {
+                    // Đang thêm mới
+                    monHocDAO.Insert(monHoc);
+                    MessageBox.Show("Thêm mới môn học thành công.\n", "", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    monHocDAO.Update(monHoc);
+                    MessageBox.Show("Cập nhật thông tin môn học thành công.\n", "", MessageBoxButtons.OK);
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi thêm lớp.\n" + ex.Message, "", MessageBoxButtons.OK);
+                MessageBox.Show("Lỗi thêm môn học.\n" + ex.Message, "", MessageBoxButtons.OK);
                 return;
             }
-            gcMonHoc.Enabled = true;
             groupBox1.Enabled = false;
             btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = true;
             btnGhi.Enabled = btnPhucHoi.Enabled = false;
+            refreshData();
         }
 
         private void btnPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            bdsMonHoc.CancelEdit();
-            if (btnThem.Enabled == false)
-            {
-                bdsMonHoc.Position = viTri;
-            }
-            gcMonHoc.Enabled = true;
+
             groupBox1.Enabled = false;
             btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = true;
             btnGhi.Enabled = btnPhucHoi.Enabled = false;
@@ -180,11 +207,27 @@ namespace QLDSV_TC
             {
                 MessageBox.Show("Lỗi kết nối về chi nhánh mới.\n", "", MessageBoxButtons.OK);
             }
-            this.MONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.MONHOCTableAdapter.Fill(this.qLDSV_TCDataSet.MONHOC);
-            this.LOPTINCHITableAdapter.Connection.ConnectionString = Program.connstr;
-            this.LOPTINCHITableAdapter.Fill(this.qLDSV_TCDataSet.LOPTINCHI);
             
+        }
+
+        private void flexMonHoc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                groupBox1.Enabled = true;
+                btnGhi.Enabled = true;
+                btnPhucHoi.Enabled = false;
+                int row = flexMonHoc.Row;
+                txtMaMH.Text = flexMonHoc[row, "MAMH"].ToString();
+                txtMaMH.Enabled = false;
+                txtTenMH.Text = flexMonHoc[row, "TENMH"].ToString();
+                txtSoTietLT.Text = flexMonHoc[row, "SOTIET_LT"].ToString();
+                txtSoTietTH.Text = flexMonHoc[row, "SOTIET_TH"].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi", ex.ToString(), MessageBoxButtons.OK);
+            }
         }
     }
 }

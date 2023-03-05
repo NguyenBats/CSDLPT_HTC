@@ -190,10 +190,12 @@ namespace QLDSV_TC
                 {
                     // Đang thêm mới
                     sinhVienDAO.Insert(sinhVien);
+                    MessageBox.Show("Thêm mới sinh viên thành công.\n", "", MessageBoxButtons.OK);
                 }
                 else
                 {
                     sinhVienDAO.Update(sinhVien);
+                    MessageBox.Show("Cập nhật thông tin sinh viên thành công.\n", "", MessageBoxButtons.OK);
                 }
             }
             catch (Exception ex)

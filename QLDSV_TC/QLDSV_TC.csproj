@@ -111,7 +111,20 @@
   <ItemGroup>
     <Compile Include="BO\Lop.cs" />
     <Compile Include="BO\LopTinChi.cs" />
+    <Compile Include="BO\MonHoc.cs" />
     <Compile Include="BO\SinhVien.cs" />
+    <Compile Include="Combobox\NhomCombobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Combobox\HuyLopCombobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Combobox\HocKyCombobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Combobox\NienKhoaCombobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Combobox\DaNghiHocCombobox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -130,6 +143,7 @@
     <Compile Include="Combobox\MonHocCombobox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DAO\MonHocDAO.cs" />
     <Compile Include="DAO\LopDAO.cs" />
     <Compile Include="DAO\LopTinChiDAO.cs" />
     <Compile Include="DAO\SinhVienDAO.cs" />

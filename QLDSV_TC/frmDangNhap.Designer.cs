@@ -43,7 +43,6 @@ namespace QLDSV_TC
             this.sinhVienCombobox1 = new QLDSV_TC.Combobox.SinhVienCombobox();
             this.monHocCombobox1 = new QLDSV_TC.Combobox.MonHocCombobox();
             this.giangVienCombobox1 = new QLDSV_TC.Combobox.GiangVienCombobox();
-            this.gioiTinhCombobox1 = new QLDSV_TC.Combobox.GioiTinhCombobox();
             this.SuspendLayout();
             // 
             // lbChiNhanh
@@ -170,22 +169,11 @@ namespace QLDSV_TC
             this.giangVienCombobox1.TabIndex = 11;
             this.giangVienCombobox1.ValueMember = "MAGV";
             // 
-            // gioiTinhCombobox1
-            // 
-            this.gioiTinhCombobox1.DisplayMember = "Sex";
-            this.gioiTinhCombobox1.FormattingEnabled = true;
-            this.gioiTinhCombobox1.Location = new System.Drawing.Point(540, 109);
-            this.gioiTinhCombobox1.Name = "gioiTinhCombobox1";
-            this.gioiTinhCombobox1.Size = new System.Drawing.Size(179, 21);
-            this.gioiTinhCombobox1.TabIndex = 12;
-            this.gioiTinhCombobox1.ValueMember = "ID";
-            // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 450);
-            this.Controls.Add(this.gioiTinhCombobox1);
             this.Controls.Add(this.giangVienCombobox1);
             this.Controls.Add(this.lopCombobox1);
             this.Controls.Add(this.sinhVienCombobox1);
@@ -221,6 +209,5 @@ namespace QLDSV_TC
         private Combobox.LopCombobox lopCombobox1;
         private QLDSV_TCDataSetGocTableAdapters.GET_LOP_TIN_CHI_BY_NIEN_KHOA_AND_HOC_KYTableAdapter geT_LOP_TIN_CHI_BY_NIEN_KHOA_AND_HOC_KYTableAdapter1;
         private Combobox.GiangVienCombobox giangVienCombobox1;
-        private Combobox.GioiTinhCombobox gioiTinhCombobox1;
     }
 }
