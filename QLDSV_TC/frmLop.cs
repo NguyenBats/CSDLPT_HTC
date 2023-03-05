@@ -109,6 +109,7 @@ namespace QLDSV_TC
                 {
                     SinhVienDAO sinhVienDAO = new SinhVienDAO();
                     sinhVienDAO.Delete(txtMaLop.Text.Trim());
+                    refreshData();
                 }
                 catch (Exception ex)
                 {
@@ -164,10 +165,12 @@ namespace QLDSV_TC
                 lop.MaLop = malop;
                 lop.TenLop = txtTenLop.Text.Trim();
                 lop.KhoaHoc = txtStartYear.Text.Trim() + "-" + txtEndYear.Text.Trim();
-                lop.MaKhoa = cmbKhoa.SelectedValue.ToString(); ;
+                DataRowView row = (DataRowView)cmbKhoa.SelectedItem;
+                string maKhoa = row["MAKHOA"].ToString();
+                lop.MaKhoa = maKhoa;
                 if (btnThem.Enabled == false)
                 {
-                    if (lopDAO.CheckMaLop(malop))
+                    if (!lopDAO.CheckMaLop(malop))
                         return;
                    
                     if (!lopDAO.CreateLop(lop))
@@ -177,6 +180,7 @@ namespace QLDSV_TC
                         MessageBox.Show("Thêm mới lớp thành công.\n", "Thành công", MessageBoxButtons.OK);
 
                     }
+                    refreshData();
                     textPanel.Enabled = false;
                     btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = true;
                     btnGhi.Enabled = btnPhucHoi.Enabled = false;
@@ -188,6 +192,7 @@ namespace QLDSV_TC
                     else
                     {
                         MessageBox.Show("Cập nhật thông tin lớp thành công.\n", "Thành công", MessageBoxButtons.OK);
+                        refreshData();
                     }
                 }
 
