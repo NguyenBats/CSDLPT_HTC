@@ -76,7 +76,7 @@ namespace QLDSV_TC
                 string nienKhoa = cmbNienKhoa.SelectedValue.ToString();
                 int hocKy = Convert.ToInt32(cmbHocKy.SelectedItem.ToString());
                 string maMonHoc = cmbMaMH.SelectedValue.ToString();
-                string tenMonHoc = cmbMaMH.SelectedText.ToString();
+                string tenMonHoc = cmbMaMH.Text.ToString().Trim();
                 int nhom = Convert.ToInt32(NhomCB.SelectedItem.ToString());
                 XrptDANH_SACH_SINH_VIEN_DANG_KI_LTC rpt = new XrptDANH_SACH_SINH_VIEN_DANG_KI_LTC(nienKhoa, hocKy, maMonHoc, nhom);
                 rpt.labelTieuDe.Text = "DANH SÁCH SINH VIÊN ĐĂNG KÝ LỚP TÍN CHỈ";
