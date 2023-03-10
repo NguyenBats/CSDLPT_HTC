@@ -666,7 +666,6 @@ G:\Distributed\CSDLPT_HTC\QLDSV_TC\obj\Debug\QLDSV_TC.XrptBANG_DIEM_MON_HOC.reso
 G:\Distributed\CSDLPT_HTC\QLDSV_TC\obj\Debug\QLDSV_TC.XrptDanhSachLTC.resources
 G:\Distributed\CSDLPT_HTC\QLDSV_TC\obj\Debug\QLDSV_TC.XrptDANH_SACH_DONG_HOC_PHI_LOP.resources
 G:\Distributed\CSDLPT_HTC\QLDSV_TC\obj\Debug\QLDSV_TC.XrptDANH_SACH_SINH_VIEN_DANG_KI_LTC.resources
-G:\Distributed\CSDLPT_HTC\QLDSV_TC\obj\Debug\QLDSV_TC.XtrpSp_DSSVDKLTC.resources
 G:\Distributed\CSDLPT_HTC\QLDSV_TC\obj\Debug\QLDSV_TC.csproj.GenerateResource.cache
 G:\Distributed\CSDLPT_HTC\QLDSV_TC\obj\Debug\QLDSV_TC.exe.licenses
 G:\Distributed\CSDLPT_HTC\QLDSV_TC\obj\Debug\QLDSV_TC.csproj.CoreCompileInputs.cache

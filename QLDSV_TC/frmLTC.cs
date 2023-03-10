@@ -201,7 +201,7 @@ namespace QLDSV_TC
         private void btnGhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             //kiem tra ma lop khong trung tren cac phan manh +++                  
-            if (state == "add" && !checkLTC()) return;
+            //if (state == "add" && !checkLTC()) return;
             try
             {              
                 if (txtSoSVMin.Text.Trim() == "")

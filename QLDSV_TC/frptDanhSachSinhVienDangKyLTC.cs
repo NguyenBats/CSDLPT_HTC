@@ -74,25 +74,24 @@ namespace QLDSV_TC
             try
             {
                 string nienKhoa = cmbNienKhoa.SelectedValue.ToString();
-
                 int hocKy = Convert.ToInt32(cmbHocKy.SelectedItem.ToString());
                 string maMonHoc = cmbMaMH.SelectedValue.ToString();
+                string tenMonHoc = cmbMaMH.SelectedText.ToString();
                 int nhom = Convert.ToInt32(NhomCB.SelectedItem.ToString());
-                // XrptDANH_SACH_SINH_VIEN_DANG_KI_LTC rpt = new XrptDANH_SACH_SINH_VIEN_DANG_KI_LTC(nienKhoa, hocKy, maMonHoc, nhom);
-                //XrptDANH_SACH_SINH_VIEN_DANG_KI_LTC rpt = new XrptDANH_SACH_SINH_VIEN_DANG_KI_LTC("2021-2022", 1, "LTW", 1);
-                XtrpSp_DSSVDKLTC rpt = new XtrpSp_DSSVDKLTC(nienKhoa, hocKy, maMonHoc, nhom);
-
-                rpt.labelTieuDe.Text = "Danh sách sinh viên đăng kí lớp tín chỉ \nKhoa "+ cmbKhoa.Text + "\nNiên khóa " + nienKhoa+" Học kì " +
-                   hocKy+"\nMôn học "+ cmbMaMH.Text +" - Nhóm" + NhomCB.Text;
-                rpt.txtTenNT.Text =Program.mHoTen;
-
+                XrptDANH_SACH_SINH_VIEN_DANG_KI_LTC rpt = new XrptDANH_SACH_SINH_VIEN_DANG_KI_LTC(nienKhoa, hocKy, maMonHoc, nhom);
+                rpt.labelTieuDe.Text = "DANH SÁCH SINH VIÊN ĐĂNG KÝ LỚP TÍN CHỈ";
+                rpt.labelKhoa.Text = "KHOA: " + cmbKhoa.Text;
+                rpt.labelNienKhoa.Text = "Niên khóa: " + nienKhoa;
+                rpt.labelHocKy.Text = "Học kỳ: " + hocKy;
+                rpt.labelMonHoc.Text = "Môn học: " + tenMonHoc;
+                rpt.labelNhom.Text = "Nhóm: " + nhom;
                 ReportPrintTool print = new ReportPrintTool(rpt);
                 print.ShowPreviewDialog();
             }
 
             catch (Exception)
             {
-                MessageBox.Show("VUi lòng chọn đủ thông tin!", "", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng chọn đủ thông tin!", "", MessageBoxButtons.OK);
                 return;
             }
             

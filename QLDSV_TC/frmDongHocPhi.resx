@@ -117,59 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="sPLAYDANHSACHHOCKIBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <metadata name="qLDSV_TCDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1185, 17</value>
-  </metadata>
-  <metadata name="qLDSV_TCDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1185, 17</value>
-  </metadata>
-  <metadata name="hOCPHIBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>844, 17</value>
-  </metadata>
-  <metadata name="qLDSV_TCDataSetGoc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>673, 17</value>
-  </metadata>
-  <metadata name="qLDSV_TCDataSetGoc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>673, 17</value>
-  </metadata>
-  <metadata name="lOPTINCHIBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>302, 17</value>
-  </metadata>
-  <metadata name="qLDSV_TCDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>153, 17</value>
-  </metadata>
-  <metadata name="qLDSV_TCDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>153, 17</value>
-  </metadata>
-  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="lOPTINCHITableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>490, 17</value>
-  </metadata>
-  <metadata name="hOCPHITableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1017, 17</value>
-  </metadata>
-  <metadata name="sP_LAYDANHSACHHOCKITableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>282, 56</value>
-  </metadata>
-  <metadata name="qLDSV_TCDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>546, 56</value>
-  </metadata>
-  <metadata name="hOCPHIBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>702, 56</value>
-  </metadata>
-  <metadata name="hOCPHITableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>882, 56</value>
-  </metadata>
   <metadata name="sPDanhSachHocPHiBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>395, 134</value>
-  </metadata>
-  <metadata name="qLDSV_TCDataSet4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>239, 134</value>
   </metadata>
   <metadata name="qLDSV_TCDataSet4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>239, 134</value>
@@ -179,12 +128,6 @@
   </metadata>
   <metadata name="qLDSV_TCDataSet31.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>339, 95</value>
-  </metadata>
-  <metadata name="qLDSV_TCDataSet31.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>339, 95</value>
-  </metadata>
-  <metadata name="hOCPHIBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1056, 56</value>
   </metadata>
   <metadata name="cTDONGHOCPHIBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>976, 95</value>
@@ -203,5 +146,147 @@
   </metadata>
   <metadata name="sP_DanhSachHocPHiTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>639, 134</value>
+  </metadata>
+  <data name="cboSinhVien.DataSource" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAE5TeXN0ZW0uRGF0YSwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJl
+        PW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAABVTeXN0ZW0uRGF0YS5E
+        YXRhVGFibGUDAAAAGURhdGFUYWJsZS5SZW1vdGluZ1ZlcnNpb24JWG1sU2NoZW1hC1htbERpZmZHcmFt
+        AwEBDlN5c3RlbS5WZXJzaW9uAgAAAAkDAAAABgQAAAC+CDw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rp
+        bmc9InV0Zi0xNiI/Pg0KPHhzOnNjaGVtYSB4bWxucz0iIiB4bWxuczp4cz0iaHR0cDovL3d3dy53My5v
+        cmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOm1zZGF0YT0idXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTp4
+        bWwtbXNkYXRhIj4NCiAgPHhzOmVsZW1lbnQgbmFtZT0iVGFibGUxIj4NCiAgICA8eHM6Y29tcGxleFR5
+        cGU+DQogICAgICA8eHM6c2VxdWVuY2U+DQogICAgICAgIDx4czplbGVtZW50IG5hbWU9IkhPVEVOIiBt
+        c2RhdGE6UmVhZE9ubHk9InRydWUiIG1zZGF0YTp0YXJnZXROYW1lc3BhY2U9IiI+DQogICAgICAgICAg
+        PHhzOnNpbXBsZVR5cGU+DQogICAgICAgICAgICA8eHM6cmVzdHJpY3Rpb24gYmFzZT0ieHM6c3RyaW5n
+        Ij4NCiAgICAgICAgICAgICAgPHhzOm1heExlbmd0aCB2YWx1ZT0iNzQiIC8+DQogICAgICAgICAgICA8
+        L3hzOnJlc3RyaWN0aW9uPg0KICAgICAgICAgIDwveHM6c2ltcGxlVHlwZT4NCiAgICAgICAgPC94czpl
+        bGVtZW50Pg0KICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJNQVNWIiBtc2RhdGE6dGFyZ2V0TmFtZXNw
+        YWNlPSIiPg0KICAgICAgICAgIDx4czpzaW1wbGVUeXBlPg0KICAgICAgICAgICAgPHhzOnJlc3RyaWN0
+        aW9uIGJhc2U9InhzOnN0cmluZyI+DQogICAgICAgICAgICAgIDx4czptYXhMZW5ndGggdmFsdWU9IjEw
+        IiAvPg0KICAgICAgICAgICAgPC94czpyZXN0cmljdGlvbj4NCiAgICAgICAgICA8L3hzOnNpbXBsZVR5
+        cGU+DQogICAgICAgIDwveHM6ZWxlbWVudD4NCiAgICAgIDwveHM6c2VxdWVuY2U+DQogICAgPC94czpj
+        b21wbGV4VHlwZT4NCiAgPC94czplbGVtZW50Pg0KICA8eHM6ZWxlbWVudCBuYW1lPSJ0bXBEYXRhU2V0
+        IiBtc2RhdGE6SXNEYXRhU2V0PSJ0cnVlIiBtc2RhdGE6TWFpbkRhdGFUYWJsZT0iVGFibGUxIiBtc2Rh
+        dGE6VXNlQ3VycmVudExvY2FsZT0idHJ1ZSI+DQogICAgPHhzOmNvbXBsZXhUeXBlPg0KICAgICAgPHhz
+        OmNob2ljZSBtaW5PY2N1cnM9IjAiIG1heE9jY3Vycz0idW5ib3VuZGVkIiAvPg0KICAgIDwveHM6Y29t
+        cGxleFR5cGU+DQogIDwveHM6ZWxlbWVudD4NCjwveHM6c2NoZW1hPgYFAAAAkhM8ZGlmZmdyOmRpZmZn
+        cmFtIHhtbG5zOm1zZGF0YT0idXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTp4bWwtbXNkYXRhIiB4bWxu
+        czpkaWZmZ3I9InVybjpzY2hlbWFzLW1pY3Jvc29mdC1jb206eG1sLWRpZmZncmFtLXYxIj4NCiAgPHRt
+        cERhdGFTZXQ+DQogICAgPFRhYmxlMSBkaWZmZ3I6aWQ9IlRhYmxlMTEiIG1zZGF0YTpyb3dPcmRlcj0i
+        MCI+DQogICAgICA8SE9URU4+TjE1RENDTjAwMSAtIFbDtSBWxINuxJDhu6ljPC9IT1RFTj4NCiAgICAg
+        IDxNQVNWPk4xNURDQ04wMDE8L01BU1Y+DQogICAgPC9UYWJsZTE+DQogICAgPFRhYmxlMSBkaWZmZ3I6
+        aWQ9IlRhYmxlMTIiIG1zZGF0YTpyb3dPcmRlcj0iMSI+DQogICAgICA8SE9URU4+TjE1RENDTjAwMiAt
+        IEzDqiBI4buvdVTDoGk8L0hPVEVOPg0KICAgICAgPE1BU1Y+TjE1RENDTjAwMjwvTUFTVj4NCiAgICA8
+        L1RhYmxlMT4NCiAgICA8VGFibGUxIGRpZmZncjppZD0iVGFibGUxMyIgbXNkYXRhOnJvd09yZGVyPSIy
+        Ij4NCiAgICAgIDxIT1RFTj5OMTVEQ0NOMDAzIC0gSG/DoG5nIFRoYW5oQsO5aSAxPC9IT1RFTj4NCiAg
+        ICAgIDxNQVNWPk4xNURDQ04wMDM8L01BU1Y+DQogICAgPC9UYWJsZTE+DQogICAgPFRhYmxlMSBkaWZm
+        Z3I6aWQ9IlRhYmxlMTQiIG1zZGF0YTpyb3dPcmRlcj0iMyI+DQogICAgICA8SE9URU4+TjE1RENDTjAw
+        NCAtIFBo4bqhbVR14bqlbjwvSE9URU4+DQogICAgICA8TUFTVj5OMTVEQ0NOMDA0PC9NQVNWPg0KICAg
+        IDwvVGFibGUxPg0KICAgIDxUYWJsZTEgZGlmZmdyOmlkPSJUYWJsZTE1IiBtc2RhdGE6cm93T3JkZXI9
+        IjQiPg0KICAgICAgPEhPVEVOPk4xNURDQ04wMDUgLSBMw6ogVGhhbmhIw6AgMTwvSE9URU4+DQogICAg
+        ICA8TUFTVj5OMTVEQ0NOMDA1PC9NQVNWPg0KICAgIDwvVGFibGUxPg0KICAgIDxUYWJsZTEgZGlmZmdy
+        OmlkPSJUYWJsZTE2IiBtc2RhdGE6cm93T3JkZXI9IjUiPg0KICAgICAgPEhPVEVOPk4xNURDQ04wMDYg
+        LSBUaeG7gW4gSMOgTmFtIDEyPC9IT1RFTj4NCiAgICAgIDxNQVNWPk4xNURDQ04wMDY8L01BU1Y+DQog
+        ICAgPC9UYWJsZTE+DQogICAgPFRhYmxlMSBkaWZmZ3I6aWQ9IlRhYmxlMTciIG1zZGF0YTpyb3dPcmRl
+        cj0iNiI+DQogICAgICA8SE9URU4+TjE1RENDTjAwNyAtIELDuWkgVGjhu4tUaGFuaDwvSE9URU4+DQog
+        ICAgICA8TUFTVj5OMTVEQ0NOMDA3PC9NQVNWPg0KICAgIDwvVGFibGUxPg0KICAgIDxUYWJsZTEgZGlm
+        ZmdyOmlkPSJUYWJsZTE4IiBtc2RhdGE6cm93T3JkZXI9IjciPg0KICAgICAgPEhPVEVOPk4xNURDQ04w
+        MDggLSBMw6ogVGhhbmhCw6xuaCAxPC9IT1RFTj4NCiAgICAgIDxNQVNWPk4xNURDQ04wMDg8L01BU1Y+
+        DQogICAgPC9UYWJsZTE+DQogICAgPFRhYmxlMSBkaWZmZ3I6aWQ9IlRhYmxlMTkiIG1zZGF0YTpyb3dP
+        cmRlcj0iOCI+DQogICAgICA8SE9URU4+TjE1RENWVDAwMSAtIEh14buzbmggVsSDbk5naMSpYTwvSE9U
+        RU4+DQogICAgICA8TUFTVj5OMTVEQ1ZUMDAxPC9NQVNWPg0KICAgIDwvVGFibGUxPg0KICAgIDxUYWJs
+        ZTEgZGlmZmdyOmlkPSJUYWJsZTExMCIgbXNkYXRhOnJvd09yZGVyPSI5Ij4NCiAgICAgIDxIT1RFTj5O
+        MTVEQ1ZUMDAyIC0gTmd1eeG7hW4gQW5oVMOgaTwvSE9URU4+DQogICAgICA8TUFTVj5OMTVEQ1ZUMDAy
+        PC9NQVNWPg0KICAgIDwvVGFibGUxPg0KICAgIDxUYWJsZTEgZGlmZmdyOmlkPSJUYWJsZTExMSIgbXNk
+        YXRhOnJvd09yZGVyPSIxMCI+DQogICAgICA8SE9URU4+TjE1RENWVDAwMyAtIFBoYW5UdeG6pW48L0hP
+        VEVOPg0KICAgICAgPE1BU1Y+TjE1RENWVDAwMzwvTUFTVj4NCiAgICA8L1RhYmxlMT4NCiAgICA8VGFi
+        bGUxIGRpZmZncjppZD0iVGFibGUxMTIiIG1zZGF0YTpyb3dPcmRlcj0iMTEiPg0KICAgICAgPEhPVEVO
+        Pk4xNkRDVlQwMDEgLSBUcuG6p24gVGhhbmhQaGFuPC9IT1RFTj4NCiAgICAgIDxNQVNWPk4xNkRDVlQw
+        MDE8L01BU1Y+DQogICAgPC9UYWJsZTE+DQogICAgPFRhYmxlMSBkaWZmZ3I6aWQ9IlRhYmxlMTEzIiBt
+        c2RhdGE6cm93T3JkZXI9IjEyIj4NCiAgICAgIDxIT1RFTj5OMTZEQ1ZUMDAyIC0gTmd1eeG7hW4gVGhh
+        bmhIb8Ogbmc8L0hPVEVOPg0KICAgICAgPE1BU1Y+TjE2RENWVDAwMjwvTUFTVj4NCiAgICA8L1RhYmxl
+        MT4NCiAgICA8VGFibGUxIGRpZmZncjppZD0iVGFibGUxMTQiIG1zZGF0YTpyb3dPcmRlcj0iMTMiPg0K
+        ICAgICAgPEhPVEVOPk4xN0RDQ04wMzIgLSBOZ3V54buFbkR1eTwvSE9URU4+DQogICAgICA8TUFTVj5O
+        MTdEQ0NOMDMyPC9NQVNWPg0KICAgIDwvVGFibGUxPg0KICAgIDxUYWJsZTEgZGlmZmdyOmlkPSJUYWJs
+        ZTExNSIgbXNkYXRhOnJvd09yZGVyPSIxNCI+DQogICAgICA8SE9URU4+TjE5RENDTjAzMyAtIE5ndXnh
+        u4VuRHV5PC9IT1RFTj4NCiAgICAgIDxNQVNWPk4xOURDQ04wMzM8L01BU1Y+DQogICAgPC9UYWJsZTE+
+        DQogIDwvdG1wRGF0YVNldD4NCjwvZGlmZmdyOmRpZmZncmFtPgQDAAAADlN5c3RlbS5WZXJzaW9uBAAA
+        AAZfTWFqb3IGX01pbm9yBl9CdWlsZAlfUmV2aXNpb24AAAAACAgICAIAAAAAAAAA//////////8L
+</value>
+  </data>
+  <data name="cboNienKhoa.DataSource" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAE5TeXN0ZW0uRGF0YSwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJl
+        PW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAABVTeXN0ZW0uRGF0YS5E
+        YXRhVGFibGUDAAAAGURhdGFUYWJsZS5SZW1vdGluZ1ZlcnNpb24JWG1sU2NoZW1hC1htbERpZmZHcmFt
+        AwEBDlN5c3RlbS5WZXJzaW9uAgAAAAkDAAAABgQAAAC8Bjw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rp
+        bmc9InV0Zi0xNiI/Pg0KPHhzOnNjaGVtYSB4bWxucz0iIiB4bWxuczp4cz0iaHR0cDovL3d3dy53My5v
+        cmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOm1zZGF0YT0idXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTp4
+        bWwtbXNkYXRhIj4NCiAgPHhzOmVsZW1lbnQgbmFtZT0iVGFibGUxIj4NCiAgICA8eHM6Y29tcGxleFR5
+        cGU+DQogICAgICA8eHM6c2VxdWVuY2U+DQogICAgICAgIDx4czplbGVtZW50IG5hbWU9IktIT0FIT0Mi
+        IG1zZGF0YTpSZWFkT25seT0idHJ1ZSIgbXNkYXRhOnRhcmdldE5hbWVzcGFjZT0iIj4NCiAgICAgICAg
+        ICA8eHM6c2ltcGxlVHlwZT4NCiAgICAgICAgICAgIDx4czpyZXN0cmljdGlvbiBiYXNlPSJ4czpzdHJp
+        bmciPg0KICAgICAgICAgICAgICA8eHM6bWF4TGVuZ3RoIHZhbHVlPSI5IiAvPg0KICAgICAgICAgICAg
+        PC94czpyZXN0cmljdGlvbj4NCiAgICAgICAgICA8L3hzOnNpbXBsZVR5cGU+DQogICAgICAgIDwveHM6
+        ZWxlbWVudD4NCiAgICAgIDwveHM6c2VxdWVuY2U+DQogICAgPC94czpjb21wbGV4VHlwZT4NCiAgPC94
+        czplbGVtZW50Pg0KICA8eHM6ZWxlbWVudCBuYW1lPSJ0bXBEYXRhU2V0IiBtc2RhdGE6SXNEYXRhU2V0
+        PSJ0cnVlIiBtc2RhdGE6TWFpbkRhdGFUYWJsZT0iVGFibGUxIiBtc2RhdGE6VXNlQ3VycmVudExvY2Fs
+        ZT0idHJ1ZSI+DQogICAgPHhzOmNvbXBsZXhUeXBlPg0KICAgICAgPHhzOmNob2ljZSBtaW5PY2N1cnM9
+        IjAiIG1heE9jY3Vycz0idW5ib3VuZGVkIiAvPg0KICAgIDwveHM6Y29tcGxleFR5cGU+DQogIDwveHM6
+        ZWxlbWVudD4NCjwveHM6c2NoZW1hPgYFAAAA1wQ8ZGlmZmdyOmRpZmZncmFtIHhtbG5zOm1zZGF0YT0i
+        dXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTp4bWwtbXNkYXRhIiB4bWxuczpkaWZmZ3I9InVybjpzY2hl
+        bWFzLW1pY3Jvc29mdC1jb206eG1sLWRpZmZncmFtLXYxIj4NCiAgPHRtcERhdGFTZXQ+DQogICAgPFRh
+        YmxlMSBkaWZmZ3I6aWQ9IlRhYmxlMTEiIG1zZGF0YTpyb3dPcmRlcj0iMCI+DQogICAgICA8S0hPQUhP
+        Qz4yMDE1LTIwMTk8L0tIT0FIT0M+DQogICAgPC9UYWJsZTE+DQogICAgPFRhYmxlMSBkaWZmZ3I6aWQ9
+        IlRhYmxlMTIiIG1zZGF0YTpyb3dPcmRlcj0iMSI+DQogICAgICA8S0hPQUhPQz4yMDE2LTIwMjA8L0tI
+        T0FIT0M+DQogICAgPC9UYWJsZTE+DQogICAgPFRhYmxlMSBkaWZmZ3I6aWQ9IlRhYmxlMTMiIG1zZGF0
+        YTpyb3dPcmRlcj0iMiI+DQogICAgICA8S0hPQUhPQz4yMDE4LTIwMjI8L0tIT0FIT0M+DQogICAgPC9U
+        YWJsZTE+DQogICAgPFRhYmxlMSBkaWZmZ3I6aWQ9IlRhYmxlMTQiIG1zZGF0YTpyb3dPcmRlcj0iMyI+
+        DQogICAgICA8S0hPQUhPQz4yMDIxLTIwMjI8L0tIT0FIT0M+DQogICAgPC9UYWJsZTE+DQogIDwvdG1w
+        RGF0YVNldD4NCjwvZGlmZmdyOmRpZmZncmFtPgQDAAAADlN5c3RlbS5WZXJzaW9uBAAAAAZfTWFqb3IG
+        X01pbm9yBl9CdWlsZAlfUmV2aXNpb24AAAAACAgICAIAAAAAAAAA//////////8L
+</value>
+  </data>
+  <data name="cboHocKy.DataSource" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAE5TeXN0ZW0uRGF0YSwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJl
+        PW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAABVTeXN0ZW0uRGF0YS5E
+        YXRhVGFibGUDAAAAGURhdGFUYWJsZS5SZW1vdGluZ1ZlcnNpb24JWG1sU2NoZW1hC1htbERpZmZHcmFt
+        AwEBDlN5c3RlbS5WZXJzaW9uAgAAAAkDAAAABgQAAACLBzw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rp
+        bmc9InV0Zi0xNiI/Pg0KPHhzOnNjaGVtYSB4bWxucz0iIiB4bWxuczp4cz0iaHR0cDovL3d3dy53My5v
+        cmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOm1zZGF0YT0idXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTp4
+        bWwtbXNkYXRhIj4NCiAgPHhzOmVsZW1lbnQgbmFtZT0iVGFibGUxIj4NCiAgICA8eHM6Y29tcGxleFR5
+        cGU+DQogICAgICA8eHM6c2VxdWVuY2U+DQogICAgICAgIDx4czplbGVtZW50IG5hbWU9IlRFTkhPQ0tZ
+        IiBtc2RhdGE6UmVhZE9ubHk9InRydWUiIG1zZGF0YTp0YXJnZXROYW1lc3BhY2U9IiI+DQogICAgICAg
+        ICAgPHhzOnNpbXBsZVR5cGU+DQogICAgICAgICAgICA8eHM6cmVzdHJpY3Rpb24gYmFzZT0ieHM6c3Ry
+        aW5nIj4NCiAgICAgICAgICAgICAgPHhzOm1heExlbmd0aCB2YWx1ZT0iMTkiIC8+DQogICAgICAgICAg
+        ICA8L3hzOnJlc3RyaWN0aW9uPg0KICAgICAgICAgIDwveHM6c2ltcGxlVHlwZT4NCiAgICAgICAgPC94
+        czplbGVtZW50Pg0KICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJIT0NLWSIgdHlwZT0ieHM6aW50IiBt
+        c2RhdGE6dGFyZ2V0TmFtZXNwYWNlPSIiIC8+DQogICAgICA8L3hzOnNlcXVlbmNlPg0KICAgIDwveHM6
+        Y29tcGxleFR5cGU+DQogIDwveHM6ZWxlbWVudD4NCiAgPHhzOmVsZW1lbnQgbmFtZT0idG1wRGF0YVNl
+        dCIgbXNkYXRhOklzRGF0YVNldD0idHJ1ZSIgbXNkYXRhOk1haW5EYXRhVGFibGU9IlRhYmxlMSIgbXNk
+        YXRhOlVzZUN1cnJlbnRMb2NhbGU9InRydWUiPg0KICAgIDx4czpjb21wbGV4VHlwZT4NCiAgICAgIDx4
+        czpjaG9pY2UgbWluT2NjdXJzPSIwIiBtYXhPY2N1cnM9InVuYm91bmRlZCIgLz4NCiAgICA8L3hzOmNv
+        bXBsZXhUeXBlPg0KICA8L3hzOmVsZW1lbnQ+DQo8L3hzOnNjaGVtYT4GBQAAALcDPGRpZmZncjpkaWZm
+        Z3JhbSB4bWxuczptc2RhdGE9InVybjpzY2hlbWFzLW1pY3Jvc29mdC1jb206eG1sLW1zZGF0YSIgeG1s
+        bnM6ZGlmZmdyPSJ1cm46c2NoZW1hcy1taWNyb3NvZnQtY29tOnhtbC1kaWZmZ3JhbS12MSI+DQogIDx0
+        bXBEYXRhU2V0Pg0KICAgIDxUYWJsZTEgZGlmZmdyOmlkPSJUYWJsZTExIiBtc2RhdGE6cm93T3JkZXI9
+        IjAiPg0KICAgICAgPFRFTkhPQ0tZPkg/YyBrPyAxPC9URU5IT0NLWT4NCiAgICAgIDxIT0NLWT4xPC9I
+        T0NLWT4NCiAgICA8L1RhYmxlMT4NCiAgICA8VGFibGUxIGRpZmZncjppZD0iVGFibGUxMiIgbXNkYXRh
+        OnJvd09yZGVyPSIxIj4NCiAgICAgIDxURU5IT0NLWT5IP2Mgaz8gMjwvVEVOSE9DS1k+DQogICAgICA8
+        SE9DS1k+MjwvSE9DS1k+DQogICAgPC9UYWJsZTE+DQogIDwvdG1wRGF0YVNldD4NCjwvZGlmZmdyOmRp
+        ZmZncmFtPgQDAAAADlN5c3RlbS5WZXJzaW9uBAAAAAZfTWFqb3IGX01pbm9yBl9CdWlsZAlfUmV2aXNp
+        b24AAAAACAgICAIAAAAAAAAA//////////8L
+</value>
+  </data>
+  <data name="flexHocPhi.StyleInfo" xml:space="preserve">
+    <value>Normal{Font:Tahoma, 8.25pt;}	Alternate{}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;BackgroundImageLayout:Hide;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	</value>
+  </data>
+  <data name="flexChiTietHocPhi.StyleInfo" xml:space="preserve">
+    <value>Normal{Font:Tahoma, 8.25pt;}	Alternate{}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;BackgroundImageLayout:Hide;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
   </metadata>
 </root>

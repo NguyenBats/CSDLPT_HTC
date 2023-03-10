@@ -109,6 +109,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BO\HocPhi.cs" />
     <Compile Include="BO\Lop.cs" />
     <Compile Include="BO\LopTinChi.cs" />
     <Compile Include="BO\MonHoc.cs" />
@@ -143,6 +144,7 @@
     <Compile Include="Combobox\MonHocCombobox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DAO\HocPhiDAO.cs" />
     <Compile Include="DAO\MonHocDAO.cs" />
     <Compile Include="DAO\LopDAO.cs" />
     <Compile Include="DAO\LopTinChiDAO.cs" />
@@ -296,12 +298,6 @@
     <Compile Include="XrptDANH_SACH_SINH_VIEN_DANG_KI_LTC.Designer.cs">
       <DependentUpon>XrptDANH_SACH_SINH_VIEN_DANG_KI_LTC.cs</DependentUpon>
     </Compile>
-    <Compile Include="XtrpSp_DSSVDKLTC.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="XtrpSp_DSSVDKLTC.Designer.cs">
-      <DependentUpon>XtrpSp_DSSVDKLTC.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="frmDangKy.resx">
       <DependentUpon>frmDangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -368,9 +364,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XrptDANH_SACH_SINH_VIEN_DANG_KI_LTC.resx">
       <DependentUpon>XrptDANH_SACH_SINH_VIEN_DANG_KI_LTC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XtrpSp_DSSVDKLTC.resx">
-      <DependentUpon>XtrpSp_DSSVDKLTC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />

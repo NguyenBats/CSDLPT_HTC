@@ -98,6 +98,7 @@ namespace QLDSV_TC
             this.BottomMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.pageInfo1,
             this.pageInfo2});
+            this.BottomMargin.HeightF = 175.0417F;
             this.BottomMargin.Name = "BottomMargin";
             // 
             // pageInfo1
@@ -335,13 +336,12 @@ namespace QLDSV_TC
             this.tableCell7.StylePriority.UseTextAlignment = false;
             this.tableCell7.Text = "Điểm hết môn";
             this.tableCell7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.tableCell7.Weight = 0.16650831451636775D;
+            this.tableCell7.Weight = 0.16650831451636774D;
             // 
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.table2});
-            this.Detail.Expanded = false;
             this.Detail.HeightF = 25F;
             this.Detail.Name = "Detail";
             // 
@@ -468,10 +468,11 @@ namespace QLDSV_TC
             queryParameter4.Name = "@Nhom";
             queryParameter4.Type = typeof(int);
             queryParameter4.ValueInfo = "1";
-            storedProcQuery1.Parameters.Add(queryParameter1);
-            storedProcQuery1.Parameters.Add(queryParameter2);
-            storedProcQuery1.Parameters.Add(queryParameter3);
-            storedProcQuery1.Parameters.Add(queryParameter4);
+            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter1,
+            queryParameter2,
+            queryParameter3,
+            queryParameter4});
             storedProcQuery1.StoredProcName = "BANG_DIEM_MON_HOC";
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -578,13 +579,14 @@ namespace QLDSV_TC
             this.DataMember = "BANG_DIEM_MON_HOC";
             this.DataSource = this.sqlDataSource1;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.Margins = new System.Drawing.Printing.Margins(100, 100, 100, 175);
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
             this.Title,
             this.DetailCaption1,
             this.DetailData1,
             this.DetailData3_Odd,
             this.PageInfo});
-            this.Version = "21.1";
+            this.Version = "22.1";
             ((System.ComponentModel.ISupportInitialize)(this.table1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

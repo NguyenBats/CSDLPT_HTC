@@ -79,7 +79,7 @@ namespace QLDSV_TC
             Program.password = txtPass.Text;
             if (Program.KetNoi() == 0)//Kết nối lần 1 bằng user giảng viên thất bại
             {
-                Program.mlogin = "SV";
+                Program.mlogin = "SINHVIEN";
                 Program.password = "123456";
                 if (Program.KetNoi() == 0) return;//Kết nối lần 2 role sinh viên thất bại
                 Program.mKhoa = cmbKhoa.SelectedIndex;
@@ -124,34 +124,7 @@ namespace QLDSV_TC
                 Program.passwordDN = Program.password;
                 String strlenh;
                 strlenh = "EXEC [dbo].[SP_Lay_Thong_Tin_GV_Tu_Login] '" + Program.mlogin + "'";
-                Program.myReader = Program.ExecSqlDataReader(strlenh);
-                //if (Program.myReader == null)
-                //{
-                //    string maSv = txtLogin.Text;
-                //    string password = txtPass.Text;
-
-                //    if (Program.KetNoi() == 0) {
-                //        MessageBox.Show("Bạn xem lại username và password", "", MessageBoxButtons.OK);
-
-                //        return;
-                //    }
-
-                //    strlenh = "EXEC [dbo].[SP_LOGIN] '" + maSv + "'," + "'" + password + "'";
-                //    Program.myReader = Program.ExecSqlDataReader(strlenh);
-                //    if (Program.myReader == null)
-                //    {
-                //        Program.username = Program.mlogin;
-                //        Program.mGroup = "PKT";
-                //        Program.conn.Close();
-                //        Program.frmChinh.MANV.Text = "Mã NV: " + Program.username;
-                //        Program.frmChinh.HOTEN.Text = "Họ tên: " + Program.username;
-                //        Program.frmChinh.NHOM.Text = "Phòng: " + "PKT";
-                //        Program.frmChinh.HienThiMenu();
-                //        this.Close();
-                //        return;
-                //    }
-
-                //};
+                Program.myReader = Program.ExecSqlDataReader(strlenh);           
                 if (!Program.myReader.HasRows)
                 {
                     MessageBox.Show("Lỗi đăng nhập", "", MessageBoxButtons.OK);

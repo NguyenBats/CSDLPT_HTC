@@ -224,9 +224,9 @@ namespace QLDSV_TC
             storedProcQuery1.Name = "DANH_SACH_DONG_HOC_PHI_LOP";
             queryParameter1.Name = "@MALOP";
             queryParameter1.Type = typeof(string);
-            queryParameter2.Name = "@NK";
+            queryParameter2.Name = "@NIENKHOA";
             queryParameter2.Type = typeof(string);
-            queryParameter3.Name = "@HK";
+            queryParameter3.Name = "@HOCKY";
             queryParameter3.Type = typeof(int);
             queryParameter3.ValueInfo = "0";
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {

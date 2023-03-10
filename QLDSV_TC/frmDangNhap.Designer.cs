@@ -29,7 +29,6 @@ namespace QLDSV_TC
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
             this.lbChiNhanh = new System.Windows.Forms.Label();
             this.lbTaiKhoan = new System.Windows.Forms.Label();
             this.lbMatKhau = new System.Windows.Forms.Label();
@@ -39,10 +38,6 @@ namespace QLDSV_TC
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.geT_LOP_TIN_CHI_BY_NIEN_KHOA_AND_HOC_KYTableAdapter1 = new QLDSV_TC.QLDSV_TCDataSetGocTableAdapters.GET_LOP_TIN_CHI_BY_NIEN_KHOA_AND_HOC_KYTableAdapter();
-            this.lopCombobox1 = new QLDSV_TC.Combobox.LopCombobox();
-            this.sinhVienCombobox1 = new QLDSV_TC.Combobox.SinhVienCombobox();
-            this.monHocCombobox1 = new QLDSV_TC.Combobox.MonHocCombobox();
-            this.giangVienCombobox1 = new QLDSV_TC.Combobox.GiangVienCombobox();
             this.SuspendLayout();
             // 
             // lbChiNhanh
@@ -91,7 +86,7 @@ namespace QLDSV_TC
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(214, 20);
             this.txtLogin.TabIndex = 4;
-            this.txtLogin.Text = "GV01";
+            this.txtLogin.Text = "GV02";
             // 
             // txtPass
             // 
@@ -129,55 +124,11 @@ namespace QLDSV_TC
             // 
             this.geT_LOP_TIN_CHI_BY_NIEN_KHOA_AND_HOC_KYTableAdapter1.ClearBeforeFill = true;
             // 
-            // lopCombobox1
-            // 
-            this.lopCombobox1.DisplayMember = "TENLOP";
-            this.lopCombobox1.FormattingEnabled = true;
-            this.lopCombobox1.Location = new System.Drawing.Point(540, 341);
-            this.lopCombobox1.Name = "lopCombobox1";
-            this.lopCombobox1.Size = new System.Drawing.Size(179, 21);
-            this.lopCombobox1.TabIndex = 10;
-            this.lopCombobox1.ValueMember = "MALOP";
-            // 
-            // sinhVienCombobox1
-            // 
-            this.sinhVienCombobox1.DisplayMember = "HOTEN";
-            this.sinhVienCombobox1.FormattingEnabled = true;
-            this.sinhVienCombobox1.Location = new System.Drawing.Point(540, 271);
-            this.sinhVienCombobox1.Name = "sinhVienCombobox1";
-            this.sinhVienCombobox1.Size = new System.Drawing.Size(179, 21);
-            this.sinhVienCombobox1.TabIndex = 9;
-            this.sinhVienCombobox1.ValueMember = "MASV";
-            // 
-            // monHocCombobox1
-            // 
-            this.monHocCombobox1.DisplayMember = "TENMH";
-            this.monHocCombobox1.FormattingEnabled = true;
-            this.monHocCombobox1.Location = new System.Drawing.Point(540, 210);
-            this.monHocCombobox1.Name = "monHocCombobox1";
-            this.monHocCombobox1.Size = new System.Drawing.Size(179, 21);
-            this.monHocCombobox1.TabIndex = 8;
-            this.monHocCombobox1.ValueMember = "MAMH";
-            // 
-            // giangVienCombobox1
-            // 
-            this.giangVienCombobox1.DisplayMember = "HOTEN";
-            this.giangVienCombobox1.FormattingEnabled = true;
-            this.giangVienCombobox1.Location = new System.Drawing.Point(540, 155);
-            this.giangVienCombobox1.Name = "giangVienCombobox1";
-            this.giangVienCombobox1.Size = new System.Drawing.Size(179, 21);
-            this.giangVienCombobox1.TabIndex = 11;
-            this.giangVienCombobox1.ValueMember = "MAGV";
-            // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 450);
-            this.Controls.Add(this.giangVienCombobox1);
-            this.Controls.Add(this.lopCombobox1);
-            this.Controls.Add(this.sinhVienCombobox1);
-            this.Controls.Add(this.monHocCombobox1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.txtPass);
@@ -204,10 +155,6 @@ namespace QLDSV_TC
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Button btnThoat;
-        private Combobox.MonHocCombobox monHocCombobox1;
-        private Combobox.SinhVienCombobox sinhVienCombobox1;
-        private Combobox.LopCombobox lopCombobox1;
         private QLDSV_TCDataSetGocTableAdapters.GET_LOP_TIN_CHI_BY_NIEN_KHOA_AND_HOC_KYTableAdapter geT_LOP_TIN_CHI_BY_NIEN_KHOA_AND_HOC_KYTableAdapter1;
-        private Combobox.GiangVienCombobox giangVienCombobox1;
     }
 }

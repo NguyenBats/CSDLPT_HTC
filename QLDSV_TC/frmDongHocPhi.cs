@@ -1,4 +1,6 @@
 ﻿using DevExpress.XtraGrid.Views.Grid;
+using QLDSV_TC.BO;
+using QLDSV_TC.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,194 +15,123 @@ namespace QLDSV_TC
 {
     public partial class frmDongHocPhi : Form
     {
-        private string strCurrentMSV = string.Empty;
-        private DataRowView currentDataRowView = null;
         public frmDongHocPhi()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void FormatFlexHocPhi()
         {
+            try
+            {
+                flexHocPhi.Width = 1600;
+                flexHocPhi.Cols[0].Visible = false;
+                flexHocPhi.Cols["MASV"].Caption = "Mã sinh viên";
+                flexHocPhi.Cols["NIENKHOA"].Caption = "Niên khóa";
+                flexHocPhi.Cols["HOCKY"].Caption = "Học kỳ";
+                flexHocPhi.Cols["HOCPHI"].Caption = "Học phí";
+                flexHocPhi.Cols["DADONG"].Caption = "Đã đóng";
+                flexHocPhi.Cols["CONLAI"].Caption = "Còn lại";
+                flexHocPhi.Rows[0].Height = 50;
+                flexHocPhi.Cols["MASV"].Width = 250;
+                flexHocPhi.Cols["NIENKHOA"].Width = 250;
+                flexHocPhi.Cols["HOCKY"].Width = 250;
+                flexHocPhi.Cols["HOCPHI"].Width = 250;
+                flexHocPhi.Cols["DADONG"].Width = 250;
+                flexHocPhi.Cols["CONLAI"].Width = 250;
 
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Lỗi format lưới học phí.\n" + ex.Message, "", MessageBoxButtons.OK);
+            }
+        }
+
+        private void FormatFlexChiTietHocPhi()
+        {
+            try
+            {
+                //MASV, NIENKHOA, HOCKY, NGAYDONG, SOTIENDONG
+                flexChiTietHocPhi.Width = 1600;
+                flexChiTietHocPhi.Cols[0].Visible = false;
+                flexChiTietHocPhi.Cols["MASV"].Caption = "Mã sinh viên";
+                flexChiTietHocPhi.Cols["NIENKHOA"].Caption = "Niên khóa";
+                flexChiTietHocPhi.Cols["HOCKY"].Caption = "Học kỳ";
+                flexChiTietHocPhi.Cols["NGAYDONG"].Caption = "Ngày đóng";
+                flexChiTietHocPhi.Cols["SOTIENDONG"].Caption = "Số tiền đóng";
+                flexChiTietHocPhi.Rows[0].Height = 50;
+                flexChiTietHocPhi.Cols["MASV"].Width = 250;
+                flexChiTietHocPhi.Cols["NIENKHOA"].Width = 250;
+                flexChiTietHocPhi.Cols["HOCKY"].Width = 250;
+                flexChiTietHocPhi.Cols["NGAYDONG"].Width = 250;
+                flexChiTietHocPhi.Cols["SOTIENDONG"].Width = 250;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Lỗi format lưới học phí chi tiết.\n" + ex.Message, "", MessageBoxButtons.OK);
+            }
+        }
+
+        private void RefreshDataHocPhi()
+        {
+            string maSV = cboSinhVien.SelectedValue.ToString().Trim();
+            HocPhiDAO hocPhiDAO = new HocPhiDAO();
+            DataTable dtbHocPhi = hocPhiDAO.DanhSachHocPhi(maSV);
+            flexHocPhi.DataSource = dtbHocPhi;
+            FormatFlexHocPhi();
         }
 
         private void frmDongHocPhi_Load(object sender, EventArgs e)
         {
         }
 
-        private void fillToolStripButton_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void btnTaiLai_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //private void gridDSLopTinChi_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        int intSelected = ((GridView)gridDSLopTinChi.MainView).GetSelectedRows()[0];
-        //        DataRowView selRow = (DataRowView)(((GridView)gridDSLopTinChi.MainView).GetRow(intSelected));
-        //        frmNhapHocPhi frmNhapHocPhi = new frmNhapHocPhi();
-        //        frmNhapHocPhi.strNienKhoa = selRow["NIENKHOA"].ToString();
-        //        frmNhapHocPhi.intHocKy = Convert.ToInt32(selRow["HOCKY"]);
-        //        frmNhapHocPhi.ShowDialog();
-
-        //    }
-        //    catch(Exception objEx)
-        //    {
-        //        MessageBox.Show("Lỗi " + objEx);
-        //    }
-
-        //}
-
-        private void gridDSLopTinChi_DoubleClick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if(sender != null && e != null)
-                    strCurrentMSV = txtMSV.Text.Trim();
-
-                this.sP_DanhSachHocPHiTableAdapter1.Connection.ConnectionString = Program.connstr;
-                this.sP_DanhSachHocPHiTableAdapter1.Fill(this.qLDSV_TCDataSet4.SP_DanhSachHocPHi, strCurrentMSV);
-                int intRowCount = ((GridView)gridHocPhi.MainView).RowCount;
-                
-            }
-            catch
-            {
-
-            }
-
-        }
-
-        private void gridControl1_TextChanged(object sender, EventArgs e)
-        {
-            //try
-            //{
-            //    int intRowCount = ((GridView)gridHocPhi.MainView).RowCount;
-            //    for (int i = 0; i < intRowCount; i++)
-            //    {
-            //        DataRowView selRow = (DataRowView)(((GridView)gridHocPhi.MainView).GetRow(i));
-            //        //if(Convert.ToDecimal(selRow["HOCPHI"]) < Convert.ToDecimal(selRow["DADONG"]))
-            //        //{
-            //        //    MessageBox.Show("Vui lòng nhập số tiền học phí lớn hơn số tiền đã đóng");
-            //        //    btnSave.Enabled = false;
-            //        //    return;
-            //        //}
-            //        selRow["CONLAI"] = Convert.ToDecimal(selRow["HOCPHI"]) - Convert.ToDecimal(selRow["DADONG"]);
-
-            //    }
-            //}
-            //catch (Exception objEx)
-            //{
-            //    MessageBox.Show("Vui lòng nhập đúng định dạng!");
-            //}
-        }
-
-        private void gridHocPhi_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            try
-            {
-
-                int intSelected = ((GridView)gridHocPhi.MainView).GetSelectedRows()[0];
-                DataRowView selRow = (DataRowView)(((GridView)gridHocPhi.MainView).GetRow(intSelected));
-                this.cT_DONGHOCPHITableAdapter.Connection.ConnectionString = Program.connstr;
-                this.cT_DONGHOCPHITableAdapter.FillBy(this.qLDSV_TCDataSetGoc.CT_DONGHOCPHI, selRow["MASV"].ToString(), selRow["NIENKHOA"].ToString(), Convert.ToInt32(selRow["HOCKY"]));
-            }
-            catch (System.Exception ex)
-            {
-
-            }
-        }
 
         private void btnThemHocPhi_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(strCurrentMSV )|| string.IsNullOrEmpty(txtMSV.Text.Trim()))
-            {
-                MessageBox.Show("Vui lòng nhập mã sinh viên", "", MessageBoxButtons.OK);
-                return;
-            }
-
-            string strlenh = " exec [dbo].[SP_ThemHocPHi] '" + strCurrentMSV + "','" + txtNienKhoa.Text + "'," + txtHocKy.Text + "," + txthocPhi.Text;
-            if (Program.ExecSqlNonQuery(strlenh) == 0)
-                MessageBox.Show("Nhập học phí thành công", "", MessageBoxButtons.OK);
-            button1_Click(null, null);
+            HocPhiDAO hocPhiDAO = new HocPhiDAO();
+            HocPhi hocphi = new HocPhi();
+            hocphi.MASV = cboSinhVien.SelectedValue.ToString().Trim();
+            hocphi.NIENKHOA = cboNienKhoa.SelectedValue.ToString().Trim();
+            hocphi.HOCKY = Convert.ToInt32(cboHocKy.SelectedValue);
+            hocphi.HOCPHI = Convert.ToInt32(txthocPhi.Text.ToString());
+            hocPhiDAO.ThemHocPhi(hocphi);
+            RefreshDataHocPhi();
         }
 
         private void btnThemChiTietHocPhi_Click(object sender, EventArgs e)
         {
             try
             {
-                if (currentDataRowView == null) return;
-
-                long longSum = Convert.ToInt64(txtChiTietTienHocPhi.Text);
-                if (longSum > Convert.ToInt64(currentDataRowView["CONLAI"]))
+                int row = flexHocPhi.Row;
+                string maSV = Convert.ToString(flexHocPhi.GetData(row, "MASV"));
+                string nienKhoa = Convert.ToString(flexHocPhi.GetData(row, "NIENKHOA"));
+                int hocKy = Convert.ToInt32(flexHocPhi.GetData(row, "HOCKY"));
+                int conlai = Convert.ToInt32(flexHocPhi.GetData(row, "CONLAI"));
+                int longSum = Convert.ToInt32(txtChiTietTienHocPhi.Text);
+                if (longSum > conlai)
                 {
                     MessageBox.Show("Vui lòng nhập số tiền nhỏ hơn số tiền còn lại", "Thông báo ", MessageBoxButtons.OK);
                     return;
                 }
+                HocPhiDAO hocPhiDAO = new HocPhiDAO();
+                HocPhi hocphi = new HocPhi();
+                hocphi.MASV = maSV;
+                hocphi.NIENKHOA = nienKhoa;
+                hocphi.HOCKY = hocKy;
+                hocphi.HOCPHI = longSum;
+                hocPhiDAO.ThemChiTietHocPhi(hocphi);
+                MessageBox.Show("Nhập học phí thành công", "", MessageBoxButtons.OK);
+                flexHocPhi_Click(null, null);
+                RefreshDataHocPhi();
 
-                string strlenh = " exec [dbo].[SP_ThemCTHocPHi] '" + currentDataRowView["MASV"].ToString() + "','" + currentDataRowView["NIENKHOA"].ToString() + "'," + Convert.ToString(currentDataRowView["HOCKY"]) + "," + txtChiTietTienHocPhi.Text;
-                if (Program.ExecSqlNonQuery(strlenh) == 0)
-                {
-
-                    MessageBox.Show("Nhập học phí thành công", "", MessageBoxButtons.OK);
-                    gridHocPhi_DoubleClick(null, null);
-                    button1_Click(null, null);
-                }
             }
             catch (Exception objex)
             {
-                MessageBox.Show(objex.ToString(),"Thông báo ",MessageBoxButtons.OK);
-            }
-
-        }
-
-        private void gridChiTietHocPhi_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gridHocPhi_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gridHocPhi_DoubleClick(object sender, EventArgs e)
-        {
-            try
-            {
-                int[] rows = ((GridView)gridHocPhi.MainView).GetSelectedRows();
-                if (rows != null && rows.Length > 0)
-                {
-                    int intSelected = ((GridView)gridHocPhi.MainView).GetSelectedRows()[0];
-                    DataRowView selRow = (DataRowView)(((GridView)gridHocPhi.MainView).GetRow(intSelected));
-                    //this.cT_DONGHOCPHITableAdapter.Connection.ConnectionString = Program.connstr;
-                    //this.cT_DONGHOCPHITableAdapter.FillBy(this.qLDSV_TCDataSetGoc.CT_DONGHOCPHI, selRow["MASV"].ToString(), selRow["NIENKHOA"].ToString(), Convert.ToInt32(selRow["HOCKY"]));
-                    this.cT_DONGHOCPHITableAdapter.Connection.ConnectionString = Program.connstr;
-                    this.cT_DONGHOCPHITableAdapter.FillByHocPhi(this.qLDSV_TCDataSetGoc.CT_DONGHOCPHI, selRow["MASV"].ToString(), selRow["NIENKHOA"].ToString(), Convert.ToInt32(selRow["HOCKY"]));
-                    this.currentDataRowView = selRow;
-                    lbCurrentSelectedRow.Text = "Đang chọn : " + String.Join(" - ", new string[] { selRow["MASV"].ToString(), selRow["NIENKHOA"].ToString(), Convert.ToString(selRow["HOCKY"]) });
-                }
-            }
-            catch (Exception objex)
-            {
-                MessageBox.Show(objex.ToString());
+                MessageBox.Show(objex.ToString(), "Thông báo ", MessageBoxButtons.OK);
             }
 
         }
@@ -208,12 +139,6 @@ namespace QLDSV_TC
         private void txtChiTietTienHocPhi_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && txtChiTietTienHocPhi.Text.Length < 9; ;
-        }
-
-        private void txtHocKy_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && txtHocKy.Text.Length < 9;
         }
 
         private void txthocPhi_KeyPress(object sender, KeyPressEventArgs e)
@@ -229,6 +154,28 @@ namespace QLDSV_TC
             frmTaoLoginPKT.ShowDialog(this);
         }
 
-        
+        private void flexHocPhi_Click(object sender, EventArgs e)
+        {
+            int row = flexHocPhi.Row;
+            HocPhiDAO hocPhiDAO = new HocPhiDAO();
+            string maSV = Convert.ToString(flexHocPhi.GetData(row, "MASV"));
+            string nienKhoa = Convert.ToString(flexHocPhi.GetData(row, "NIENKHOA"));
+            int hocKy = Convert.ToInt32(flexHocPhi.GetData(row, "HOCKY"));
+            DataTable dtbChiTietHocPhi = hocPhiDAO.GetCTDongHocPhi(maSV, nienKhoa, hocKy);
+            flexChiTietHocPhi.DataSource = dtbChiTietHocPhi;
+            FormatFlexChiTietHocPhi();
+            lbCurrentSelectedRow.Text = "Đang chọn : " + String.Join(" - ", new string[] { "Mã sinh viên: " + maSV, "Niên khóa: " + nienKhoa, "Học kỳ: " + hocKy });
+        }
+
+        private void flexChiTietHocPhi_Click(object sender, EventArgs e)
+        {
+           
+           
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            RefreshDataHocPhi();
+        }
     }
 }

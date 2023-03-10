@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace QLDSV_TC
-{  
+{
 
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
@@ -27,15 +27,15 @@ namespace QLDSV_TC
                 {
                     f.Close();
                 }
-                   
-            
+
+
         }
 
         public frmMain()
         {
             InitializeComponent();
-            QuanLy.Visible= TuyChon.Visible=BaoCao.Visible = false;
-            btnDangXuat.Enabled =btnDangKy.Enabled= false;
+            QuanLy.Visible = TuyChon.Visible = BaoCao.Visible = false;
+            btnDangXuat.Enabled = btnDangKy.Enabled = false;
         }
 
         private void DangNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -60,26 +60,38 @@ namespace QLDSV_TC
                 HOTEN.Text = "Họ tên: " + Program.username;
                 NHOM.Text = "Phòng: " + Program.mGroup;
                 btnDangKy.Enabled = false;
-                QuanLy.Visible = MoLTC.Enabled = NhapDiem.Enabled = BaoCao.Visible = DangKyLTC.Enabled = DongHocPhi.Enabled = false;
+                TuyChon.Visible = true;// MoLTC.Enabled =
+                DangKyLTC.Enabled = NhapDiem.Enabled = false;
+                DongHocPhi.Enabled = true;
+                return;
+            }
+
+            else if (Program.mGroup == "PGV" || Program.mGroup == "KHOA")
+            {
+                MANV.Text = "Mã NV: " + Program.username;
+                HOTEN.Text = "Họ tên: " + Program.username;
+                NHOM.Text = "Phòng: " + Program.mGroup;
+                btnDangKy.Enabled = false;
+                QuanLy.Visible = MoLTC.Enabled = BaoCao.Visible = true;
                 DongHocPhi.Enabled = TuyChon.Visible = true;
                 return;
             }
-            if (Program.mGroup != "PGV"&& Program.mGroup != "KHOA")
+            else
             {
                 MANV.Text = "Mã SV: " + Program.username;
                 HOTEN.Text = "Họ tên: " + Program.mHoTen;
                 NHOM.Text = "Lớp: " + Program.mGroup;
                 btnDangKy.Enabled = false;
-                QuanLy.Visible = MoLTC.Enabled=NhapDiem.Enabled= BaoCao.Visible = false;
+                QuanLy.Visible = MoLTC.Enabled = NhapDiem.Enabled = BaoCao.Visible = DongHocPhi.Enabled = false;
                 TuyChon.Visible = DangKyLTC.Enabled = true;//= DongHocPhi.Enabled= true;
                 return;
             }
-            
-            MANV.Text = "Mã NV: " + Program.username;
-            HOTEN.Text = "Họ tên: " + Program.mHoTen;
-            NHOM.Text = "Nhóm: " + Program.mGroup;
-            btnDangKy.Enabled=QuanLy.Visible =TuyChon.Visible= NhapDiem.Enabled = BaoCao.Visible = true;
-            DangKyLTC.Enabled = false;// DongHocPhi.Enabled = false;
+
+            //MANV.Text = "Mã NV: " + Program.username;
+            //HOTEN.Text = "Họ tên: " + Program.mHoTen;
+            //NHOM.Text = "Nhóm: " + Program.mGroup;
+            //btnDangKy.Enabled=QuanLy.Visible =TuyChon.Visible= NhapDiem.Enabled = BaoCao.Visible = true;
+            //DangKyLTC.Enabled = false;// DongHocPhi.Enabled = false;
             //Phân quyền
         }
 
@@ -111,7 +123,7 @@ namespace QLDSV_TC
 
         private void btnDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            QuanLy.Visible = TuyChon.Visible =  false;
+            QuanLy.Visible = TuyChon.Visible = false;
             BaoCao.Visible = false;
             btnDangXuat.Enabled = false;
             btnDangNhap.Enabled = true;

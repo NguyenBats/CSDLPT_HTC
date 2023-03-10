@@ -41,6 +41,11 @@ namespace QLDSV_TC
             this.pageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.pageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.labelMonHoc = new DevExpress.XtraReports.UI.XRLabel();
+            this.labelNhom = new DevExpress.XtraReports.UI.XRLabel();
+            this.labelHocKy = new DevExpress.XtraReports.UI.XRLabel();
+            this.labelNienKhoa = new DevExpress.XtraReports.UI.XRLabel();
+            this.labelKhoa = new DevExpress.XtraReports.UI.XRLabel();
             this.labelTieuDe = new DevExpress.XtraReports.UI.XRLabel();
             this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.table1 = new DevExpress.XtraReports.UI.XRTable();
@@ -105,9 +110,64 @@ namespace QLDSV_TC
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.labelMonHoc,
+            this.labelNhom,
+            this.labelHocKy,
+            this.labelNienKhoa,
+            this.labelKhoa,
             this.labelTieuDe});
-            this.ReportHeader.HeightF = 60F;
+            this.ReportHeader.HeightF = 100.625F;
             this.ReportHeader.Name = "ReportHeader";
+            // 
+            // labelMonHoc
+            // 
+            this.labelMonHoc.LocationFloat = new DevExpress.Utils.PointFloat(0F, 74.19434F);
+            this.labelMonHoc.Name = "labelMonHoc";
+            this.labelMonHoc.SizeF = new System.Drawing.SizeF(325F, 24.19433F);
+            this.labelMonHoc.StyleName = "Title";
+            this.labelMonHoc.StylePriority.UseTextAlignment = false;
+            this.labelMonHoc.Text = "Môn học";
+            this.labelMonHoc.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // labelNhom
+            // 
+            this.labelNhom.LocationFloat = new DevExpress.Utils.PointFloat(325F, 74.19434F);
+            this.labelNhom.Name = "labelNhom";
+            this.labelNhom.SizeF = new System.Drawing.SizeF(325F, 24.19433F);
+            this.labelNhom.StyleName = "Title";
+            this.labelNhom.StylePriority.UseTextAlignment = false;
+            this.labelNhom.Text = "Nhóm";
+            this.labelNhom.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // labelHocKy
+            // 
+            this.labelHocKy.LocationFloat = new DevExpress.Utils.PointFloat(325F, 50F);
+            this.labelHocKy.Name = "labelHocKy";
+            this.labelHocKy.SizeF = new System.Drawing.SizeF(325F, 24.19433F);
+            this.labelHocKy.StyleName = "Title";
+            this.labelHocKy.StylePriority.UseTextAlignment = false;
+            this.labelHocKy.Text = "Học kỳ";
+            this.labelHocKy.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // labelNienKhoa
+            // 
+            this.labelNienKhoa.LocationFloat = new DevExpress.Utils.PointFloat(0F, 50F);
+            this.labelNienKhoa.Name = "labelNienKhoa";
+            this.labelNienKhoa.SizeF = new System.Drawing.SizeF(325F, 24.19433F);
+            this.labelNienKhoa.StyleName = "Title";
+            this.labelNienKhoa.StylePriority.UseTextAlignment = false;
+            this.labelNienKhoa.Text = "Niên khóa: ";
+            this.labelNienKhoa.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // labelKhoa
+            // 
+            this.labelKhoa.LocationFloat = new DevExpress.Utils.PointFloat(0F, 25.80566F);
+            this.labelKhoa.Name = "labelKhoa";
+            this.labelKhoa.SizeF = new System.Drawing.SizeF(650F, 24.19433F);
+            this.labelKhoa.StyleName = "Title";
+            this.labelKhoa.StylePriority.UseTextAlignment = false;
+            this.labelKhoa.Text = "KHOA";
+            this.labelKhoa.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // labelTieuDe
             // 
@@ -115,7 +175,9 @@ namespace QLDSV_TC
             this.labelTieuDe.Name = "labelTieuDe";
             this.labelTieuDe.SizeF = new System.Drawing.SizeF(650F, 24.19433F);
             this.labelTieuDe.StyleName = "Title";
-            this.labelTieuDe.Text = "Danh sach sinh vien dang ki lop tin chi";
+            this.labelTieuDe.StylePriority.UseTextAlignment = false;
+            this.labelTieuDe.Text = "DANH SÁCH SINH VIÊN ĐĂNG KÝ LỚP TÍN CHỈ";
+            this.labelTieuDe.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // GroupHeader1
             // 
@@ -153,7 +215,7 @@ namespace QLDSV_TC
             this.tableCell1.StyleName = "DetailCaption1";
             this.tableCell1.StylePriority.UseBorders = false;
             this.tableCell1.Text = "Tên Khoa";
-            this.tableCell1.Weight = 0.20932286189152644D;
+            this.tableCell1.Weight = 0.20932286189152643D;
             // 
             // tableCell2
             // 
@@ -236,7 +298,7 @@ namespace QLDSV_TC
             this.tableCell8.Name = "tableCell8";
             this.tableCell8.StyleName = "DetailData1";
             this.tableCell8.StylePriority.UseBorders = false;
-            this.tableCell8.Weight = 0.20932286189152644D;
+            this.tableCell8.Weight = 0.20932286189152643D;
             // 
             // tableCell9
             // 
@@ -294,7 +356,7 @@ namespace QLDSV_TC
             // tableCell14
             // 
             this.tableCell14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MALOP]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MALTC]")});
             this.tableCell14.Name = "tableCell14";
             this.tableCell14.StyleName = "DetailData1";
             this.tableCell14.Weight = 0.16410813551682693D;
@@ -303,15 +365,15 @@ namespace QLDSV_TC
             // 
             this.sqlDataSource1.ConnectionName = "QLDSV_TC.Properties.Settings.QLDSV_TCConnectionString";
             this.sqlDataSource1.Name = "sqlDataSource1";
-            storedProcQuery1.Name = "DANH_SACH_SINH_VIEN_DANG_KI_LTC";
-            queryParameter1.Name = "@nienkhoa";
+            storedProcQuery1.Name = "Sp_DSSVDKLTC";
+            queryParameter1.Name = "@NienKhoa";
             queryParameter1.Type = typeof(string);
-            queryParameter2.Name = "@hocky";
+            queryParameter2.Name = "@HocKy";
             queryParameter2.Type = typeof(int);
             queryParameter2.ValueInfo = "0";
-            queryParameter3.Name = "@mamon";
+            queryParameter3.Name = "@MaMH";
             queryParameter3.Type = typeof(string);
-            queryParameter4.Name = "@nhom";
+            queryParameter4.Name = "@Nhom";
             queryParameter4.Type = typeof(int);
             queryParameter4.ValueInfo = "0";
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
@@ -319,7 +381,7 @@ namespace QLDSV_TC
             queryParameter2,
             queryParameter3,
             queryParameter4});
-            storedProcQuery1.StoredProcName = "DANH_SACH_SINH_VIEN_DANG_KI_LTC";
+            storedProcQuery1.StoredProcName = "Sp_DSSVDKLTC";
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
@@ -387,7 +449,7 @@ namespace QLDSV_TC
             this.Detail});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.sqlDataSource1});
-            this.DataMember = "DANH_SACH_SINH_VIEN_DANG_KI_LTC";
+            this.DataMember = "Sp_DSSVDKLTC";
             this.DataSource = this.sqlDataSource1;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Margins = new System.Drawing.Printing.Margins(100, 100, 100, 285);
@@ -439,5 +501,10 @@ namespace QLDSV_TC
         private DevExpress.XtraReports.UI.XRControlStyle DetailData3_Odd;
         private DevExpress.XtraReports.UI.XRControlStyle PageInfo;
         public DevExpress.XtraReports.UI.XRLabel labelTieuDe;
+        public DevExpress.XtraReports.UI.XRLabel labelKhoa;
+        public DevExpress.XtraReports.UI.XRLabel labelHocKy;
+        public DevExpress.XtraReports.UI.XRLabel labelNienKhoa;
+        public DevExpress.XtraReports.UI.XRLabel labelMonHoc;
+        public DevExpress.XtraReports.UI.XRLabel labelNhom;
     }
 }

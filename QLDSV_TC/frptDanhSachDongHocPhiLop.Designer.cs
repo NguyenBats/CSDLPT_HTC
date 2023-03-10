@@ -56,10 +56,9 @@ namespace QLDSV_TC
             // 
             nIENKHOALabel.AutoSize = true;
             nIENKHOALabel.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nIENKHOALabel.Location = new System.Drawing.Point(704, 159);
-            nIENKHOALabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            nIENKHOALabel.Location = new System.Drawing.Point(528, 129);
             nIENKHOALabel.Name = "nIENKHOALabel";
-            nIENKHOALabel.Size = new System.Drawing.Size(78, 19);
+            nIENKHOALabel.Size = new System.Drawing.Size(64, 16);
             nIENKHOALabel.TabIndex = 26;
             nIENKHOALabel.Text = "Niên khóa";
             // 
@@ -67,10 +66,9 @@ namespace QLDSV_TC
             // 
             tENLOPLabel.AutoSize = true;
             tENLOPLabel.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tENLOPLabel.Location = new System.Drawing.Point(132, 230);
-            tENLOPLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            tENLOPLabel.Location = new System.Drawing.Point(99, 187);
             tENLOPLabel.Name = "tENLOPLabel";
-            tENLOPLabel.Size = new System.Drawing.Size(36, 19);
+            tENLOPLabel.Size = new System.Drawing.Size(29, 16);
             tENLOPLabel.TabIndex = 30;
             tENLOPLabel.Text = "Lớp";
             // 
@@ -79,10 +77,9 @@ namespace QLDSV_TC
             this.cmbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKhoa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbKhoa.FormattingEnabled = true;
-            this.cmbKhoa.Location = new System.Drawing.Point(224, 153);
-            this.cmbKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbKhoa.Location = new System.Drawing.Point(168, 124);
             this.cmbKhoa.Name = "cmbKhoa";
-            this.cmbKhoa.Size = new System.Drawing.Size(342, 27);
+            this.cmbKhoa.Size = new System.Drawing.Size(258, 24);
             this.cmbKhoa.TabIndex = 12;
             this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
             // 
@@ -90,10 +87,9 @@ namespace QLDSV_TC
             // 
             this.labKhoa.AutoSize = true;
             this.labKhoa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labKhoa.Location = new System.Drawing.Point(132, 156);
-            this.labKhoa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labKhoa.Location = new System.Drawing.Point(99, 127);
             this.labKhoa.Name = "labKhoa";
-            this.labKhoa.Size = new System.Drawing.Size(45, 19);
+            this.labKhoa.Size = new System.Drawing.Size(36, 16);
             this.labKhoa.TabIndex = 11;
             this.labKhoa.Text = "Khoa";
             // 
@@ -104,10 +100,9 @@ namespace QLDSV_TC
             this.cmbNienKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNienKhoa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNienKhoa.FormattingEnabled = true;
-            this.cmbNienKhoa.Location = new System.Drawing.Point(819, 153);
-            this.cmbNienKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbNienKhoa.Location = new System.Drawing.Point(614, 124);
             this.cmbNienKhoa.Name = "cmbNienKhoa";
-            this.cmbNienKhoa.Size = new System.Drawing.Size(169, 27);
+            this.cmbNienKhoa.Size = new System.Drawing.Size(128, 24);
             this.cmbNienKhoa.TabIndex = 29;
             this.cmbNienKhoa.ValueMember = "NIENKHOA";
             this.cmbNienKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbNienKhoa_SelectedIndexChanged);
@@ -125,12 +120,11 @@ namespace QLDSV_TC
             // btnPreview
             // 
             this.btnPreview.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPreview.Location = new System.Drawing.Point(589, 327);
-            this.btnPreview.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPreview.Location = new System.Drawing.Point(387, 263);
             this.btnPreview.Name = "btnPreview";
-            this.btnPreview.Size = new System.Drawing.Size(100, 28);
+            this.btnPreview.Size = new System.Drawing.Size(130, 23);
             this.btnPreview.TabIndex = 25;
-            this.btnPreview.Text = "Preview";
+            this.btnPreview.Text = "Xem trước";
             this.btnPreview.UseVisualStyleBackColor = true;
             this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
             // 
@@ -138,10 +132,9 @@ namespace QLDSV_TC
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(698, 234);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(524, 190);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 19);
+            this.label1.Size = new System.Drawing.Size(48, 16);
             this.label1.TabIndex = 24;
             this.label1.Text = "Học kỳ";
             // 
@@ -154,10 +147,9 @@ namespace QLDSV_TC
             "2",
             "3",
             "4"});
-            this.cmbHocKy.Location = new System.Drawing.Point(819, 230);
-            this.cmbHocKy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbHocKy.Location = new System.Drawing.Point(614, 187);
             this.cmbHocKy.Name = "cmbHocKy";
-            this.cmbHocKy.Size = new System.Drawing.Size(169, 27);
+            this.cmbHocKy.Size = new System.Drawing.Size(128, 24);
             this.cmbHocKy.TabIndex = 23;
             // 
             // lOPBindingSource
@@ -188,10 +180,9 @@ namespace QLDSV_TC
             this.tENLOPComboBox.DisplayMember = "TENLOP";
             this.tENLOPComboBox.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tENLOPComboBox.FormattingEnabled = true;
-            this.tENLOPComboBox.Location = new System.Drawing.Point(224, 227);
-            this.tENLOPComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tENLOPComboBox.Location = new System.Drawing.Point(168, 184);
             this.tENLOPComboBox.Name = "tENLOPComboBox";
-            this.tENLOPComboBox.Size = new System.Drawing.Size(342, 27);
+            this.tENLOPComboBox.Size = new System.Drawing.Size(258, 24);
             this.tENLOPComboBox.TabIndex = 31;
             this.tENLOPComboBox.ValueMember = "MALOP";
             this.tENLOPComboBox.SelectedIndexChanged += new System.EventHandler(this.tENLOPComboBox_SelectedIndexChanged);
@@ -202,9 +193,9 @@ namespace QLDSV_TC
             // 
             // frptDanhSachDongHocPhiLop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1164, 554);
+            this.ClientSize = new System.Drawing.Size(873, 450);
             this.Controls.Add(tENLOPLabel);
             this.Controls.Add(this.tENLOPComboBox);
             this.Controls.Add(this.cmbNienKhoa);
@@ -214,7 +205,6 @@ namespace QLDSV_TC
             this.Controls.Add(this.cmbHocKy);
             this.Controls.Add(this.cmbKhoa);
             this.Controls.Add(this.labKhoa);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frptDanhSachDongHocPhiLop";
             this.Text = "frptDanhSachDongHocPhiLop";
             this.Load += new System.EventHandler(this.frptDanhSachDongHocPhiLop_Load);
